@@ -1,0 +1,13 @@
+{"users": [
+{
+  "localId": "hdTIPnXEX1XISYkh5sP4iUZGV0e2",
+  "email": "admin@raiceshealth.cl",
+  "emailVerified": true,
+  "passwordHash": "YZ3Q8q66E6qc46heQUSIvQMvXYNeokesq54okkY2cwRO9x9F/Z6YxHxMv40U9LamFrdg2zh+mfjQZiBmlk7MmA==",
+  "salt": "btjfgG2HUuRn6g==",
+  "displayName": "Administrador",
+  "lastSignedInAt": "1764098190165",
+  "createdAt": "1764097699276",
+  "disabled": false,
+  "providerUserInfo": []
+}]}

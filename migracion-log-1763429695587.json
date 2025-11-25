@@ -1,0 +1,1368 @@
+{
+  "fecha": "2025-11-18T01:34:55.587Z",
+  "modo": "DRY-RUN",
+  "stats": {
+    "total": 271,
+    "exitosos": 271,
+    "errores": 0,
+    "pacientesCreados": [
+      {
+        "nombre": "Abigailt Troncoso Gonzalez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Alberto Guerrero Bustamante",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Alejandra Gatica Vallejos",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Alejandra Lucero Flores",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Alejandra Verdugo Arevalo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Alessandra Manzo Parada",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Alexander Vega Marchant",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Alexis Fernández",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "informe justificacion de LM alexis fernandez 13sept 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "material psicoeducativo adherencia alexis fernandez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Alfonso Mella",
+        "firestoreId": "dry-run-id",
+        "secciones": 7
+      },
+      {
+        "nombre": "Ana Maria Gonzalez del Rio",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Ana María Prieto Parodi",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Ana María Veliz",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Andrea Estefany Flores Barros",
+        "firestoreId": "dry-run-id",
+        "secciones": 8
+      },
+      {
+        "nombre": "ficha_1",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Angel Valenzuela Gonzalez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Angela Bergez Valdes",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Antoine Alem Monne Bergez (antuan)",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Antonia Javiera Perez Chacon",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Antonia Javiera Perez Chacon",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Informe médico 15 abril 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Arlene Delgado Diaz",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Belen Saavedra Maturana",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Camila Pinilla",
+        "firestoreId": "dry-run-id",
+        "secciones": 7
+      },
+      {
+        "nombre": "informe camila pinilla 4 nov 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Camila Rojas Gallardo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Camila Tejos Montoya",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Camila Ávila Lara",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Carla Clavelle Roa",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "ficha_1",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "Solicitud de Internación Voluntaria 18 abril 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Carla Saavedra Cancino",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "datos esposo de carla saavedra",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Medidas no farmacológicas para cese de lactancia",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Carlos Benjamin Contreras Araya",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Carlos Cabrera Troncoso",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Carlos Inostroza Bravo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Carol Castillo Astaburuaga",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Carolina Cifuentes Cifuentes",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "Carolina Concha",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Catalina Bustos",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Catherine Valeria Inostroza Fuentes",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Cecilia Almonacid Fierro",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Informe Complementario   Licencia Médica N° 21241132",
+        "firestoreId": "dry-run-id",
+        "secciones": 4
+      },
+      {
+        "nombre": "Cecilia Novoa Herrera",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Cecilia Andrea Roco Villareal",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Claudia Alejandra Giménez Vignolo",
+        "firestoreId": "dry-run-id",
+        "secciones": 3
+      },
+      {
+        "nombre": "Claudia florentina vargas medina",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "gemini cli 5 oct 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Claudia Zárate Hernandez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Cynthia Andrea Villarroel Acuña",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Daniela Calquin Valdés",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Daniela Cecilia Batikoff Chico",
+        "firestoreId": "dry-run-id",
+        "secciones": 3
+      },
+      {
+        "nombre": "recomendaciones higiene sueño daniela",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Daniela Soto Salazar",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Daniela Urra Sanchez",
+        "firestoreId": "dry-run-id",
+        "secciones": 8
+      },
+      {
+        "nombre": "Dante Avaca Baladron_",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "informe medico compin dante avaca 20 agosto 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "David Berrios",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "derivación a hospitalización psiquiátrica de urgencias",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Diego Fuentes Perez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Diego Marin",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Doris Córdova Rojas",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Edgard Matteo Dubreuil",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Edith Moreno Carrión",
+        "firestoreId": "dry-run-id",
+        "secciones": 8
+      },
+      {
+        "nombre": "INFORME MEDICO COMPLEMENTARIO",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Informe médico complementario",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Edith Reyes Pilser",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Eduardo Rodrigo Moraga Toledo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Elvira Jarpa Pérez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Ena Lucia Rocco Castro",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Eric Castillo Acevedo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Evelyn Loreto Gaete Rios",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Evelyn Patricia Cornejo Matamala",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Fabiola Sazo Espinoza",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Felipe Ignacio Rodriguez Morales",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Felipe Nuñez Varas",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Felipe Tapia Montecinos",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Fernanda Mejias Maripangui",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Fernando Vasquez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Francesca Cappozzo Chamorro",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Franchesca Mendoza",
+        "firestoreId": "dry-run-id",
+        "secciones": 6
+      },
+      {
+        "nombre": "Sin título 1",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sin título 2",
+        "firestoreId": "dry-run-id",
+        "secciones": 6
+      },
+      {
+        "nombre": "Sin título",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Franchesca Isabel Mendoza Díaz",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Francisca Alejandra Pérez Ibarra",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Francisca Toro Moscoso",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Francisco Avaca",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Fresia Gonzalez Suarez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Fuad Abuter Aburto",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Fuad Alfredo Abuter Aburto_",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Gabriela Arenas Basualto",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Gabriela Espinoza Maldonado",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Gabriela Paiva Cáceres",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Gabriela Reyes Muñoz",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Gema Rosa Navarro Vidal",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Genesis Cisterna Briceño",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Gerardo Chandia",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Gonzalo Patricio Crisostomo Roa",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Graciela Berrios Troncoso",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Hector Ferrada Rivas",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Hugo Rojas de la Fuente",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Ignacio Alvarado Olivares",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Isidora Yukich Lamas",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Constanza Martinez Conde",
+        "firestoreId": "dry-run-id",
+        "secciones": 7
+      },
+      {
+        "nombre": "Jacqueline Del Carmen Muñoz Nuñez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Jaime Contreras Avendaño",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Drawing 2025 08 11 18.27.18.excalidraw",
+        "firestoreId": "dry-run-id",
+        "secciones": 3
+      },
+      {
+        "nombre": "Javier Morales",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Javiera ALejandra Zamora Roco",
+        "firestoreId": "dry-run-id",
+        "secciones": 4
+      },
+      {
+        "nombre": "sugerencias de analisis caso gpt a partir de info del 15 oct",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Javiera Rocio Marin Carreño",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Javiera Rojas Wilson",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Jehannette Francisca Ortiz Montecinos",
+        "firestoreId": "dry-run-id",
+        "secciones": 7
+      },
+      {
+        "nombre": "Jesus Salinas_",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Joaquín Vignolo",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "recomendaciones no farmacológicas Joaquin Vignolo 29 agosto 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Jocelyn Nataly Gonzalez Eriz",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Jorge Eduardo Jorquera Sepúlveda",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Jose Lizama Canio",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "informe pai josefa villagra",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Josefa Villagra Jorquera",
+        "firestoreId": "dry-run-id",
+        "secciones": 3
+      },
+      {
+        "nombre": "Josefina Espinoza",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "INFORME MEDICO COMPLEMENTARIO 11 jul 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Joselyne Millangir Aravena",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "Sin título",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "José Manuel Ojeda Parot",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Juan Miguel Davidson",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Juan Riquelme Pacheco",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Juana Ximena Cubillos Lara",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Karina Ahumada",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Karina Parada",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Katerina Amaro Martinez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Kimberly Alarcon Sandoval",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "Konny Sepúlveda Contreras",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Laura Raquel de Maria Melo Bravo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Leonardo Antonio aravena apablaza",
+        "firestoreId": "dry-run-id",
+        "secciones": 9
+      },
+      {
+        "nombre": "ic a urgencia leonardo prieto valenzuela",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Leonardo Prieto Valenzuela",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Lucas Henriquez Briones",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Luis Rebolledo Arellano",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Lujan Rey Ricci",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Luz Javiera Morales Silva",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maite Laclabere Ansoleaga",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Manuel Gavilán",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Manuel Jesus Herrera Acevedo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Manuel Rodriguez Zambrano",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Manuel Rodriguez Zambrano",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sin título",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "EDS dieta",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Marcela Paz Betancourt Vásquez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Marcela Caceres Arias",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Marcela Celis Saavedra",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Marcela isabel leal valenzuela",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Marcela Montecino Luengo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maria Angelica Zurita Figueroa",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maria Antonieta Adasme Apaz",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maria Cecilia Rivera Meneses",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maria Cristina Valenzuela Canales",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maria Felisa Rojas Santander",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "Maria Fernanda Muñoz Zapata",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maria Fernanda Silva",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maria Ines Castro Paz",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maria Laura Bilbao Massri",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Maria Paz Figueroa Navarro",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Mariam Liberona Riquelme_",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "INFORME MEDICO COMPLEMENTARIO",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Interconsulta medicina familiar 24 abril 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Marianela Morales Morales",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "Maribel del Carmen Figueroa Maureira",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Mario Bravo Toledo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Marisol Mendoza Castro",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Marta Vargas Diaz",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "Maryelin Rojas Orellana",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Marysel Zárate Villaseca",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "María Angélica del Río Prunes",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "María Ignacia Williams Valdés",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "María Inés Celis Saavedra",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "María Jesús Órdenes Elliott",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "MaríaJesús Aravena Álvarez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Matías Muñoz Rodríguez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Miguel Angel Peralta",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "ficha_1",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "Miguel Hernandez Pavez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Milenka Fuentes Chamorro",
+        "firestoreId": "dry-run-id",
+        "secciones": 3
+      },
+      {
+        "nombre": "Milenka Fuentes Chamorro",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Monica Muñoz Contreras",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Mylissen Lamas Pimentel",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Mónica Díaz Andonaegui",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Informe Médico",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Mónica Díaz Andonaegui",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Natalia Arce Escalona",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Nelly Bustos",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Nicolas Briones Garcia",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Nicole Moya",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Oscar Carrasco Romero",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Pablo Correa Opazo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Pablo Toledo Torrealba",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Pacientes extrasistema",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Pamela Abarza Cancino",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Pamela Herrera Suazo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Patricia Oyarce Mena",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "interconsulta hacia nefrologia patricia rubilar agosto 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Patricia Rubilar Salazar",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Patricio Ibarra",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Paula Baeza Prat",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Paula Lucy Hernandez Flores",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Paula Riveros Saavedra",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Paulina Reyes Guzman",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Paulina Reyes Guzmán",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "ficha_1",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Pedro Alvarado",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Peter Alexis Veliz Barrueto",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "René Martínez Domke",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Ricardo Espinoza Manriquez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Ricardo Parada Herrera_",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "informe ricardo silva 26 agosto 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Ricardo Ernesto Silva Soto",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Roberto Acuña Galleguillos",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "Roberto Diaz Gonzalez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Rocío Becerra Bustamante",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Rocío Morales",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Rogelio Aravena Alarcon",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Romina Andrea Gonzalez Marín",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Romina Tamara Alarcon Valdes",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Rose Elena Abarca Delgado",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sabrina Muñoz Hidalgo",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "informe sandra baeza compin lm junio 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sandra Baeza",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sandra Cecilia Sobarzo Dominguez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sandra Orellana Alarcon",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sebastian Navarro Fernandez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sebastian Zamora",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sharay Saavedra Garrido",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Simone Lambert Díaz",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sin título",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sofia Paulina Rivera maturana",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sofia Sanchez Vega",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Solange Goldswosthy",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Soledad Alcaíno Cifuentes",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Susana Tarazona",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sylvia Guerrero Veliz",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Trinidad Santa María Highet",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Valentina Moya Roa",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Valentina Parada Herrera",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Valentina Schorr Prieto",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Vanessa Valentina Sepulveda Sotomayor",
+        "firestoreId": "dry-run-id",
+        "secciones": 4
+      },
+      {
+        "nombre": "Vania Carolina Valenzuela Ibáñez",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Veronica Ramirez Calderon",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "INTERCONSULTA MÉDICA",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Veronica Zamora Contreras",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Isabel Lobos Canales",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Sin título",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Verónica Duarte Tapia",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Vicente José Cruz Garrido",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Victor Olave San Martin",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "DCL explicacion",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Medidas preventivas para el viaje a Canadá ",
+        "firestoreId": "dry-run-id",
+        "secciones": 6
+      },
+      {
+        "nombre": "victor sandoval medina",
+        "firestoreId": "dry-run-id",
+        "secciones": 2
+      },
+      {
+        "nombre": "INFORME MEDICO COMPLEMENTARIO COMPIN 15 JULIO 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "INFORME MEDICO COMPLEMENTARIO COMPIN 28 AGOSTO 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Informe médico",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "informe viviana bernales compin 15 octubre 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "interconsulta viviana bernales a medicina interna por anemia 15 sept 2025",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Viviana Bernales Espinoza",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Wladimir Valverde",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Yasna Soledad Valenzuela Reyes",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "index_hashtags",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      },
+      {
+        "nombre": "Pacientes Extrasistema",
+        "firestoreId": "dry-run-id",
+        "secciones": 1
+      }
+    ],
+    "erroresDetalle": []
+  },
+  "timestamp": 1763429695587
+}

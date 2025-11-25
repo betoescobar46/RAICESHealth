@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Limpiar localStorage</title>
+    <meta http-equiv="refresh" content="2;url=/">
+</head>
+<body>
+    <h2>Limpiando localStorage y cargando pacientes...</h2>
+    <script>
+        // Limpiar solo los pacientes del localStorage
+        localStorage.removeItem('patients');
+        console.log('localStorage limpiado');
+
+        // Redirigir a la app principal
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 1000);
+    </script>
+</body>
+</html>

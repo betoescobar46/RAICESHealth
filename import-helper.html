@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importador Rápido - SIMORAHealth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .step {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .step-content {
+            color: #555;
+            line-height: 1.6;
+            margin-left: 40px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-label {
+            display: block;
+            background: white;
+            border: 2px dashed #667eea;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+
+        .file-label:hover {
+            background: #f8f9fa;
+            border-color: #764ba2;
+        }
+
+        .file-label.has-file {
+            background: #e8f5e9;
+            border-color: #4caf50;
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .status.success {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #4caf50;
+        }
+
+        .status.error {
+            background: #ffebee;
+            color: #c62828;
+            border: 1px solid #ef5350;
+        }
+
+        .status.info {
+            background: #e3f2fd;
+            color: #1565c0;
+            border: 1px solid #2196f3;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .progress {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            transition: width 0.3s;
+            width: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Importador de Pacientes</h1>
+        <p class="subtitle">Importa tus pacientes desde el archivo JSON generado</p>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">1</span>
+                Selecciona el archivo JSON
+            </div>
+            <div class="step-content">
+                <label for="fileInput" class="file-label" id="fileLabel">
+                    <div class="icon">📁</div>
+                    <div>Click aquí para seleccionar <strong>pacientes_migrados.json</strong></div>
+                    <div style="font-size: 12px; color: #999; margin-top: 10px;">O arrastra el archivo aquí</div>
+                </label>
+                <input type="file" id="fileInput" class="file-input" accept=".json">
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">
+                <span class="step-number">2</span>
+                Elige el modo de importación
+            </div>
+            <div class="step-content">
+                <label style="display: block; margin: 10px 0;">
+                    <input type="radio" name="mode" value="add" checked>
+                    <strong>Agregar</strong> a pacientes existentes
+                </label>
+                <label style="display: block; margin: 10px 0;">
+                    <input type="radio" name="mode" value="replace">
+                    <strong>Reemplazar</strong> todos los pacientes
+                </label>
+            </div>
+        </div>
+
+        <button id="importBtn" disabled>
+            📥 Importar Pacientes
+        </button>
+
+        <div class="progress" id="progress">
+            <div style="margin-bottom: 10px; font-size: 14px;" id="progressText">Importando...</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="status" id="status"></div>
+
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+            <h3 style="margin-bottom: 10px; font-size: 16px;">💡 Después de importar</h3>
+            <p style="font-size: 14px; color: #666; line-height: 1.6;">
+                Los pacientes estarán disponibles en <strong>Registro</strong>.
+                Verifica que la información se importó correctamente.
+                Tus archivos .md originales permanecen intactos.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const fileLabel = document.getElementById('fileLabel');
+        const importBtn = document.getElementById('importBtn');
+        const status = document.getElementById('status');
+        const progress = document.getElementById('progress');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+
+        let fileData = null;
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                fileLabel.classList.add('has-file');
+                fileLabel.innerHTML = `
+                    <div class="icon">✅</div>
+                    <div><strong>${file.name}</strong></div>
+                    <div style="font-size: 12px; color: #666; margin-top: 5px;">
+                        ${(file.size / 1024).toFixed(2)} KB
+                    </div>
+                `;
+
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    try {
+                        fileData = JSON.parse(event.target.result);
+                        importBtn.disabled = false;
+                        showStatus('info', `✅ Archivo cargado: ${fileData.length} pacientes encontrados`);
+                    } catch (error) {
+                        showStatus('error', '❌ Error: El archivo no es un JSON válido');
+                        importBtn.disabled = true;
+                    }
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        // Drag and drop
+        fileLabel.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileLabel.style.background = '#f0f0f0';
+        });
+
+        fileLabel.addEventListener('dragleave', () => {
+            fileLabel.style.background = '';
+        });
+
+        fileLabel.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileLabel.style.background = '';
+            const file = e.dataTransfer.files[0];
+            if (file && file.name.endsWith('.json')) {
+                fileInput.files = e.dataTransfer.files;
+                fileInput.dispatchEvent(new Event('change'));
+            }
+        });
+
+        importBtn.addEventListener('click', () => {
+            if (!fileData) {
+                showStatus('error', '❌ Por favor selecciona un archivo primero');
+                return;
+            }
+
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            importPatients(fileData, mode === 'replace');
+        });
+
+        function importPatients(patients, replaceExisting) {
+            progress.style.display = 'block';
+            importBtn.disabled = true;
+            status.style.display = 'none';
+
+            try {
+                // Obtener pacientes existentes
+                const existingPatients = JSON.parse(localStorage.getItem('rlp_patients') || '[]');
+
+                // Preparar nuevos pacientes
+                let finalPatients = [];
+
+                if (replaceExisting) {
+                    finalPatients = patients;
+                    progressText.textContent = `Reemplazando ${patients.length} pacientes...`;
+                } else {
+                    finalPatients = [...existingPatients, ...patients];
+                    progressText.textContent = `Agregando ${patients.length} pacientes...`;
+                }
+
+                // Simular progreso
+                let progressValue = 0;
+                const interval = setInterval(() => {
+                    progressValue += 10;
+                    progressFill.style.width = progressValue + '%';
+
+                    if (progressValue >= 100) {
+                        clearInterval(interval);
+
+                        // Guardar en localStorage
+                        localStorage.setItem('rlp_patients', JSON.stringify(finalPatients));
+
+                        progress.style.display = 'none';
+                        showStatus('success',
+                            `🎉 ¡Importación exitosa!<br>
+                            <strong>${patients.length} pacientes importados</strong><br>
+                            Total en sistema: ${finalPatients.length} pacientes<br><br>
+                            <a href="http://localhost:3001" style="color: inherit; text-decoration: underline;">
+                                Ir a SIMORAHealth →
+                            </a>`
+                        );
+
+                        setTimeout(() => {
+                            window.location.href = 'http://localhost:3001';
+                        }, 3000);
+                    }
+                }, 100);
+
+            } catch (error) {
+                progress.style.display = 'none';
+                showStatus('error', `❌ Error al importar: ${error.message}`);
+                importBtn.disabled = false;
+            }
+        }
+
+        function showStatus(type, message) {
+            status.className = 'status ' + type;
+            status.innerHTML = message;
+            status.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

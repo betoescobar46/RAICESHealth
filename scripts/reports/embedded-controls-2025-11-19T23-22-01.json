@@ -1,0 +1,4513 @@
+{
+  "timestamp": "2025-11-19T23:22:08.321Z",
+  "modo": "DRY_RUN",
+  "estadisticas": {
+    "totalIngresos": 257,
+    "ingresosConControles": 171,
+    "totalControlesDetectados": 521,
+    "controlesPorPatron": {
+      "markdown_bold": 78,
+      "control_keyword": 240,
+      "fecha_inicio": 133,
+      "fecha_numerica": 70,
+      "otro": 0
+    },
+    "pacientesAfectados": 171
+  },
+  "detalles": [
+    {
+      "notaId": "05DQywNvQUGW05Xr6CTL",
+      "pacienteId": "Qvg7TWkVzuXNgHSoBrRP",
+      "pacienteNombre": "Marcela Caceres Arias",
+      "cantidadControles": 8,
+      "controles": [
+        {
+          "titulo": "11/05/1990",
+          "fecha": "1990-05-11",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "11/05/1990 Cesante Fonasa 56 9 32572388 3 oriente "
+        },
+        {
+          "titulo": "13 diciembre 2021 -  mejor de animo, menos depre, menor angustia, mas ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "13 diciembre 2021: mejor de animo, menos depre, me"
+        },
+        {
+          "titulo": "3/1/21",
+          "fecha": "2021-01-03",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "3/1/21 Hola, buenas noches. Primero Feliz Año :)! "
+        },
+        {
+          "titulo": "12 enero 2021 - bien en general, animo 5,8 / 7 , faltaria mas moti",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "12 enero 2021 bien en general, animo 5,8 / 7 , fal"
+        },
+        {
+          "titulo": "27 marzo 2022 -  control tele, bien en general, aun sin trabajar, ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "27 marzo 2022: control tele, bien en general, aun "
+        },
+        {
+          "titulo": "Control 21 nov a las 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 21 nov a las 20.00hrs. Enviarme reporte en"
+        },
+        {
+          "titulo": "5 diciembre 2022",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "5 diciembre 2022 Presencial Irregular toma farmaco"
+        },
+        {
+          "titulo": "6 marzo 2023",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "6 marzo 2023: Presenicial Retener info ej donde es"
+        }
+      ]
+    },
+    {
+      "notaId": "07IK3B8x8Jh9r1jEPxxt",
+      "pacienteId": "UdmxgZ9a3zMkTMKxgRVr",
+      "pacienteNombre": "Konny Sepúlveda Contreras",
+      "cantidadControles": 6,
+      "controles": [
+        {
+          "titulo": "8-5-92",
+          "fecha": "2092-05-08",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "8-5-92 32 años konny.sepcont@gmail.com 86341329 Co"
+        },
+        {
+          "titulo": "Control 1 julio 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 1 julio 20.45hrs. **1-7-2024** Pendiente r"
+        },
+        {
+          "titulo": "Control 4 agosto 9.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 4 agosto 9.15hrs. Vortioxetina 10mgvo: med"
+        },
+        {
+          "titulo": "4 agosto 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**4 agosto 2024** Ademas levotiroxina metfomina Vo"
+        },
+        {
+          "titulo": "Control 10 octubre 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 10 octubre 20.45hrs. Lme f412 desde 4 agos"
+        },
+        {
+          "titulo": "control 2 junio 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 2 junio 18.30hrs. minfel 54 mg vo: 1 cada "
+        }
+      ]
+    },
+    {
+      "notaId": "0FUzS0AhyXS7PQMH6lmF",
+      "pacienteId": "YkIFnGHGN9PeEQWZ3e9G",
+      "pacienteNombre": "Peter Alexis Veliz Barrueto",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "17-11-89",
+          "fecha": "2089-11-17",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "17-11-89 22 y media norte A 4004 Talca 951032740 P"
+        }
+      ]
+    },
+    {
+      "notaId": "12jWQXPIPNzqtVMCSPtO",
+      "pacienteId": "QLEZuIuEBTzrTGSw5AYN",
+      "pacienteNombre": "Mónica Díaz Andonaegui",
+      "cantidadControles": 8,
+      "controles": [
+        {
+          "titulo": "17 agosto 1969",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "17 agosto 1969 988889654Vive con Loreto pareja en "
+        },
+        {
+          "titulo": "Control 20 febrero 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 20 febrero 20.45hrs. Butrinol XL 150mgvo: "
+        },
+        {
+          "titulo": "Control psiq 20 marzo 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq 20 marzo 19.15hrs. Sugiero psicoterap"
+        },
+        {
+          "titulo": "Control 2 mayo 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 2 mayo 20.00hrs. Butrino XL de 300mgvo 1 c"
+        },
+        {
+          "titulo": "Control 4 julio 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 4 julio 20.45hrs. Enviarme informe de su p"
+        },
+        {
+          "titulo": "Control 15 agosto 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 15 agosto 18.30hrs. Mantener psicoterapia "
+        },
+        {
+          "titulo": "Control 17 octubre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 17 octubre 18.30hrs. Minfel 54 mg vo: 1 ca"
+        },
+        {
+          "titulo": "16 sept 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "16 sept 2024: Receta minfel 36 mg cada mañana (ref"
+        }
+      ]
+    },
+    {
+      "notaId": "17KRzqujC6YmZBZgWpNP",
+      "pacienteId": "CdIzyMmNQ5rgjTjAJe7F",
+      "pacienteNombre": "Javiera Rocio Marin Carreño",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "6/01/2001",
+          "fecha": "2001-01-06",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "6/01/2001 23 años Est arqui 6 to año. 79773298 Mar"
+        },
+        {
+          "titulo": "Control 21 noviembre 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 21 noviembre 20.00hrs. Isotretinoina 10mg "
+        },
+        {
+          "titulo": "21 noviembre 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "21 noviembre 2024 conrol telemedicina al inicio de"
+        }
+      ]
+    },
+    {
+      "notaId": "2t2TYLFhluyoMmhTHqgP",
+      "pacienteId": "bBhrOAI6glHu4ns4wED2",
+      "pacienteNombre": "Josefina Espinoza",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "18-11-2004",
+          "fecha": "2004-11-18",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "18-11-2004 Vive con: madre TS 56, padre contador 6"
+        }
+      ]
+    },
+    {
+      "notaId": "3KsXwCoeuGjGYEhgoCBw",
+      "pacienteId": "LQYmqJ5D8uMfBU2Se7LK",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 7,
+      "controles": [
+        {
+          "titulo": "Control 30 octubre 20.45 hrs presencial",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 30 octubre 20.45 hrs presencial Letrozol i"
+        },
+        {
+          "titulo": "22 enero 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**22 enero 2024** Arivitae 5mgvo: 0-0-1 Trazodona "
+        },
+        {
+          "titulo": "3-4-24 -  pcr rt de papiloma: positivo para 16, 58 , 42, 54",
+          "fecha": "2024-04-03",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "3-4-24: pcr rt de papiloma: positivo para 16, 58 ,"
+        },
+        {
+          "titulo": "Control 8 julio 20.00hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 8 julio 20.00hrs Mantener psicoterapia Ari"
+        },
+        {
+          "titulo": "control 26 enero 9.00hrs. , (extenderé ultima licencia ahí).",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 26 enero 9.00hrs. , (extenderé ultima lice"
+        },
+        {
+          "titulo": "control 27 marzo 20.45 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 27 marzo 20.45 hrs. psicoterapia Valdoxan "
+        },
+        {
+          "titulo": "27 marzo 2025",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**27 marzo 2025** **Con quién asiste** Asiste sola"
+        }
+      ]
+    },
+    {
+      "notaId": "3Pueeb6Aa0bevK4lZqdT",
+      "pacienteId": "cubFTfnZfFaPssk64CyW",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "control 24 febrero 20.45 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 24 febrero 20.45 hrs. solicito exámenes de"
+        },
+        {
+          "titulo": "control 29 mayo 19.15hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 29 mayo 19.15hrs Bisglicinato de magnesio "
+        }
+      ]
+    },
+    {
+      "notaId": "3fQattt60mlRMo3XOSJ7",
+      "pacienteId": "j0necBVWaX5wV8U0q0Y8",
+      "pacienteNombre": "Ricardo Ernesto Silva Soto",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "control en 1 mes: 23 julio a las 10.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control en 1 mes: 23 julio a las 10.45hrs. mantene"
+        },
+        {
+          "titulo": "control en 3 meses: 22 octubre 10.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control en 3 meses: 22 octubre 10.00hrs. mantener "
+        },
+        {
+          "titulo": "control 24 sept 15.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 24 sept 15.30hrs. suspender café (lo más i"
+        }
+      ]
+    },
+    {
+      "notaId": "3uDgmGOqP34m0Efq4VbN",
+      "pacienteId": "ss8YIP9LNmoXDOKWMgET",
+      "pacienteNombre": "Mariam Liberona Riquelme_",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "24 nov 1981",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "24 nov 1981 43 96441509 fonasa asistente comercial"
+        },
+        {
+          "titulo": "control 16 enero 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 16 enero 18.30hrs. Depurol retard 150mg vo"
+        },
+        {
+          "titulo": "control: 31 marzo 20.00hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control: 31 marzo 20.00hrs psicoterapia.  > Depuro"
+        }
+      ]
+    },
+    {
+      "notaId": "3yFyiYR8JOQGMYUApoIB",
+      "pacienteId": "esqXACQ3cKrdG12VpVyS",
+      "pacienteNombre": "Sebastian Zamora",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control 3 marzo 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 3 marzo 20.45hrs. sugiero hacer psicoterap"
+        }
+      ]
+    },
+    {
+      "notaId": "43cERi5OnYf44hhhqfWW",
+      "pacienteId": "9CXpc1QRDSinAeMfYj36",
+      "pacienteNombre": "Gabriela Espinoza Maldonado",
+      "cantidadControles": 9,
+      "controles": [
+        {
+          "titulo": "5 oct 2021 -  rize 10mg 1 comp sos por noche. envio receta por ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "5 oct 2021: rize 10mg 1 comp sos por noche. envio "
+        },
+        {
+          "titulo": "11 oct 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**11 oct 2021**: regular, con sintomas consistente"
+        },
+        {
+          "titulo": "control psiquiatrico el 13 diciembre 2021 a las 19.45 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control psiquiatrico el 13 diciembre 2021 a las 19"
+        },
+        {
+          "titulo": "10 febrero 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**10 febrero 2022** llorando a penas se conecta. l"
+        },
+        {
+          "titulo": "control 8 de agosto a las 20.00 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 8 de agosto a las 20.00 hrs. subelan or 15"
+        },
+        {
+          "titulo": "31 mayo 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**31 mayo 2022**: afectada emocionalmente, se auto"
+        },
+        {
+          "titulo": "Control psiq en 2 meses: 31 oct 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq en 2 meses: 31 oct 20.00hrs. Venlafax"
+        },
+        {
+          "titulo": "control miercoles 3 de mayo 20:00hrs telemedicina",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control miercoles 3 de mayo 20:00hrs telemedicina "
+        },
+        {
+          "titulo": "Control 20 junio a las 20.00hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 20 junio a las 20.00hrs Lmer desde el 15 m"
+        }
+      ]
+    },
+    {
+      "notaId": "45wmhn0QDKEgEQw3886e",
+      "pacienteId": "oVTbHSY7nUlld5AHvfnz",
+      "pacienteNombre": "Gema Rosa Navarro Vidal",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "15-2-1960",
+          "fecha": "1960-02-15",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "15-2-1960 989569979 Genavi2004@gmail.com Banmedica"
+        },
+        {
+          "titulo": "Control 15 agosto 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 15 agosto 20.00hrs. Cymbalta 30mg cada noc"
+        }
+      ]
+    },
+    {
+      "notaId": "4GJJFoiOzu4mqP0uplhe",
+      "pacienteId": "edP9CMMXCws4FN0PCPfd",
+      "pacienteNombre": "Ricardo Parada Herrera_",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "3 febrero 2025",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**3 febrero 2025** Ricardo Parada Herrera 15854288"
+        }
+      ]
+    },
+    {
+      "notaId": "4sOPo7gl4fSbO9HCxvrt",
+      "pacienteId": "csS4wfq9A6mrhjnmdeac",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "23 sept 2025 -  me manda mail que se ha sentido mas estable y sin",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "23 sept 2025: me manda mail que se ha sentido mas "
+        }
+      ]
+    },
+    {
+      "notaId": "5J0HknU6l4j8NMuQNcqB",
+      "pacienteId": "aLFQmerj3uk9OW7lzmDn",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "28 agosto 1977",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "28 agosto 1977 Profe general basica, tiene escuela"
+        },
+        {
+          "titulo": "Control 4 diciembre 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 4 diciembre 20.00hrs. Px Pendiente enviarm"
+        },
+        {
+          "titulo": "Control con psiquiatra: 2 septiembre 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control con psiquiatra: 2 septiembre 19.15hrs. Man"
+        },
+        {
+          "titulo": "12 de marzo de 2025 - 16:24:40: envio receta samexid 70mg vo 1 cada maña",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "miércoles, 12 de marzo de 2025 16:24:40: envio rec"
+        },
+        {
+          "titulo": "control 11 agosto 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 11 agosto 18.30hrs. Neurok 70 mg vo: 1 cad"
+        }
+      ]
+    },
+    {
+      "notaId": "5RxzjDa90h6UsPrcrUW9",
+      "pacienteId": "xyBdJMUyOKuRDtTBr5KA",
+      "pacienteNombre": "ficha_1",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "20 nov 2023",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "20 nov 2023 Presencial Deslafax 100mgvo 1-0-0 Sigu"
+        },
+        {
+          "titulo": "Control en 1 año: 5 mayo 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control en 1 año: 5 mayo 18.30hrs. Mantener deslaf"
+        },
+        {
+          "titulo": "Control 12 junio 9.30hrs AM.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 12 junio 9.30hrs AM. == ==Ectiban 10mg vo:"
+        }
+      ]
+    },
+    {
+      "notaId": "5tanEMPttRp2KUE1JKsQ",
+      "pacienteId": "9ahT0udFgrtxtzGycJ9B",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control 16 julio 9.15hrs AM",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 16 julio 9.15hrs AM solicitaría polisomnog"
+        }
+      ]
+    },
+    {
+      "notaId": "69s3K2ZGPUAnNR6C2t9B",
+      "pacienteId": "Xbddl9uWJ200SmsjxFQV",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "25/07/2025 - Hemograma: Eritrocitos 5.21 x 10^6/ul, Hematocrito",
+          "fecha": "2025-07-25",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "25/07/2025 Hemograma: Eritrocitos 5.21 x 10^6/ul, "
+        },
+        {
+          "titulo": "Control: 1 octubre 10.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 1 octubre 10.00hrs. Mantener psicoterapia"
+        },
+        {
+          "titulo": "Control 30 julio a las 11.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 30 julio a las 11.30hrs.  LME por 30 dias "
+        },
+        {
+          "titulo": "28/03/2023",
+          "fecha": "2023-03-28",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "28/03/2023 0 Años Camino La Viña 4515, Sector Las "
+        }
+      ]
+    },
+    {
+      "notaId": "6NJfbuzOoIoaFEVUz3d6",
+      "pacienteId": "7HHA7drvMMz5Ml2i1sId",
+      "pacienteNombre": "Francisco Avaca",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control 17 febrero 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 17 febrero 19.15hrs. mantener terapia de p"
+        }
+      ]
+    },
+    {
+      "notaId": "6nidCGrGCmsV42E5TF3C",
+      "pacienteId": "03KujcfiKq9TStjWS65V",
+      "pacienteNombre": "Sebastian Navarro Fernandez",
+      "cantidadControles": 6,
+      "controles": [
+        {
+          "titulo": "25 feb 2021",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "25 feb 2021 plan: receta por escitalopram 20 mg vo"
+        },
+        {
+          "titulo": "22 abril 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**22 abril 2021** sin CP, solo 1 día “episodio rar"
+        },
+        {
+          "titulo": "25 enero 202",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "“**25 enero 202**2: Hola Seba, no hay problema. Oc"
+        },
+        {
+          "titulo": "Control 20 feb 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 20 feb 18.30hrs. Mantener ipran 20mg vo 0-"
+        },
+        {
+          "titulo": "Control 2 mayo 1830hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 2 mayo 1830hrs. Desconectarse del trabajo,"
+        },
+        {
+          "titulo": "2 mayo 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**2 mayo 2024** Volvio a ver noticias Ansiedad nor"
+        }
+      ]
+    },
+    {
+      "notaId": "71jVnNBznt1B8LNi9Pc9",
+      "pacienteId": "jGzjqqaWXsGVxAqNT5Il",
+      "pacienteNombre": "Franchesca Isabel Mendoza Díaz",
+      "cantidadControles": 8,
+      "controles": [
+        {
+          "titulo": "15 marzo 1990",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "15 marzo 1990 31 años Hacienda del maule, pasaje l"
+        },
+        {
+          "titulo": "2 sept 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**2 sept 2021**: cuentas rodrigo. empezo to. no hj"
+        },
+        {
+          "titulo": "11 noviembre 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**11 noviembre 2021**: empezo pst hace 1 semana bi"
+        },
+        {
+          "titulo": "10 feb 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**10 feb 2022** con 7.5 arip ya sin acatisia. Con "
+        },
+        {
+          "titulo": "11 abril 2022",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "11 abril 2022: presencial, eutimica, sin id suicid"
+        },
+        {
+          "titulo": "Control lun 12 diciembre 20:40 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control lun 12 diciembre 20:40 hrs. Butrino 150mgv"
+        },
+        {
+          "titulo": "control 15 mayo 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 15 mayo 20.00hrs. mantener psicoterapia en"
+        },
+        {
+          "titulo": "3 sept 2025 -  indico pluriamin 10mg vo: 1 sos por insomnio ocas",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "3 sept 2025: indico pluriamin 10mg vo: 1 sos por i"
+        }
+      ]
+    },
+    {
+      "notaId": "7IlcVR8dP8cg4eNhCDor",
+      "pacienteId": "oPhB9uN6aw8Eu8f0vHKj",
+      "pacienteNombre": "Manuel Jesus Herrera Acevedo",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "Control 5 junio 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 5 junio 18.30hrs. Exámenes de laboratorio "
+        },
+        {
+          "titulo": "28 agosto 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**28 agosto 2023** Sensible llanto tema gente casa"
+        },
+        {
+          "titulo": "Control el el 11 enero 18.30hrs. Por telemedicina",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el el 11 enero 18.30hrs. Por telemedicina "
+        }
+      ]
+    },
+    {
+      "notaId": "7TcPBQS0CTIrxaXj6btY",
+      "pacienteId": "iTa5qtNcRovXxugHIni1",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "3 marzo 2025",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "3 marzo 2025 Juana Ximena Cubillos Lara 9168010-6 "
+        },
+        {
+          "titulo": "control 21 abril 19.15hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 21 abril 19.15hrs LM por f41.9 desde 3 mar"
+        },
+        {
+          "titulo": "10 marzo 2025 -  registro examenes de laboratorio que me envia por",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "10 marzo 2025: registro examenes de laboratorio qu"
+        },
+        {
+          "titulo": "Control el 2 junio 20:45 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 2 junio 20:45 hrs. Completar tratamient"
+        }
+      ]
+    },
+    {
+      "notaId": "7g9WHEeFNQro10JXiDqR",
+      "pacienteId": "W1AxpJhFxC777ISt4WqW",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "15 agosto 1974 - fecha nacimiento",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "15 agosto 1974 fecha nacimiento 978788175 fonasa t"
+        }
+      ]
+    },
+    {
+      "notaId": "8sAvAV0PRYzfik05wlf8",
+      "pacienteId": "Ozzi6Gyrv8l84NdUzPs6",
+      "pacienteNombre": "Cecilia Almonacid Fierro",
+      "cantidadControles": 7,
+      "controles": [
+        {
+          "titulo": "22-11-61",
+          "fecha": "2061-11-22",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "22-11-61 60 maule sur sn colbun Cecyal08@gmail.com"
+        },
+        {
+          "titulo": "12 mayo 2022 -  control por tele. mejor en general, sin crisis de",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "12 mayo 2022: control por tele. mejor en general, "
+        },
+        {
+          "titulo": "Control 22 agosto 19.15 hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 22 agosto 19.15 hrs Solicito tsh t4l, plp "
+        },
+        {
+          "titulo": "28 nov 2022",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "28 nov 2022: Dieta desinflamatoria Eda: hernia hia"
+        },
+        {
+          "titulo": "Control 7 junio 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 7 junio 18.30hrs. Lexpapro 20mg: 1 cada no"
+        },
+        {
+          "titulo": "Control el 14 marzo a las 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 14 marzo a las 20.00hrs. Mantener escit"
+        },
+        {
+          "titulo": "11-09-2025",
+          "fecha": "2025-09-11",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "11-09-2025 Vit D 25-OH: 34.4 ng/mL | Ac. Fól. Sér."
+        }
+      ]
+    },
+    {
+      "notaId": "8wf2kxc0uZa2V8veHXR0",
+      "pacienteId": "UUczZImAkC0I4xKA3ojL",
+      "pacienteNombre": "Maria Antonieta Adasme Apaz",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "control en 1 mes: 10 sept 10.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control en 1 mes: 10 sept 10.45hrs.  deroxat cr 12"
+        },
+        {
+          "titulo": "Control el 29 octubre 11.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 29 octubre 11.30hrs.  Puede usar bisgli"
+        }
+      ]
+    },
+    {
+      "notaId": "9X1diq58EDHwP4q8wpo3",
+      "pacienteId": "TR47q7c1GWRdECuZfRnI",
+      "pacienteNombre": "Cecilia Novoa Herrera",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "27 jul 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **27 jul 2023** > > Manda lab x mail > > Fecha l"
+        }
+      ]
+    },
+    {
+      "notaId": "9j1vpehSMmhX8Lply60W",
+      "pacienteId": "IKdf9GR8PvQcxre0Dt7q",
+      "pacienteNombre": "Sharay Saavedra Garrido",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "14 jun 2004",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "14 jun 2004 Villa Doña Ignacia 3, pje. Valle del S"
+        }
+      ]
+    },
+    {
+      "notaId": "ACPSY5xbFHbKb0jviQjV",
+      "pacienteId": "t8c5ZuqSbMGYoRZvYtjl",
+      "pacienteNombre": "Oscar Carrasco Romero",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "Control 9 sept 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 9 sept 20.00hrs. Ipran 20mgvo: 1 cada maña"
+        },
+        {
+          "titulo": "9 septiembre 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**9 septiembre 2024** Hace aprox 1 mes sin farmaco"
+        }
+      ]
+    },
+    {
+      "notaId": "AFdSWH54WzzAvXu8gBRu",
+      "pacienteId": "XweJKNY4pedyVHdIplbJ",
+      "pacienteNombre": "Trinidad Santa María Highet",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control 25 abril 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 25 abril 20.45hrs. Receta x6 meses. Manten"
+        }
+      ]
+    },
+    {
+      "notaId": "AFlPqwKmzOxjyNA6QxzJ",
+      "pacienteId": "athSEsj56Eoqw09Cj3ug",
+      "pacienteNombre": "Alejandra Lucero Flores",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "7-9-82",
+          "fecha": "2082-09-07",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "7-9-82 31 1/2 Oriente A 1429, Talca janitalucero@g"
+        },
+        {
+          "titulo": "Control 16 septiembre 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 16 septiembre 19.15hrs. Solicito exámenes "
+        },
+        {
+          "titulo": "26 de agosto de 2024 -  seguimiento x mail. Ansiedad al aumentar sostac, ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "lunes, 26 de agosto de 2024 : seguimiento x mail. "
+        },
+        {
+          "titulo": "17 dic 2024 -  osmetil 18mg vo: 1 en la mañana por cuatro dias, ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "17 dic 2024: osmetil 18mg vo: 1 en la mañana por c"
+        },
+        {
+          "titulo": "control: 24 febrero a las 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control: 24 febrero a las 20.00hrs. mantener psico"
+        }
+      ]
+    },
+    {
+      "notaId": "AbTyqYVBLENxwhGVdn24",
+      "pacienteId": "EC47BCXiIZFlObshFtV2",
+      "pacienteNombre": "Romina Tamara Alarcon Valdes",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control el 13 de febrero a las 18.30 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 13 de febrero a las 18.30 hrs. Lme desd"
+        }
+      ]
+    },
+    {
+      "notaId": "AyXl6JLAdYLoDthx7nmX",
+      "pacienteId": "CARjB9MqNBoDCUYC7z71",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "2 septiembre 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**2 septiembre 2024** Usando microdosis de psilosc"
+        }
+      ]
+    },
+    {
+      "notaId": "B2mXCi1UF1jAOWmqXnac",
+      "pacienteId": "sHMRQPzFL03yzjdTZHNG",
+      "pacienteNombre": "Daniela Soto Salazar",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "8 sept 2003",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "8 sept 2003 San rafael norte sector los aromos par"
+        }
+      ]
+    },
+    {
+      "notaId": "BC33GlsDrsSvIqbRkl1f",
+      "pacienteId": "mm0sDYZbcymQYpG1mGiP",
+      "pacienteNombre": "Rogelio Aravena Alarcon",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "8-5-64",
+          "fecha": "2064-05-08",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "8-5-64 6 norte 16 1/2 orte 1661. Fonasa 569 569214"
+        },
+        {
+          "titulo": "Control 23 mayo 20.45hrs. Por telemedicina.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 23 mayo 20.45hrs. Por telemedicina. Recomi"
+        }
+      ]
+    },
+    {
+      "notaId": "BEzhqCgFjDRb4FqG6o7a",
+      "pacienteId": "iyodFIv1O5iDwB2Sz72u",
+      "pacienteNombre": "Marisol Mendoza Castro",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "21 oct 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **21 oct 2021** tele control: > > despierta solo"
+        },
+        {
+          "titulo": "Control 21 julio 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 21 julio 18.30hrs. Escitalopram 10mg vo: m"
+        }
+      ]
+    },
+    {
+      "notaId": "BVQf6V8Cqul6dmt3CXEh",
+      "pacienteId": "LYNt2O29ClfOI26gbxBq",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "control 13 enero 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 13 enero 20.45hrs. mantener psicoterapia s"
+        },
+        {
+          "titulo": "11 febrero 2025 -  me envía resultado de laboratorio, realizado el 1",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "11 febrero 2025: me envía resultado de laboratorio"
+        }
+      ]
+    },
+    {
+      "notaId": "BWmDcHQSz7qV0GtzQva7",
+      "pacienteId": "QVKTfVZm2C8y9k0Qyu2H",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "30-4-96",
+          "fecha": "2096-04-30",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "30-4-96 Cinco sur 3910 Talca 28 años Camirojgall@g"
+        },
+        {
+          "titulo": "5 feb 2025 -  reviso laboratorio, examenes normales, destaca vi",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "5 feb 2025: reviso laboratorio, examenes normales,"
+        }
+      ]
+    },
+    {
+      "notaId": "BlihwozdYgJf4fYaEZCZ",
+      "pacienteId": "EcKbRJ8YCuhoPe4ezaHx",
+      "pacienteNombre": "Jorge Eduardo Jorquera Sepúlveda",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "22 noviembre 1960 - FN",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "22 noviembre 1960 FN vive con: esposa Maria Ines, "
+        },
+        {
+          "titulo": "8-7-11 - 498-4 ¿Qué edad tiene don Jorge? 64 ¿La fecha de n",
+          "fecha": "2011-07-08",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "8-7-11 498-4 ¿Qué edad tiene don Jorge? 64 ¿La fec"
+        },
+        {
+          "titulo": "control en 2 semanas: control el 16 julio a las 11.30hrs., en caso que inicie antes en psiquiatria del hospital, continuar los controles ahi en hospital.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control en 2 semanas: control el 16 julio a las 11"
+        }
+      ]
+    },
+    {
+      "notaId": "Bt1CD8EzSc9twQHDPPn2",
+      "pacienteId": "PdwmeARLWIIsRi63V1G7",
+      "pacienteNombre": "Leonardo Prieto Valenzuela",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "7 nov 1969",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "7 nov 1969 18 y media poniente 0585 569 87438795 ("
+        },
+        {
+          "titulo": "15 jul 2025 -  indico medio lorazepam cada doce hrs por 2 dias y",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "15 jul 2025: indico medio lorazepam cada doce hrs "
+        }
+      ]
+    },
+    {
+      "notaId": "C5JowQd67UznpwHqCUYl",
+      "pacienteId": "6ZLHEETJvAflJ9pVuwuO",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "19-9-52",
+          "fecha": "2052-09-19",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "19-9-52 villa los nogales 2 11 sur 168 talca colme"
+        },
+        {
+          "titulo": "27/1/22 - a cerrar el espacio las paredes. culkpa padre ex m",
+          "fecha": "2022-01-27",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "27/1/22 a cerrar el espacio las paredes. culkpa pa"
+        },
+        {
+          "titulo": "28 feb 2022 -  control VLL",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "28 feb 2022: control VLL hgma 12 enero 115000 plaq"
+        },
+        {
+          "titulo": "Control presencial: 11 julio a las 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control presencial: 11 julio a las 20.00hrs. Solic"
+        }
+      ]
+    },
+    {
+      "notaId": "CBV36J55yGhZwJIq4me4",
+      "pacienteId": "bUjI6BrKZJplMgd25cLQ",
+      "pacienteNombre": "Camila Pinilla",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "31/7/1989",
+          "fecha": "1989-07-31",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "31/7/1989 cpinilla.h89@gmail.com Balmaceda 615 laj"
+        },
+        {
+          "titulo": "Control en 1 mes: 19 nov a las 17.00hrs .",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control en 1 mes: 19 nov a las 17.00hrs . Mantener"
+        }
+      ]
+    },
+    {
+      "notaId": "CK7XPXIlzcFk4WN6iinH",
+      "pacienteId": "cJ6YBr019NCuDZqnIdOF",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "Control 16 diciembre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 16 diciembre 18.30hrs. Mantener psicoterap"
+        },
+        {
+          "titulo": "control 14 abril 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 14 abril 20.00hrs. subelan OR 225mg vo: 1 "
+        }
+      ]
+    },
+    {
+      "notaId": "COknuvJZyv8Wni36OPA8",
+      "pacienteId": "igVSvutLaZCCYNdut4Fp",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "2 marzo 1966",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "2 marzo 1966 Banmedica Loteo las acacias parcela 1"
+        },
+        {
+          "titulo": "Control psiq 4 marzo 18.30hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq 4 marzo 18.30hrs Wellbutrin XL 150mgv"
+        },
+        {
+          "titulo": "Control 19 agosto 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 19 agosto 19.15hrs. Ectiban 20mgvo: 1 cada"
+        },
+        {
+          "titulo": "3 abril 2025 -  envio receta de osmetil 27mg por 2 cajas, ya que ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "3 abril 2025: envio receta de osmetil 27mg por 2 c"
+        }
+      ]
+    },
+    {
+      "notaId": "CbzUtxctme9U4L4pJu5K",
+      "pacienteId": "dEX63ZuG7EiWtcxOt2u7",
+      "pacienteNombre": "Daniela Calquin Valdés",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "14 mayo 1982",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "14 mayo 1982 992115516 danielacalquin@gmail.com Tb"
+        }
+      ]
+    },
+    {
+      "notaId": "Ce62vtgyRVGH9lQLxsxK",
+      "pacienteId": "MkXzuZbkfm16SliZHKqC",
+      "pacienteNombre": "Romina Andrea Gonzalez Marín",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "Control psiq en tres meses: 18 marzo 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq en tres meses: 18 marzo 19.15hrs. Man"
+        },
+        {
+          "titulo": "20 enero 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**20 enero 2024**: reviso lab, hay que repetir pti"
+        },
+        {
+          "titulo": "25 marzo 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**25 marzo 2024** control presencial Subelan or 22"
+        }
+      ]
+    },
+    {
+      "notaId": "CtuBo7GDmiGbsdnCqale",
+      "pacienteId": "d4vVtStd1vfoZ3xPuDzV",
+      "pacienteNombre": "Belen Saavedra Maturana",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control 6 nov 19.15hrs presencial",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 6 nov 19.15hrs presencial Subir de nuevo a"
+        }
+      ]
+    },
+    {
+      "notaId": "DTbmZrUfUumJaDroBb8B",
+      "pacienteId": "faDIGjVxDoeHjP8eak2h",
+      "pacienteNombre": "Fernanda Mejias Maripangui",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "6-8-87",
+          "fecha": "2087-08-06",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "6-8-87 999140601 Fermejias.maripangui@gmail.com 53"
+        },
+        {
+          "titulo": "Control 5 sept 2045hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 5 sept 2045hrs Lmer f412 desde 1 agosto po"
+        },
+        {
+          "titulo": "Control 29 septiembre 9.00hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 29 septiembre 9.00hrs LMER vigente Ectiban"
+        },
+        {
+          "titulo": "Control 30 marzo 9.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 30 marzo 9.00hrs. Ectiban 20mg vo: 1 cada "
+        }
+      ]
+    },
+    {
+      "notaId": "DU4tSBtSlpu6EtKU5RTc",
+      "pacienteId": "giXDWMkL03VrybVAcPHf",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 8,
+      "controles": [
+        {
+          "titulo": "14 enero 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "# **14 enero 2021**  flojera, maxi mas tranquilo, "
+        },
+        {
+          "titulo": "control el 27 mayo a las 19.30",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control el 27 mayo a las 19.30 # **17 mayo 2021:**"
+        },
+        {
+          "titulo": "control 24 feb 6.45",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 24 feb 6.45 eventual envio de dato de tera"
+        },
+        {
+          "titulo": "25 feb 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "# **25 feb 2022** eutimica, sin rams,adherente a e"
+        },
+        {
+          "titulo": "Control el 20 sept 9.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 20 sept 9.00hrs. Enviarme reporte una s"
+        },
+        {
+          "titulo": "control 5 mayo 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 5 mayo 20.45hrs. sugiero que hagan terapia"
+        },
+        {
+          "titulo": "control 28 abril 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 28 abril 20.45hrs. lme por f32.2 por 12 di"
+        },
+        {
+          "titulo": "control: 9 junio 20.00hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control: 9 junio 20.00hrs dilasedan 5 mg vo: 1/2 e"
+        }
+      ]
+    },
+    {
+      "notaId": "Dbz14bRbHl1LwnbkHVw8",
+      "pacienteId": "FdKlke4ZUdPrgY1v1jpf",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "7 julio 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "==**7 julio 2024**== ==Estable en general== ==Sin "
+        },
+        {
+          "titulo": "10 octubre 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "==**10 octubre 2024**== ==control telemedicina== ="
+        },
+        {
+          "titulo": "21 marzo 2025",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "# ==**21 marzo 2025**== ==Medicamentos actuales== "
+        }
+      ]
+    },
+    {
+      "notaId": "DeEHwJxpv9NNR884vC4T",
+      "pacienteId": "P4R2l44wI77LPsPqfalz",
+      "pacienteNombre": "Luz Javiera Morales Silva",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "18-5-91",
+          "fecha": "2091-05-18",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "18-5-91 32 años 946112354 javierams26@gmail.com fo"
+        }
+      ]
+    },
+    {
+      "notaId": "Dg7YjvRgzOywL7c8CWzW",
+      "pacienteId": "iwEbqoIUHhno1n2aMaZu",
+      "pacienteNombre": "Marta Vargas Diaz",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "control 13 abril a las 10.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 13 abril a las 10.00hrs. solicito exámenes"
+        },
+        {
+          "titulo": "3 abril 2025 -  reviso examenes de laboratorio. **ldl 146**. glic",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "3 abril 2025: reviso examenes de laboratorio. **ld"
+        }
+      ]
+    },
+    {
+      "notaId": "EK939U4I9Ton6xJJtzg2",
+      "pacienteId": "hV2I6QReKalwczeaB49r",
+      "pacienteNombre": "Gonzalo Patricio Crisostomo Roa",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "29-12-97",
+          "fecha": "2097-12-29",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "29-12-97 25 años 3 sur esquina tarapaca 302, parra"
+        }
+      ]
+    },
+    {
+      "notaId": "F5ZTQbYsMKbw7HTQlGF0",
+      "pacienteId": "bzTBWXwnUjFyGzKe7R53",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control en 1 mes: el 6 agosto a las 10.00hrs, venir acompañada de Julio.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control en 1 mes: el 6 agosto a las 10.00hrs, veni"
+        }
+      ]
+    },
+    {
+      "notaId": "FGXk9Bz0liRyYvmSelyB",
+      "pacienteId": "l9AAivYOXvIfZEiTyDzf",
+      "pacienteNombre": "Vanessa Valentina Sepulveda Sotomayor",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control: 19 nov 14.00hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 19 nov 14.00hrs Pendiente enviarme exámen"
+        }
+      ]
+    },
+    {
+      "notaId": "Fi7co360SwvQnJcAEZ3Y",
+      "pacienteId": "8ertU5GUTWc1dE4Ygh6v",
+      "pacienteNombre": "Maryelin Rojas Orellana",
+      "cantidadControles": 6,
+      "controles": [
+        {
+          "titulo": "17 oct 1986",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "17 oct 1986 37 años Doña antonia 3, calle provinci"
+        },
+        {
+          "titulo": "Control psiq 12 febrero a las 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq 12 febrero a las 20.00hrs. Solicito e"
+        },
+        {
+          "titulo": "12 feb 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**12 feb 2024** Con resfrio comun, algo obstruida,"
+        },
+        {
+          "titulo": "Control 25 marzo 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 25 marzo 20.00hrs. Oriento a medidas de ad"
+        },
+        {
+          "titulo": "Control 6 mayo 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 6 mayo 20.00hrs. Sertac 50mgvo: 1 cada mañ"
+        },
+        {
+          "titulo": "Control 24 junio 20.00hrs. Ft 21 jun.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 24 junio 20.00hrs. Ft 21 jun. **24-6-24** "
+        }
+      ]
+    },
+    {
+      "notaId": "GcaUGvyzyF7Q0hbFrQrz",
+      "pacienteId": "6DIs0eCvnft0iJkYDeth",
+      "pacienteNombre": "Lucas Henriquez Briones",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control: 2 enero 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control: 2 enero 18.30hrs. ELONTRIL XL 150MG VO: 1"
+        }
+      ]
+    },
+    {
+      "notaId": "GrJ4Jd9zlnEww8JqX7te",
+      "pacienteId": "pgIKbQcCeIBAWD6OwZ7C",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "Control 13 mayo 18.30hrs, presencial.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 13 mayo 18.30hrs, presencial. Zubam ODT 10"
+        },
+        {
+          "titulo": "Control 14 julio 20:15 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 14 julio 20:15 hrs. Mantener psicoterapia."
+        }
+      ]
+    },
+    {
+      "notaId": "HGNBfs5KmMayieUrOHuK",
+      "pacienteId": "JcRSELKzg91UfUq75Lco",
+      "pacienteNombre": "Mario Bravo Toledo",
+      "cantidadControles": 9,
+      "controles": [
+        {
+          "titulo": "11 noviembre 2020",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **11 noviembre 2020** > > **Telepsiquiatría** > "
+        },
+        {
+          "titulo": "26 nov 2020",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **26 nov 2020** > > Telepsiquiatría > > Mejor en"
+        },
+        {
+          "titulo": "17 diciembre 2020",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **17 diciembre 2020** > > Acompañado de hija, co"
+        },
+        {
+          "titulo": "7 enero 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **7 enero 2021** > > con su hija, TACTAP normal "
+        },
+        {
+          "titulo": "4 feb 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **4 feb 2021** > > lo operan el jueves 11 feb, m"
+        },
+        {
+          "titulo": "11 feb 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **11 feb 2021**: envío informe médico vía mail a"
+        },
+        {
+          "titulo": "15 marzo 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **15 marzo 2021**: LME por tno mixto ansioso dep"
+        },
+        {
+          "titulo": "7 agosto 2023",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "7 agosto 2023 Envia esquema farmac que usa: Qtp 25"
+        },
+        {
+          "titulo": "Control psiquiatra 19 febrero 19.15hrs. Presencial",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiquiatra 19 febrero 19.15hrs. Presencial"
+        }
+      ]
+    },
+    {
+      "notaId": "HP3FUW31H4Az9UapuWZ9",
+      "pacienteId": "Jt3YsjOI5wWc2kZvsKwJ",
+      "pacienteNombre": "Carol Castillo Astaburuaga",
+      "cantidadControles": 11,
+      "controles": [
+        {
+          "titulo": "2 diciembre 2020",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "2 diciembre 2020 Mantiene irritabilidad, dificulta"
+        },
+        {
+          "titulo": "23 diciembre 2020",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "23 diciembre 2020 Mejor en general, tomando wellbu"
+        },
+        {
+          "titulo": "7 enero 2021",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "7 enero 2021 Regular en general a pesar de licenci"
+        },
+        {
+          "titulo": "20 enero 2021",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "20 enero 2021 psicoterapia semanal, cedió taquicar"
+        },
+        {
+          "titulo": "17 feb 2021",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "17 feb 2021 ha estado con psicoterapia semanal, lo"
+        },
+        {
+          "titulo": "12 mayo 2021 -  viajando desde stgo a talca, estuvo por 3 días. D",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "12 mayo 2021: viajando desde stgo a talca, estuvo "
+        },
+        {
+          "titulo": "16/8/21 -  envio receta aradix 10mgvo 1-0-0 por 30 días.",
+          "fecha": "2021-08-16",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "16/8/21: envio receta aradix 10mgvo 1-0-0 por 30 d"
+        },
+        {
+          "titulo": "23 sept 2021",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "23 sept 2021: mucho mejor en general, preparada pa"
+        },
+        {
+          "titulo": "28 octubre 2021 -  bien en general, volvio al trabajo hace 2 semanas",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "28 octubre 2021: bien en general, volvio al trabaj"
+        },
+        {
+          "titulo": "3 febrero 2022 -  bien en general, en noviembre 2021 tuvo sd vertig",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "3 febrero 2022: bien en general, en noviembre 2021"
+        },
+        {
+          "titulo": "27-3-23",
+          "fecha": "2023-03-27",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "27-3-23 Presencial Bien en general En inicio marzo"
+        }
+      ]
+    },
+    {
+      "notaId": "HYnbNRgdqDWCTiFq0qN8",
+      "pacienteId": "A1PErYEkTFTv8ItdkaTY",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 14,
+      "controles": [
+        {
+          "titulo": "5-5-67",
+          "fecha": "2067-05-05",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "5-5-67 Dirección: Fundo San armando, Parral Edad 5"
+        },
+        {
+          "titulo": "Control mierc 13 sept 19.15 hrs telemedicina.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control mierc 13 sept 19.15 hrs telemedicina. Soli"
+        },
+        {
+          "titulo": "Control por telemedicina el 9 noviembre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control por telemedicina el 9 noviembre 18.30hrs. "
+        },
+        {
+          "titulo": "9 nov 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**9 nov 2023** Litio 300mg vo: 1-0-1 Levotiroxina "
+        },
+        {
+          "titulo": "Control 18 abril 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 18 abril 18.30hrs. nota * Tendrá TDA? O es"
+        },
+        {
+          "titulo": "Control 18 mayo a las 8.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 18 mayo a las 8.00hrs. - Aroxat CR 25mgvo:"
+        },
+        {
+          "titulo": "29 agosto 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**29 agosto 2024** Padre con demencia senil . Refi"
+        },
+        {
+          "titulo": "Control sobrecupo, debe estar acompañada de su hija: domingo 1 de septiembre 10.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control sobrecupo, debe estar acompañada de su hij"
+        },
+        {
+          "titulo": "Control 21 noviembre 20.45 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 21 noviembre 20.45 hrs. Aroxat CR 25mg vo:"
+        },
+        {
+          "titulo": "1 diciembre 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**1 diciembre 2024** seguimiento laboratorio 29 no"
+        },
+        {
+          "titulo": "control 2 enero 19.15hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 2 enero 19.15hrs litio 450mg vo: 1 cada do"
+        },
+        {
+          "titulo": "Control sobrecupo el 26 enero a las 9.00hrs AM, acompañada.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control sobrecupo el 26 enero a las 9.00hrs AM, ac"
+        },
+        {
+          "titulo": "24 enero 2025",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "24 enero 2025: seguimiento con Oscar oscar le ha e"
+        },
+        {
+          "titulo": "control 26 febrero 19.15 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 26 febrero 19.15 hrs. Psicoterapia pendien"
+        }
+      ]
+    },
+    {
+      "notaId": "HvKjzdGx9Bxh7Y1A18di",
+      "pacienteId": "sdVVI7jFVqGP9gsaNrIu",
+      "pacienteNombre": "Soledad Alcaíno Cifuentes",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "13/4/2001",
+          "fecha": "2001-04-13",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "13/4/2001 8 norte #1339\t956573747 Talca\t, ahi vive"
+        }
+      ]
+    },
+    {
+      "notaId": "I1uDnVHN3NUN5tmcl940",
+      "pacienteId": "K9yylv0L8BcYjIRU3MCL",
+      "pacienteNombre": "Maria Felisa Rojas Santander",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "6-2-1952",
+          "fecha": "1952-02-06",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "6-2-1952 Villa rio claro pje los paltos 052, Talca"
+        },
+        {
+          "titulo": "Control 27 junio 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 27 junio 19.15hrs. Mirtazapina BD 30mg vo:"
+        },
+        {
+          "titulo": "13 febrero 2025",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**13 febrero 2025** acompañada de su hija comentan"
+        }
+      ]
+    },
+    {
+      "notaId": "I5vLRzFXuToJGTrVNrPi",
+      "pacienteId": "Rc8zbPVca8zfj836yRqJ",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 6,
+      "controles": [
+        {
+          "titulo": "26 abril 1990",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "26 abril 1990 Psicologa, prog mi abogado (apreciac"
+        },
+        {
+          "titulo": "Control psiquiatra 25 enero 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiquiatra 25 enero 19.15hrs. Mantener psi"
+        },
+        {
+          "titulo": "Control jueves 23 mayo 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control jueves 23 mayo 20.00hrs. Mantener psicoter"
+        },
+        {
+          "titulo": "23 mayo 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**23 mayo 2024** Bien cognitivo Sigue psicoterapia"
+        },
+        {
+          "titulo": "Control 21 noviembre 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 21 noviembre 19.15hrs. Mantener farmacos: "
+        },
+        {
+          "titulo": "control 22 mayo a las 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 22 mayo a las 20.45hrs. wellbutrin XL 300m"
+        }
+      ]
+    },
+    {
+      "notaId": "IIIQxB3K7KVOgoR5x9sG",
+      "pacienteId": "T6tIRVZ4JWrTgmPCb0JI",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control 27 agosto a las 9.15hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 27 agosto a las 9.15hrs  Mantener psicoter"
+        }
+      ]
+    },
+    {
+      "notaId": "IMWjGKEHqZcHgEzhOa2J",
+      "pacienteId": "FnVZB65jgyComFNylqMY",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control: 5 junio a las 21:00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 5 junio a las 21:00hrs. Mantener psicoter"
+        }
+      ]
+    },
+    {
+      "notaId": "IWa4tyv5Ni8rZhr79pRE",
+      "pacienteId": "zIfOZQv6RBej3YouEhNS",
+      "pacienteNombre": "Sofia Sanchez Vega",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "6 mayo 2021 -  eutímica, ansiedad comprensible por carga e incer",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "6 mayo 2021: eutímica, ansiedad comprensible por c"
+        },
+        {
+          "titulo": "control 29 jul 2021 siete y media.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 29 jul 2021 siete y media. oriento a difer"
+        },
+        {
+          "titulo": "19 nov 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**19 nov 2021**: indico aradix 10mgvo mitad 3 dias"
+        },
+        {
+          "titulo": "Control 24 oct 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 24 oct 20.00hrs. Mantener ipran 10mg dia *"
+        },
+        {
+          "titulo": "13 feb 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**13 feb 2023** Presencial Bien en general Termino"
+        }
+      ]
+    },
+    {
+      "notaId": "IlOMajwBMRByPfsjOROC",
+      "pacienteId": "hqiHzrczAtVp7qifh7Vx",
+      "pacienteNombre": "Alejandra Gatica Vallejos",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "11-04-1980",
+          "fecha": "1980-04-11",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "11-04-1980 Algava.1980@gmail.com Divina providenci"
+        },
+        {
+          "titulo": "5 febrero 2025 -  me refiere por mail que tiene samexid de 30mg. in",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "5 febrero 2025: me refiere por mail que tiene same"
+        },
+        {
+          "titulo": "8 febrero 2025 -  empezó samexid hace una semana y e depurol de 75 ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "8 febrero 2025: empezó samexid hace una semana y e"
+        },
+        {
+          "titulo": "7 abril 2025",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "# **7 abril 2025** Cedió hipersensibilidad afectiv"
+        }
+      ]
+    },
+    {
+      "notaId": "JCddA8QrkI2bEk38ZdR2",
+      "pacienteId": "3neR3UMfArki1K1Sz4PR",
+      "pacienteNombre": "Alberto Guerrero Bustamante",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "25 enero 1963",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "25 enero 1963 17 norte 14 orte 2062 Talca Fonasa 9"
+        },
+        {
+          "titulo": "Control psiq presencial 29 de enero a las 21.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq presencial 29 de enero a las 21.30hrs"
+        },
+        {
+          "titulo": "Control 24 junio 19.15hrs. Presencial.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 24 junio 19.15hrs. Presencial. Mantener ps"
+        }
+      ]
+    },
+    {
+      "notaId": "JTj1w7SbwilMugch90UX",
+      "pacienteId": "LRDp9ebDvh4gCmyQUK1l",
+      "pacienteNombre": "Fresia Gonzalez Suarez",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "02/08/1937 - fecha nacimiento",
+          "fecha": "1937-08-02",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "02/08/1937 fecha nacimiento fran.cancino0209@gmail"
+        },
+        {
+          "titulo": "25 noviembre 2024 - , recibo por mail informe de rm cerebral, realizad",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "25 noviembre 2024, recibo por mail informe de rm c"
+        }
+      ]
+    },
+    {
+      "notaId": "JoDKfACs82y0sXJPhEHx",
+      "pacienteId": "2RqtJPdzaeyFgXaZxixK",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "28 julio 1952",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "28 julio 1952 71 Camino real 560 Linares 982153578"
+        },
+        {
+          "titulo": "Control 22 abril 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 22 abril 18.30hrs. Venlavitae 150mg vo or:"
+        },
+        {
+          "titulo": "12-6-24",
+          "fecha": "2024-06-12",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "12-6-24 Seguimiento telefonico Miedo, ansiedad, Da"
+        },
+        {
+          "titulo": "Control 4 agosto 11.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 4 agosto 11.00hrs. Venlavitae 150mg vo: 2 "
+        }
+      ]
+    },
+    {
+      "notaId": "KcTtuzdRhARCXrud1k72",
+      "pacienteId": "nZVkCuM3dux1ZRyTrEUW",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "3 marzo 1984 - fecha nacimiento",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "3 marzo 1984 fecha nacimiento 14 Sur 696, cooperat"
+        }
+      ]
+    },
+    {
+      "notaId": "KrewlN6951MmGJI18EY2",
+      "pacienteId": "MM0GiM13LUtCW1dvvJu6",
+      "pacienteNombre": "Simone Lambert Díaz",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "control: 20 marzo 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control: 20 marzo 20.45hrs. Enviarme feedback sema"
+        },
+        {
+          "titulo": "1 marzo 2025 -  informa por mail que no ha tenido resultados con ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "1 marzo 2025: informa por mail que no ha tenido re"
+        }
+      ]
+    },
+    {
+      "notaId": "L7v0vLgYZ5FWlk5eZEti",
+      "pacienteId": "77MyUaSFw9lE4vhLflkD",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control: 26 mayo 19:15 hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 26 mayo 19:15 hrs Sostac 20mg vía oral: 1"
+        }
+      ]
+    },
+    {
+      "notaId": "LZ3RpzTaSXcL3MtQwRDn",
+      "pacienteId": "1jZHsYpd8Nhqk0RR8pUU",
+      "pacienteNombre": "Angel Valenzuela Gonzalez",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control 21 abril 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 21 abril 18.30hrs. solicito exámenes de la"
+        }
+      ]
+    },
+    {
+      "notaId": "MQyWA6J4B8gx7jbXNiwI",
+      "pacienteId": "g8sqL1FNyAxAP47TMT1A",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "2 marzo 2005",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "2 marzo 2005 42717226 Madre: Victoria **anamnesis "
+        }
+      ]
+    },
+    {
+      "notaId": "Mefy2NxFfBNUxla8Ze6b",
+      "pacienteId": "gwsRHvAW0taN6lpiw8Xz",
+      "pacienteNombre": "Valentina Moya Roa",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "29/12/2002",
+          "fecha": "2002-12-29",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "29/12/2002 valentinamoyaroa@gmail.com jose.moya@nu"
+        },
+        {
+          "titulo": "Control 8 abril 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 8 abril 19.15hrs. Dilasedan 10mg cada maña"
+        }
+      ]
+    },
+    {
+      "notaId": "MlBGqeVd1AxYXhRtO9ca",
+      "pacienteId": "zEWkRw9hkZWISZvE0Ugj",
+      "pacienteNombre": "Cynthia Andrea Villarroel Acuña",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "24 dic 1966",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "24 dic 1966 Villa el encanto 4, pje isla esmeralda"
+        },
+        {
+          "titulo": "Control 16 noviembre 20.00hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 16 noviembre 20.00hrs Mantener psicoterapi"
+        },
+        {
+          "titulo": "Control 7 marzo 2024 a las 18:30hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 7 marzo 2024 a las 18:30hrs Mantener psico"
+        }
+      ]
+    },
+    {
+      "notaId": "NIsISpaxHbJFcvY6h82T",
+      "pacienteId": "kCdlKsApvTW4HJ7lSMw3",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "6-1-2005",
+          "fecha": "2005-01-06",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "6-1-2005 18 Santa maria del boldo avda circunvalac"
+        },
+        {
+          "titulo": "control 21 jun 18.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 21 jun 18.15hrs. psicoterapia por ahora pr"
+        },
+        {
+          "titulo": "21 jun 2023",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "21 jun 2023: Termino pololo Nauseas vomitos asocia"
+        },
+        {
+          "titulo": "Control 25 enero 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 25 enero 18.30hrs. No usar minfel por al m"
+        }
+      ]
+    },
+    {
+      "notaId": "NJD2n1nbr0InnrkgDiMm",
+      "pacienteId": "hXLIFnLjIPUfcB8iGYxe",
+      "pacienteNombre": "Ricardo Espinoza Manriquez",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "16 junio 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **16 junio 2022**, control videollamada: > > Com"
+        },
+        {
+          "titulo": "Control lunes 17 abril a las 19:15 hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control lunes 17 abril a las 19:15 hrs Reporte en "
+        }
+      ]
+    },
+    {
+      "notaId": "NhELC39cYdt7S9xpQSDJ",
+      "pacienteId": "KBbWpv0sUjjHjpg6PVRb",
+      "pacienteNombre": "Jesus Salinas_",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "24 sept 1991 - fn",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "24 sept 1991 fn 997154177 consalud vive con: solo."
+        },
+        {
+          "titulo": "control 23 enero 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 23 enero 20.00hrs. solicito hemograma, tsh"
+        }
+      ]
+    },
+    {
+      "notaId": "NwA3GFFBsnck6ZfHfvri",
+      "pacienteId": "BRjnQbaKw95QMqtGnNQR",
+      "pacienteNombre": "Diego Fuentes Perez",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "7 sept 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**7 sept 2022** Diego Fuentes Perez 18252513-8 30 "
+        }
+      ]
+    },
+    {
+      "notaId": "OqHZMYuP93fnJfEmMCke",
+      "pacienteId": "GaDHizdKUQaCQPUtVb7L",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "12-3-1982",
+          "fecha": "1982-03-12",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "12-3-1982 Avda las rastras km6.5 condominio polo d"
+        },
+        {
+          "titulo": "Control 11 noviembre 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 11 noviembre 20.45hrs. Psicoterapia Samexi"
+        }
+      ]
+    },
+    {
+      "notaId": "P9Xk3Vmw7k5FeRsai2Pm",
+      "pacienteId": "bEyVKA1RXvi7J6uWcRkn",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control 22 octubre 11.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 22 octubre 11.30hrs.  Solicito exámenes de"
+        }
+      ]
+    },
+    {
+      "notaId": "PHy6dTyOjpriW4FKkGuw",
+      "pacienteId": "DdrNNOVgVro8WGRdznGb",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control en 2 semanas: 6 agosto 9.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control en 2 semanas: 6 agosto 9.15hrs. Psicoterap"
+        }
+      ]
+    },
+    {
+      "notaId": "PxcCBRif2WYK04QHEMbG",
+      "pacienteId": "P0qNLWLXk540tamPPkVn",
+      "pacienteNombre": "Felipe Nuñez Varas",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control 12 diciembre 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 12 diciembre 20.00hrs. ectiban 10mg vo: ½ "
+        }
+      ]
+    },
+    {
+      "notaId": "QgIIvIJPbazdQEbLn0Mi",
+      "pacienteId": "yRgJ5PQ2F423j3EaK1tc",
+      "pacienteNombre": "Sylvia Guerrero Veliz",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "13 marzo 1985",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "13 marzo 1985 16002388-0 Pje 23 y media oriente 31"
+        }
+      ]
+    },
+    {
+      "notaId": "R32m8Fodx4Rr9J2Go3n0",
+      "pacienteId": "HUlEoNHXVqFhLfHB5QZn",
+      "pacienteNombre": "Nelly Bustos",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "14-4-1994",
+          "fecha": "1994-04-14",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "14-4-1994 30 nelly.bustos.94@gmail.com 49467187 fo"
+        },
+        {
+          "titulo": "Control 2 diciembre 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 2 diciembre 20.45hrs. Ectiban 20mg vo: 1 c"
+        },
+        {
+          "titulo": "Control 3 abril 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 3 abril 20.45hrs. mantener psicoterapia  >"
+        },
+        {
+          "titulo": "control 11 sept 20.45hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 11 sept 20.45hrs Ectiban 20mg vo: 1 cada m"
+        }
+      ]
+    },
+    {
+      "notaId": "S6GNIm5zxUJoex6XbFey",
+      "pacienteId": "MNGx2iH3t1ouH0jeevg9",
+      "pacienteNombre": "Marianela Morales Morales",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "5 jun 1980",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "5 jun 1980 Enfermera ssmaule, vd a px con vmi, cla"
+        },
+        {
+          "titulo": "Control psiq 25 abril 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq 25 abril 19.15hrs. Subelan or 150mgvo"
+        },
+        {
+          "titulo": "Control 10 oct 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 10 oct 20.00hrs. Venlavitae 150mg vo: 1 ca"
+        },
+        {
+          "titulo": "control: 24 abril 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control: 24 abril 19.15hrs. mantener fármcacos: Ve"
+        }
+      ]
+    },
+    {
+      "notaId": "S6zM5Y74bwfeoVd6W2Jb",
+      "pacienteId": "nT8gzdSHpAX6p7wAso8X",
+      "pacienteNombre": "Juan Riquelme Pacheco",
+      "cantidadControles": 6,
+      "controles": [
+        {
+          "titulo": "8-7-86",
+          "fecha": "2086-07-08",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "8-7-86 empedrado, bueras 270, septima region fonas"
+        },
+        {
+          "titulo": "31 marzo 2022 - telemedicina. mejor en general, adherente a tto y ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "31 marzo 2022 telemedicina. mejor en general, adhe"
+        },
+        {
+          "titulo": "4 julio 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**4 julio 2022** control presencial Cumple 1 mes a"
+        },
+        {
+          "titulo": "Control 15 agosto a las 18.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 15 agosto a las 18.00hrs. Mantener psicote"
+        },
+        {
+          "titulo": "Control 12 junio 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 12 junio 18.30hrs. Mantener farmacos Recet"
+        },
+        {
+          "titulo": "Control 2 diciembre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 2 diciembre 18.30hrs. Topiramato 100mgvo: "
+        }
+      ]
+    },
+    {
+      "notaId": "Sq2Gd8Fw7astDayYK5gU",
+      "pacienteId": "ZQomrfdOE6QeaESxrTRE",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "11 enero 1990 - fn",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "11 enero 1990 fn loteo los almendros 453 Talca 950"
+        },
+        {
+          "titulo": "control: 6 agosto 14.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control: 6 agosto 14.45hrs. psicoterapia con Paula"
+        }
+      ]
+    },
+    {
+      "notaId": "TI7GXwcmGdWhz6InhGKk",
+      "pacienteId": "B7XwZ3OtMmtUL3QnaeDt",
+      "pacienteNombre": "Maria Ines Castro Paz",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "26-6-66",
+          "fecha": "2066-06-26",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "26-6-66 98431323 1 y media poniente B, pucara 0321"
+        },
+        {
+          "titulo": "29 agosto 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**29 agosto 2024** Durmiendo bien, sin insomnio co"
+        },
+        {
+          "titulo": "Control 23 diciembre 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 23 diciembre 19.15hrs. Solicito tsh y t4li"
+        }
+      ]
+    },
+    {
+      "notaId": "TYcjgWfzpAKhULpi8gMx",
+      "pacienteId": "FhI5ofSVIbOu9fty4wCH",
+      "pacienteNombre": "Veronica Ramirez Calderon",
+      "cantidadControles": 6,
+      "controles": [
+        {
+          "titulo": "control 3 marzo 18:30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 3 marzo 18:30hrs. no consumir estimulantes"
+        },
+        {
+          "titulo": "5 marzo 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**5 marzo 2022**: altruline siente cierto aplanami"
+        },
+        {
+          "titulo": "23-4-22 -  informa mail alza de peso*",
+          "fecha": "2022-04-23",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "23-4-22: informa mail alza de peso* **30 mayo 2022"
+        },
+        {
+          "titulo": "5-6-22 -  veo resultado lab que me envio el 1 junio: tsh 2.",
+          "fecha": "2022-06-05",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "5-6-22: veo resultado lab que me envio el 1 junio:"
+        },
+        {
+          "titulo": "Control psiq: 31 oct 18.30 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq: 31 oct 18.30 hrs. Levotiroxina 100 m"
+        },
+        {
+          "titulo": "Control 23 sept 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 23 sept 19.15hrs. Enviarme resultado de ex"
+        }
+      ]
+    },
+    {
+      "notaId": "U6LRzyIZY2OU1z10IOmf",
+      "pacienteId": "0YutlamXsmMPGalL24EL",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "27-5-64",
+          "fecha": "2064-05-27",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "27-5-64 Dante.avacbaladron@gmail.com nicolasavacaa"
+        },
+        {
+          "titulo": "Control 4 noviembre a las 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 4 noviembre a las 20.00hrs. Pendiente envi"
+        },
+        {
+          "titulo": "control 6 marzo 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 6 marzo 19.15hrs. Psicoterapia Mantener su"
+        },
+        {
+          "titulo": "control: 7 abril 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control: 7 abril 20.00hrs. solicito nivel de vitam"
+        },
+        {
+          "titulo": "3 abril 2025 -  reviso examenes de laboratorio que me enviaron po",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "3 abril 2025: reviso examenes de laboratorio que m"
+        }
+      ]
+    },
+    {
+      "notaId": "UVOyj3cZykfzZi6JGuxE",
+      "pacienteId": "q6PZyj4xrcq05MXeWxas",
+      "pacienteNombre": "Antonia Javiera Perez Chacon",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "3-3-2006",
+          "fecha": "2006-03-03",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "3-3-2006 anto.perezchacon@gmail.com 986014919 Bris"
+        },
+        {
+          "titulo": "Control 19 agosto 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 19 agosto 20.45hrs. . Seguimiento 4 agosto"
+        },
+        {
+          "titulo": "19 agosto 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**19 agosto 2024** Minfel 54 mg vo: 1 cada mañana "
+        }
+      ]
+    },
+    {
+      "notaId": "WAfjVm9HnmN39tzIfkyo",
+      "pacienteId": "GLkKWq9NE4bIUk1Gh38r",
+      "pacienteNombre": "Lujan Rey Ricci",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "12 abril 1995",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "12 abril 1995 19104992-6 lujanrr.12@gmail.com Avda"
+        },
+        {
+          "titulo": "Control 16 mayo 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 16 mayo 20.00hrs. Lexapro 20mgvo: 1 cada m"
+        },
+        {
+          "titulo": "Control 21 jul 9.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 21 jul 9.30hrs. Mantener lexapro 20mg vo c"
+        }
+      ]
+    },
+    {
+      "notaId": "WUQc5aWhXa81HLTWTLwC",
+      "pacienteId": "UnLJilUqn3nQAxCxv6Hg",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "2 enero 2025",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "2 enero 2025: seguimiento elefonico . lm le duró h"
+        },
+        {
+          "titulo": "Control el 24 de abril a las 18:30 hrs. Se solicita que te acompañe alguien de confianza que te conozca desde la infancia (parte de la sesión, no toda).",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 24 de abril a las 18:30 hrs. Se solicit"
+        }
+      ]
+    },
+    {
+      "notaId": "Wa3EHsV1U7lxRARwxBKY",
+      "pacienteId": "FKYQbldN8lxDN63OwHO4",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 12,
+      "controles": [
+        {
+          "titulo": "18 marzo 2021",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "18 marzo 2021 plan: continuar fono + psicoterapia "
+        },
+        {
+          "titulo": "control el vier 28 junio siete y media, acordamos que diseretara por 10 m8iunmutos tematica de tartamudez, le preguntara a su fono mañana si es prudente ello o no.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control el vier 28 junio siete y media, acordamos "
+        },
+        {
+          "titulo": "28 mayo 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "###### **28 mayo 2021** bien en general, no quiso "
+        },
+        {
+          "titulo": "1 julio 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "###### **1 julio 2021** bien en gneral. boto un ra"
+        },
+        {
+          "titulo": "6 sept 2021 -  reaccion paranoide con personal de U. Indico inic",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "6 sept 2021: reaccion paranoide con personal de U."
+        },
+        {
+          "titulo": "20 sept 2021 -  control telefonico breve comenta que está mas tra",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "20 sept 2021: control telefonico breve comenta que"
+        },
+        {
+          "titulo": "control video. bien en general. sin sintomas significativos de toc, un par de dias tuvo pensamientos obsesivos sexuales con rodo pero se le paso y los cointrolo bien. sueñoi y apetito normales, este ultimo leeevemente aumentado refiere, sin cambios significativos en peso. sin casis, sin id suicida, con familia en general bien, un par de peleas con hermano por tema que le da miedo manejar pero se acepta a si misma.eutimica, adherente a tto y sin rams desde el 6 de diciembre empezo el ectien y esta con 75. se destaca lo tranquila que esta en general. de vacaciones hace 1 semana, termino bien la u, sin rutina mayormente estructurada, hablkamos de lo imprtante de esto ultimo en proximas semanas.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control video. bien en general. sin sintomas signi"
+        },
+        {
+          "titulo": "Control agosto 2022: bien en general, adherente a tto y sin rams, bien del toc, algunas palpitaciones, mejor descartar e indico holter. me lo envia el 7 sept 2022: normal.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control agosto 2022: bien en general, adherente a "
+        },
+        {
+          "titulo": "Control tele 12 abril 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control tele 12 abril 18.30hrs. Mantener subelan O"
+        },
+        {
+          "titulo": "Control 19 julio a las 20.00hrs. Vía telemedicina.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 19 julio a las 20.00hrs. Vía telemedicina."
+        },
+        {
+          "titulo": "Control 18 oct 20.00hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 18 oct 20.00hrs Mantener subelan or 225mg:"
+        },
+        {
+          "titulo": "Control 22 agosto 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 22 agosto 20.45hrs. Mantener farmacos Venl"
+        }
+      ]
+    },
+    {
+      "notaId": "WpHsvAKyf1btIRS8dV8R",
+      "pacienteId": "EePdSnpj4msJ1tWUNF2N",
+      "pacienteNombre": "INFORME MEDICO COMPLEMENTARIO",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control médico: 9 de julio 17:15 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control médico: 9 de julio 17:15 hrs. ECG de repos"
+        }
+      ]
+    },
+    {
+      "notaId": "WswNaN2Cg96wZ0Vc1XtB",
+      "pacienteId": "wQ06OeuI98ReBwJhTpu1",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "20 sept 2002",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "20 sept 2002 22 años las araucarias 1435 villa mel"
+        }
+      ]
+    },
+    {
+      "notaId": "X5qfOmSIANYmMfMfS90m",
+      "pacienteId": "Psd99vJ2GNKDd26VviOQ",
+      "pacienteNombre": "Felipe Tapia Montecinos",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "9 oct 2023",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "9 oct 2023 Con psicologa frecuente, ha sido comple"
+        },
+        {
+          "titulo": "8 nov 2023",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "8 nov 2023 Escitalopram 10mgvo 0-0-1 Subelan or 15"
+        },
+        {
+          "titulo": "Control 14 marzo 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 14 marzo 20.45hrs. Muy preocupado por aner"
+        }
+      ]
+    },
+    {
+      "notaId": "XSSFx3Yvjgb710GI9j6X",
+      "pacienteId": "bGJVEzppkkjIfrJ4UV55",
+      "pacienteNombre": "Edgard Matteo Dubreuil",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "Control presencial 11 sept 19.15 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control presencial 11 sept 19.15 hrs.  # 2023-07-1"
+        },
+        {
+          "titulo": "Control: 22 de enero 2024, 18:30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 22 de enero 2024, 18:30hrs. Sertralina 10"
+        },
+        {
+          "titulo": "Control 1 abril 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 1 abril 18.30hrs. Se contactará a hijo Nic"
+        },
+        {
+          "titulo": "Control 11 noviembre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 11 noviembre 18.30hrs. Solicito bun crea. "
+        },
+        {
+          "titulo": "control 22 septiembre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 22 septiembre 18.30hrs. solicito exámenes "
+        }
+      ]
+    },
+    {
+      "notaId": "XbuYHZdKjQUfdruGjPHs",
+      "pacienteId": "zje3S8CqDGYOHshvMIZI",
+      "pacienteNombre": "Camila Tejos Montoya",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "12-12-1987",
+          "fecha": "1987-12-12",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "12-12-1987 16836279-K 36 13 norte 3717 Talca Consa"
+        },
+        {
+          "titulo": "26 julio 2024 -  seguimiento telefonico",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "26 julio 2024: seguimiento telefonico Morelin 1 ca"
+        }
+      ]
+    },
+    {
+      "notaId": "XsM96P5COKEB5sB3AVXd",
+      "pacienteId": "lATkKXoZK3wUFxxnlLtP",
+      "pacienteNombre": "Fuad Alfredo Abuter Aburto_",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "Control 12 sept 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 12 sept 20.45hrs. Contraindicada la marihu"
+        },
+        {
+          "titulo": "5 de septiembre de 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "jueves, 5 de septiembre de 2024: Reporta acatisia,"
+        },
+        {
+          "titulo": "Control 14 octubre 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 14 octubre 19.15hrs. Pendiente enviarme re"
+        },
+        {
+          "titulo": "1 oct 2024 -  eco abd normal del 29 sept.",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "1 oct 2024: eco abd normal del 29 sept. Lab 28 sep"
+        },
+        {
+          "titulo": "Control 14 noviembre 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 14 noviembre 20.45hrs. Topamax 50mg vo: 1/"
+        }
+      ]
+    },
+    {
+      "notaId": "YBbeNim4rHM4ipGLgjWC",
+      "pacienteId": "LGDAIactr7xIrFnkSTw4",
+      "pacienteNombre": "Franchesca Mendoza",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "15 marzo 1990",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "15 marzo 1990 31 años Hacienda del maule, pasaje l"
+        }
+      ]
+    },
+    {
+      "notaId": "YVLPMlrXsvHxpYNQr8Ml",
+      "pacienteId": "h8jm5cvlwhDAfCwGtTEG",
+      "pacienteNombre": "Vania Carolina Valenzuela Ibáñez",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "29/07/1993",
+          "fecha": "1993-07-29",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "29/07/1993 18571917-0 966785596 vaniacarolina.vi@g"
+        },
+        {
+          "titulo": "18 mayo 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**18 mayo 2022**: mejor en general. Eutimica. Sin "
+        },
+        {
+          "titulo": "17 agosto 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**17 agosto 2023** Sigue en rancagua viviendo con "
+        }
+      ]
+    },
+    {
+      "notaId": "Ydgcl6ChwQsS57Gpmul7",
+      "pacienteId": "sbaxI07Dksrx3eD36D1j",
+      "pacienteNombre": "Diego Marin",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "Control 25 marzo 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 25 marzo 19.15hrs. Aroxat CR 25mgvo: 1 cad"
+        },
+        {
+          "titulo": "30 octubre 2024 -  recibo mail de paciente en que me pide certificad",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "30 octubre 2024: recibo mail de paciente en que me"
+        }
+      ]
+    },
+    {
+      "notaId": "Z55mNZDPfjSoI6NFw0MM",
+      "pacienteId": "n80YA9W3SjFT2plc3aYu",
+      "pacienteNombre": "Paula Lucy Hernandez Flores",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "Control psiq 28 marzo 20.00hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq 28 marzo 20.00hrs Altruline 50mg vo: "
+        },
+        {
+          "titulo": "Control 8 agosto 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 8 agosto 18.30hrs. Altruline 50mgvo: 1 cad"
+        }
+      ]
+    },
+    {
+      "notaId": "ZXB0WQYEYdlPC9WKs6mD",
+      "pacienteId": "vD8IbEYNkkusp4D9rObZ",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "24 junio 2025 -  17 beta estradiol en 92. LH 11.9. FSH 6.6, TSH 4.",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "24 junio 2025: 17 beta estradiol en 92. LH 11.9. F"
+        },
+        {
+          "titulo": "control 23 julio a las 10.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 23 julio a las 10.00hrs. enviarme resultad"
+        },
+        {
+          "titulo": "control 27 agosto 10.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 27 agosto 10.45hrs. LME desde el 25 jul po"
+        }
+      ]
+    },
+    {
+      "notaId": "ZYYbLTLhchgUnNwMmC2n",
+      "pacienteId": "0V06JSjCtcaIwmZniPIl",
+      "pacienteNombre": "Jehannette Francisca Ortiz Montecinos",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "18/5/2001",
+          "fecha": "2001-05-18",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "18/5/2001 15 sur 5 poniente A #075 Talca 944109117"
+        }
+      ]
+    },
+    {
+      "notaId": "ZYrdxDiBptczqiAD2EQJ",
+      "pacienteId": "gF9Y2Z0DLvZn2JexcPn8",
+      "pacienteNombre": "Luis Rebolledo Arellano",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "28 enero 1991",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "28 enero 1991 17498794-7 Pob santa amalia calle la"
+        }
+      ]
+    },
+    {
+      "notaId": "ZtFYSHrOMATO1jRu8p8D",
+      "pacienteId": "T4AqGw6iYCYBsBrPRvat",
+      "pacienteNombre": "Fuad Abuter Aburto",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "Control 12 sept 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 12 sept 20.45hrs. Contraindicada la marihu"
+        },
+        {
+          "titulo": "5 de septiembre de 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "jueves, 5 de septiembre de 2024: Reporta acatisia,"
+        },
+        {
+          "titulo": "Control 14 octubre 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 14 octubre 19.15hrs. Pendiente enviarme re"
+        },
+        {
+          "titulo": "1 oct 2024 -  eco abd normal del 29 sept.",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "1 oct 2024: eco abd normal del 29 sept. Lab 28 sep"
+        },
+        {
+          "titulo": "Control 14 noviembre 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 14 noviembre 20.45hrs. Topamax 50mg vo: 1/"
+        }
+      ]
+    },
+    {
+      "notaId": "aAOUYHlE5dcc2E0ds3Rt",
+      "pacienteId": "A11TCGnTPXnv5bJG8n1A",
+      "pacienteNombre": "Angela Bergez Valdes",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "13-3-92",
+          "fecha": "2092-03-13",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "13-3-92 9 93046573 banmedica 4 sur 2845 talca dent"
+        },
+        {
+          "titulo": "control el 21 feb 18:30 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control el 21 feb 18:30 hrs. mantener psicoterapia"
+        },
+        {
+          "titulo": "Control 17 jul 1830hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 17 jul 1830hrs. Mantener farmacos Retomar "
+        },
+        {
+          "titulo": "31 julio 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "31 julio 2024 Cntrol tele Nacio guadalupe 5 meses,"
+        },
+        {
+          "titulo": "25 sept 2024 -  reporta hiperhidrosis y dos veces a la semana ent",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "25 sept 2024: reporta hiperhidrosis y dos veces a "
+        }
+      ]
+    },
+    {
+      "notaId": "aZUqKnA8ZHl9vNZ6kAAr",
+      "pacienteId": "1ssO6o5MTwWnnXXjZdC8",
+      "pacienteNombre": "Pamela Herrera Suazo",
+      "cantidadControles": 6,
+      "controles": [
+        {
+          "titulo": "29/12/74 - fn",
+          "fecha": "2074-12-29",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "29/12/74 fn isapre mas vida 77338730 pamelaherrera"
+        },
+        {
+          "titulo": "29 sept 2021",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "29 sept 2021: mejor en general, se equivocó en dos"
+        },
+        {
+          "titulo": "2 nov 2021 -  control videollamada.",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "2 nov 2021: control videollamada. igual que la otr"
+        },
+        {
+          "titulo": "1/12/21",
+          "fecha": "2021-12-01",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "1/12/21: sin novedades de peritaje que tuvo hoy de"
+        },
+        {
+          "titulo": "control el 2 febrero a las 19:00 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control el 2 febrero a las 19:00 hrs. Rize 10mg: 1"
+        },
+        {
+          "titulo": "21 marzo 2022 -  receta rize 5mgvo 1-0-0 + ravotril 2mgvo 0-0-1 po",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "21 marzo 2022: receta rize 5mgvo 1-0-0 + ravotril "
+        }
+      ]
+    },
+    {
+      "notaId": "afU5nRlB9SwMIOX8I1YM",
+      "pacienteId": "yX8wQPxI6stj0qg8yzLA",
+      "pacienteNombre": "Nicole Moya",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "26/04/25 - 10:24",
+          "fecha": "2025-04-26",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "26/04/25 10:24 Perfil lipídico: colesterol total *"
+        }
+      ]
+    },
+    {
+      "notaId": "b4yuv0NGW9VSdschv2oc",
+      "pacienteId": "LOGtt6hgZBIUi2xZTLQV",
+      "pacienteNombre": "Roberto Diaz Gonzalez",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "20 jul 1974",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "20 jul 1974 32 y media orte C 1954 Talca Fonasa Su"
+        }
+      ]
+    },
+    {
+      "notaId": "bGarNa1A6slhNCvE1D5t",
+      "pacienteId": "ZEQXYOlJWpvgdTZyCLqT",
+      "pacienteNombre": "Camila Ávila Lara",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control el 9 diciembre 19.30 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control el 9 diciembre 19.30 hrs. el sabado 30 env"
+        }
+      ]
+    },
+    {
+      "notaId": "bGdcoERDHG20fXRb5xcj",
+      "pacienteId": "FIDcM1pehCIDvzeLzsqU",
+      "pacienteNombre": "Marcela Montecino Luengo",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "25 julio 2021 -  mejor en general, ya sin taquicardia, menos cefal",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "25 julio 2021: mejor en general, ya sin taquicardi"
+        },
+        {
+          "titulo": "25 agosto 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**25 agosto 2021**: electromiografía del once agos"
+        },
+        {
+          "titulo": "6 octubre 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**6 octubre 2021** bien en general, 3 a 6 meses re"
+        },
+        {
+          "titulo": "28 jun 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**28 jun 2023** Conbtrol tele Escitavitae 20mgvo: "
+        }
+      ]
+    },
+    {
+      "notaId": "bKyJMfzmOrCtlBEpT9Yi",
+      "pacienteId": "mOGVCS8anFPTwmvWrssF",
+      "pacienteNombre": "Milenka Fuentes Chamorro",
+      "cantidadControles": 6,
+      "controles": [
+        {
+          "titulo": "25 enero 2002",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "25 enero 2002 Alcerreca 595, Empedrado. Vive con: "
+        },
+        {
+          "titulo": "Control 2 mayo 20.45 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 2 mayo 20.45 hrs. Mantener psicoterapia Li"
+        },
+        {
+          "titulo": "2 mayo 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "2 mayo 2024 Ultima vez q se corto fue hace app 1 m"
+        },
+        {
+          "titulo": "23 mayo 2024 -  envio receta neurok 50 mg vo 1 cada mañana (aumen",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "23 mayo 2024: envio receta neurok 50 mg vo 1 cada "
+        },
+        {
+          "titulo": "Control el 4 julio 20.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 4 julio 20.30hrs. Neurok 70mg vo: 1 cad"
+        },
+        {
+          "titulo": "Control 9 septiembre 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 9 septiembre 19.15hrs. Mantener psicoterap"
+        }
+      ]
+    },
+    {
+      "notaId": "bXP5YkwPTq5yDKAySKoA",
+      "pacienteId": "911S4ksERetwkGFYskUG",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "10/1/1968",
+          "fecha": "1968-01-10",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "10/1/1968 arlenerr@hotmail.com +569 56893385 Aveni"
+        }
+      ]
+    },
+    {
+      "notaId": "bdrJcxlN4N1HWOggqYzk",
+      "pacienteId": "ykOfHsGuMchQVm51a1vj",
+      "pacienteNombre": "Alfonso Mella",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "17/4/1988",
+          "fecha": "1988-04-17",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "17/4/1988 Ancud 2160, Arica +569 93150677 Nueva Ma"
+        }
+      ]
+    },
+    {
+      "notaId": "bxllr4BKNJRILhz0OoG1",
+      "pacienteId": "B95Bfi4dh4e1JDrM0KWK",
+      "pacienteNombre": "Carolina Concha",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "28 marzo 2022 - control presencial. eutimica, sin id suicida, sin ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "28 marzo 2022 control presencial. eutimica, sin id"
+        },
+        {
+          "titulo": "24-10-22",
+          "fecha": "2022-10-24",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "24-10-22  Presencial  Sintomas depresivos no inval"
+        }
+      ]
+    },
+    {
+      "notaId": "cJNiVcSswMn0HYcngZq2",
+      "pacienteId": "Zse9JFzXNoWBVda5x6cT",
+      "pacienteNombre": "Monica Muñoz Contreras",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "29-12-1964",
+          "fecha": "1964-12-29",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "29-12-1964 Contralor Viña Casas del Toqui Isapre C"
+        },
+        {
+          "titulo": "1/12/21 - mando informe compin",
+          "fecha": "2021-12-01",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "1/12/21 mando informe compin **17/12/21:** por con"
+        },
+        {
+          "titulo": "3 dic 2021 -  envio informe medico",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "3 dic 2021: envio informe medico _________________"
+        },
+        {
+          "titulo": "control 23 marzo 20.00 hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 23 marzo 20.00 hrs clonazepam 0.5mg vo: ½ "
+        },
+        {
+          "titulo": "22 abril 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**22 abril 2024** Escitalopram 20mgvo: 1 cada noch"
+        }
+      ]
+    },
+    {
+      "notaId": "cUPk2BmmJvACMnOnm2lB",
+      "pacienteId": "OLkc3rRa5iERO6tfITV1",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "control en 3 meses: 3 octubre 15.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control en 3 meses: 3 octubre 15.45hrs. pendiente "
+        },
+        {
+          "titulo": "Control médico programado para el 16 de septiembre a las 20:00 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control médico programado para el 16 de septiembre"
+        },
+        {
+          "titulo": "11 agosto 2024 -  seg telefonico",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "11 agosto 2024: seg telefonico Craving significati"
+        },
+        {
+          "titulo": "21 agosto 2024 -  envio receta e indicaciones:",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "21 agosto 2024: envio receta e indicaciones: Neuro"
+        }
+      ]
+    },
+    {
+      "notaId": "cYFtQkwqlFSlDmzJehbS",
+      "pacienteId": "Dl5mXZeoXZLKGGnQhPNA",
+      "pacienteNombre": "Maite Laclabere Ansoleaga",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "17/06/2025 -  test de HOMA: insulina basal 9.0 uUI/ml; glicemia",
+          "fecha": "2025-06-17",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "17/06/2025: test de HOMA: insulina basal 9.0 uUI/m"
+        },
+        {
+          "titulo": "03-09-2025 - → Ac antiendomisio IgA NEGATIVO",
+          "fecha": "2025-09-03",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "03-09-2025 → Ac antiendomisio IgA NEGATIVO  Indico"
+        }
+      ]
+    },
+    {
+      "notaId": "cbbLh7IjMpsJnSx6VLAr",
+      "pacienteId": "jJ4ft64wFYLoIevA0Dfp",
+      "pacienteNombre": "Laura Raquel de Maria Melo Bravo",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "Control: 4 diciembre 19:15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 4 diciembre 19:15hrs. Mantener psicoterap"
+        },
+        {
+          "titulo": "4 diciembre 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**4 diciembre 2023** Venlavitae 150mg vo: 1-0-0 Mi"
+        },
+        {
+          "titulo": "Control el 15 enero 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 15 enero 20.00hrs. Mantener psicoterapi"
+        },
+        {
+          "titulo": "19 diciembre 2023 -  recibo laboratorio. Además indicaciones via telef",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "19 diciembre 2023: recibo laboratorio. Además indi"
+        },
+        {
+          "titulo": "Control 26 agosto 20 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 26 agosto 20 hrs. Mantener psicoterapia Su"
+        }
+      ]
+    },
+    {
+      "notaId": "ci8aRR6yhzD0D3ESO125",
+      "pacienteId": "QmEaW8PLDRvNLfimTOkE",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "control el 29 julio a las 18.30",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control el 29 julio a las 18.30 mantener psicotera"
+        },
+        {
+          "titulo": "13 octubre 2021 -  trabajando hasta diciembre en cesfam las americas",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "13 octubre 2021: trabajando hasta diciembre en ces"
+        }
+      ]
+    },
+    {
+      "notaId": "cqDsXRzq1yUpE5rqLJQM",
+      "pacienteId": "YlkdM2UAj0sYHgeM4NHP",
+      "pacienteNombre": "Gabriela Reyes Muñoz",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "20-7-93",
+          "fecha": "2093-07-20",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "20-7-93 Claudina Urrutia 615 Cauquenes Gabireyes83"
+        }
+      ]
+    },
+    {
+      "notaId": "dYAt2ffMNixHXY6ty4H6",
+      "pacienteId": "PdUB7LXddhVINU2C875E",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "21-12-22 - no seguira por sist publico, no se tomó PRL, manda",
+          "fecha": "2022-12-21",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "21-12-22 no seguira por sist publico, no se tomó P"
+        },
+        {
+          "titulo": "control 8 marzo 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 8 marzo 18.30hrs. Control Escitalopram 10m"
+        },
+        {
+          "titulo": "Control 19 junio a las 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 19 junio a las 19.15hrs. Mantener psicoter"
+        },
+        {
+          "titulo": "Control en tres meses: 11 sept 1830hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control en tres meses: 11 sept 1830hrs. Ipran 20mg"
+        }
+      ]
+    },
+    {
+      "notaId": "e5p2Ngoqfzjse3hBa9sP",
+      "pacienteId": "dMVAwKhsMWkJtbZcUjsD",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control 10 febrero 19:15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 10 febrero 19:15hrs. psicoterapia neuroval"
+        }
+      ]
+    },
+    {
+      "notaId": "eCTkuRYN9mqGfO0yGBEk",
+      "pacienteId": "XbhtYXhZ0Rp4hMvkiBoL",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control psiquiátrico: 24 septiembre 10.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiquiátrico: 24 septiembre 10.45hrs. Psic"
+        }
+      ]
+    },
+    {
+      "notaId": "emdifXYFS8OrdU6dMGSA",
+      "pacienteId": "LP2s9mjuLct0Ww70z4M1",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "Control 15 octubre 9.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 15 octubre 9.15hrs. Solicito exámenes de l"
+        },
+        {
+          "titulo": "28-08-2025",
+          "fecha": "2025-08-28",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "28-08-2025 **Química Clínica:** VFG (H1) 105.1 mL/"
+        }
+      ]
+    },
+    {
+      "notaId": "hZ6JzmuhnIrn4wjre89z",
+      "pacienteId": "xVj6iddZSe1qaqpoD3Fb",
+      "pacienteNombre": "Jocelyn Nataly Gonzalez Eriz",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "Control 26 junio 20.45 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 26 junio 20.45 hrs. Sertac 50mgvo: medio c"
+        },
+        {
+          "titulo": "26 junio 2023",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "26 junio 2023. Lab normal Mejor en general Se ve é"
+        },
+        {
+          "titulo": "Control: 14 agosto 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 14 agosto 18.30hrs. Sugiero apoyo salud m"
+        }
+      ]
+    },
+    {
+      "notaId": "hsjGUGT9MgLOcrDcTeVG",
+      "pacienteId": "OGOvBifGV2s17E2jV26A",
+      "pacienteNombre": "Susana Tarazona",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "21-3-1973",
+          "fecha": "1973-03-21",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "21-3-1973 21 poniente 583, Talca 26451507 bebe-050"
+        }
+      ]
+    },
+    {
+      "notaId": "hyYZz7H0ErcZJYOVEqAo",
+      "pacienteId": "MIiy0fUfZ7RI0CBPj16X",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 10,
+      "controles": [
+        {
+          "titulo": "13-4-79",
+          "fecha": "2079-04-13",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "13-4-79 fonasa 23 oriente, 20 y media norte 3115 T"
+        },
+        {
+          "titulo": "1 sept 2021 -  sin mayor novedad de como se ha sentido, a veces ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "1 sept 2021: sin mayor novedad de como se ha senti"
+        },
+        {
+          "titulo": "18 nov 2021",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "18 nov 2021: ultimo laboratorio 5oct litemia 0.75 "
+        },
+        {
+          "titulo": "30 nov 2011 -  lme por 30 dias desde el 30 nmov depre severa",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "30 nov 2011 : lme por 30 dias desde el 30 nmov dep"
+        },
+        {
+          "titulo": "7 abril 2022 - nsp control tele. se reagenda por unica vez para e",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "7 abril 2022 nsp control tele. se reagenda por uni"
+        },
+        {
+          "titulo": "Control 14 junio 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 14 junio 18.30hrs. Enviarme reporte por ac"
+        },
+        {
+          "titulo": "1 abril 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**1 abril 2024**control telemedicina Empezo en jua"
+        },
+        {
+          "titulo": "Control 8 agosto 20.45 hrs.telemedicina.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 8 agosto 20.45 hrs.telemedicina. Contraind"
+        },
+        {
+          "titulo": "8 agosto 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**8 agosto 2024** Litio 300mg vo: 1 cada doce hora"
+        },
+        {
+          "titulo": "Control: 7 octube 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 7 octube 19.15hrs. Olivin 10mg vo: 1 y me"
+        }
+      ]
+    },
+    {
+      "notaId": "i05cjhQda577ptm4hGsv",
+      "pacienteId": "PPeMbO82wMYhSdj6YrE4",
+      "pacienteNombre": "Josefa Villagra Jorquera",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "16-08-2025",
+          "fecha": "2025-08-16",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "16-08-2025 **Química Clínica:** VFG: <span style=\""
+        }
+      ]
+    },
+    {
+      "notaId": "iFskubDYZLVxcNjWevWd",
+      "pacienteId": "4R1YFJ1t9BRPrLWGoXzB",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "9 jul 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "9 jul 2024 == ==632 María Inés Celis Saavedra 6522"
+        },
+        {
+          "titulo": "6 de noviembre de 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "miércoles, 6 de noviembre de 2024 == ==sola paroxe"
+        },
+        {
+          "titulo": "18 de diciembre de 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "miércoles, 18 de diciembre de 2024 == ==sola parox"
+        },
+        {
+          "titulo": "18 de marzo de 2025",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "martes, 18 de marzo de 2025 == ==sola escitalopram"
+        }
+      ]
+    },
+    {
+      "notaId": "iIiW2dYqmG2HehL3QRod",
+      "pacienteId": "aqEVs0sFaYDb3gGu33xK",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "3 abril 2025",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "# **3 abril 2025** **Con quién asiste** Asiste sol"
+        },
+        {
+          "titulo": "control 29 mayo 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 29 mayo 20.45hrs. mantener psicoterapia ve"
+        }
+      ]
+    },
+    {
+      "notaId": "j36FlWoS4l2wiOzM3Odd",
+      "pacienteId": "p5Td79fiYfVUFKWQsC7l",
+      "pacienteNombre": "Paulina Reyes Guzmán",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "control 23 enero 20.45hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 23 enero 20.45hrs. suplementar con vitamin"
+        },
+        {
+          "titulo": "5 enero 2024 -  lm por 18 dias por f41.0 desde el 7 enero.",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "5 enero 2024: lm por 18 dias por f41.0 desde el 7 "
+        }
+      ]
+    },
+    {
+      "notaId": "j6uWq2eh4VZsSV0lvyGV",
+      "pacienteId": "ghCrPaeEHtavb9iAyOzp",
+      "pacienteNombre": "Roberto Acuña Galleguillos",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "17 junio 2021 -  control video, estable, sin crisis de panico, adh",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "17 junio 2021: control video, estable, sin crisis "
+        },
+        {
+          "titulo": "29 julio 2021 -  bien ritmo de magister, bien en el trabajo, sbor ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "29 julio 2021: bien ritmo de magister, bien en el "
+        },
+        {
+          "titulo": "30 sept 2021",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**30 sept 2021** bien eutimico, problema politico "
+        },
+        {
+          "titulo": "control en 6 meses: 17 noviembre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control en 6 meses: 17 noviembre 18.30hrs. enviarm"
+        }
+      ]
+    },
+    {
+      "notaId": "jHbYp7su3ELcLyJBG8kg",
+      "pacienteId": "qSw3HESlm44o6Xg94kZI",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 8,
+      "controles": [
+        {
+          "titulo": "13/11/83",
+          "fecha": "2083-11-13",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "13/11/83 talca. 14 sur pje 5 y media poniente 286 "
+        },
+        {
+          "titulo": "21 marzo 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**21 marzo 2022**: wellbutrin xl 300mg 1-0-0. lamo"
+        },
+        {
+          "titulo": "Control 22 agosto 20.00hrs por tele.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 22 agosto 20.00hrs por tele.  ---  **3 oct"
+        },
+        {
+          "titulo": "16-8-23 -  seg telef",
+          "fecha": "2023-08-16",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "16-8-23: seg telef Hace 3 dias el sab OH ebriedad "
+        },
+        {
+          "titulo": "Control el 2 oct 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 2 oct 20.00hrs. Supervision de farmacos"
+        },
+        {
+          "titulo": "27 nov 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **27 nov 2023** > > Acompañada por su hermana > "
+        },
+        {
+          "titulo": "11 oct 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **11 oct 2024** > > RM columna cervical 24 mayo "
+        },
+        {
+          "titulo": "control 24 marzo 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 24 marzo 19.15hrs. enviarme reporte por ma"
+        }
+      ]
+    },
+    {
+      "notaId": "krUlTNpfXRjESIQqRIZj",
+      "pacienteId": "o8b31LyeC7XnWuhNdkh2",
+      "pacienteNombre": "Sofia Paulina Rivera maturana",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "24 enero 1991",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "24 enero 1991 30 años 1 y medio sur C 4728 Talca E"
+        }
+      ]
+    },
+    {
+      "notaId": "lxOEGhZGsIkl0Vk7bJzG",
+      "pacienteId": "K75BsqPyhy9tZa5GUbFL",
+      "pacienteNombre": "Sandra Orellana Alarcon",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "10-5-65",
+          "fecha": "2065-05-10",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "10-5-65 59 75299571 sandra_orellana_@hotmail.com d"
+        },
+        {
+          "titulo": "control 30 enero 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 30 enero 19.15hrs. ectiban 10mg vo: ½ cada"
+        },
+        {
+          "titulo": "control: 17 julio 20.45hrs:",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control: 17 julio 20.45hrs: - Ectiban 20mg: 1 comp"
+        }
+      ]
+    },
+    {
+      "notaId": "lzFfuklYVkSlgu6QObjd",
+      "pacienteId": "OB17esr63Yw7GRQi2Y0d",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "Control en 1 mes: 24 sept a las 12.15hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control en 1 mes: 24 sept a las 12.15hrs Psicotera"
+        },
+        {
+          "titulo": "Control 29 octubre a las 14.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 29 octubre a las 14.00hrs. Psicoterapia  L"
+        },
+        {
+          "titulo": "27 agosto 2025",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**Maribel del Carmen Figueroa Maureira**, 61 años,"
+        },
+        {
+          "titulo": "24 septiembre 2025",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "El **24 septiembre 2025**, tras despido laboral, p"
+        }
+      ]
+    },
+    {
+      "notaId": "m5zqkUBFn9h5COjthDqq",
+      "pacienteId": "frLQJYHicQ8cWOJIzH7Z",
+      "pacienteNombre": "Alexander Vega Marchant",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "12 agosto 2021 -  lleva 30 dias justos con 10mg lexapro, nota mejor",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "12 agosto 2021: lleva 30 dias justos con 10mg lexa"
+        },
+        {
+          "titulo": "9 sept 2021 -  mucho mejor, sin sintomas fisicos de ansiedad, tr",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "9 sept 2021: mucho mejor, sin sintomas fisicos de "
+        },
+        {
+          "titulo": "14 oct 2021",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "14 oct 2021 mucho mejor, espontaneo, risa genuina,"
+        },
+        {
+          "titulo": "control jueves 20 enero a las 19.30 hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control jueves 20 enero a las 19.30 hrs mantener l"
+        },
+        {
+          "titulo": "20 enero 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**20 enero 2022** eutimico, sin id suicida, funcio"
+        }
+      ]
+    },
+    {
+      "notaId": "mKrwrrY6fHB8DfX0Gvba",
+      "pacienteId": "X6y86Nj4hb2LVggEhN5E",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control: 9 de julio 17:15 hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 9 de julio 17:15 hrs Enviar correo sobre "
+        }
+      ]
+    },
+    {
+      "notaId": "mTznXf4LXOPS3dgszICf",
+      "pacienteId": "X91e6UWNGhmI5kpIsXsM",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "4 jul 1962",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "4 jul 1962 Sector Purísima, Callejón San Vicente s"
+        },
+        {
+          "titulo": "Control presencial 1 julio 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control presencial 1 julio 19.15hrs. Escitalopram "
+        },
+        {
+          "titulo": "1 julio 2024",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "1 julio 2024 Escitalopram 10mgvo: 1 1/2 cada mañan"
+        }
+      ]
+    },
+    {
+      "notaId": "oezqvnsG7eQcEMHdbPnD",
+      "pacienteId": "f9VAgwQbhxVLA7iw4WfV",
+      "pacienteNombre": "Felipe Ignacio Rodriguez Morales",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "14-3-94",
+          "fecha": "2094-03-14",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "14-3-94 Frodriguezmorales23@gmail.com 947565916 Vi"
+        }
+      ]
+    },
+    {
+      "notaId": "qKIVhFhhEFlXjydgw7G7",
+      "pacienteId": "FlDI5mbiobx5GE1XDSpZ",
+      "pacienteNombre": "Hugo Rojas de la Fuente",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control el 6 junio 19:15 hrs. presencial. Dirección en 2 sur 1-2 oriente #870 of 1403 edificio Espacio, Talca.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control el 6 junio 19:15 hrs. presencial. Direcció"
+        }
+      ]
+    },
+    {
+      "notaId": "qqLJHYCS6AAqV2ZWBZh2",
+      "pacienteId": "rfJciZn8vwznYksAv9wk",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "16 enero 2002",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "16 enero 2002 pasaje oviedo cruce 88, villa España"
+        }
+      ]
+    },
+    {
+      "notaId": "s481W6M7W4NliASz0bax",
+      "pacienteId": "Oog2R2ZpHvCymlwa2Ru8",
+      "pacienteNombre": "Maria Fernanda Muñoz Zapata",
+      "cantidadControles": 5,
+      "controles": [
+        {
+          "titulo": "Control 28 agosto 20.00hrs presencial.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 28 agosto 20.00hrs presencial. Sugiero psi"
+        },
+        {
+          "titulo": "28 agosto 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**28 agosto 2023** Presencial Mediacion frustrada,"
+        },
+        {
+          "titulo": "Control 2 octubre a las 20.00hrs presencial.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 2 octubre a las 20.00hrs presencial. Mante"
+        },
+        {
+          "titulo": "Control 27 nov 18.30hrs presencial.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 27 nov 18.30hrs presencial. Mantener psico"
+        },
+        {
+          "titulo": "27 nov 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**27 nov 2023** Bien en general, adherente a tto y"
+        }
+      ]
+    },
+    {
+      "notaId": "sMbgjj6JBsbfgDIqdv0y",
+      "pacienteId": "HXcJ3jmSJvEgzOHCUvQb",
+      "pacienteNombre": "Mylissen Lamas Pimentel",
+      "cantidadControles": 4,
+      "controles": [
+        {
+          "titulo": "29 mayo 1974",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "29 mayo 1974 Sta maria del boldo avda circunvalaci"
+        },
+        {
+          "titulo": "24 enero 2024 - , me envía result lb del agosto 2023: glic normal.",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "24 enero 2024, me envía result lb del agosto 2023:"
+        },
+        {
+          "titulo": "Control en 3 meses: 30 mayo 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control en 3 meses: 30 mayo 18.30hrs. Vitamina D 5"
+        },
+        {
+          "titulo": "Control 1 mayo 2024",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 1 mayo 2024 Telemedicina, pidió adelantar "
+        }
+      ]
+    },
+    {
+      "notaId": "sc66ZX4de2SePT7apAwu",
+      "pacienteId": "Tqc2thqGVhepz68UswBj",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "28 agosto 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "# **28 agosto 2023** Presencial Cambio  lugar a ma"
+        }
+      ]
+    },
+    {
+      "notaId": "t6nRVvbV6dVmjvpYKKGr",
+      "pacienteId": "cHwk899QnOyqZQDOB9DW",
+      "pacienteNombre": "Constanza Martinez Conde",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "29/10/2025",
+          "fecha": "2025-10-29",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "29/10/2025 Constanzamcr@gmail.com Constanza Caroli"
+        },
+        {
+          "titulo": "18-11-2025 - , folio 22580398-6",
+          "fecha": "2025-11-18",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "18-11-2025 , folio 22580398-6  ## ANAMNESIS PROXIM"
+        }
+      ]
+    },
+    {
+      "notaId": "tDtPGxuQgy98ELICrFUa",
+      "pacienteId": "NuwiAVSPU0vENu9IbW4j",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 8,
+      "controles": [
+        {
+          "titulo": "22 mayo 1961",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "22 mayo 1961 61 años * 9570121-3 Los copihues, 164"
+        },
+        {
+          "titulo": "Control 20 feb 20:00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 20 feb 20:00hrs. Iniciar Ectien xr 37.5MG:"
+        },
+        {
+          "titulo": "Control lunes 10 abril 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control lunes 10 abril 20.00hrs. Mantener deroxat "
+        },
+        {
+          "titulo": "control 24 julio 1915hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 24 julio 1915hrs. certfiicado médico para "
+        },
+        {
+          "titulo": "13 nov 2023 -  Envía lab",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "13 nov 2023: Envía lab Vit D 16 Vfg 84 rac normal "
+        },
+        {
+          "titulo": "Control 1 abril 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 1 abril 19.15hrs. Butrino xl 300mg vo: 1 c"
+        },
+        {
+          "titulo": "12 agosto 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**12 agosto 2024** Butrino 150 mg vo: 1 cada mañan"
+        },
+        {
+          "titulo": "Control: 30 sept 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 30 sept 19.15hrs. Implementar medidas de "
+        }
+      ]
+    },
+    {
+      "notaId": "tSP39cAM1VDWBkdMylRM",
+      "pacienteId": "kCTWNAnrxMiEd3lQhrX6",
+      "pacienteNombre": "Ignacio Alvarado Olivares",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "10-2-92",
+          "fecha": "2092-02-10",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "10-2-92 fonasa camino troncal 7725 la cruz quinta "
+        }
+      ]
+    },
+    {
+      "notaId": "toKpdkUHQwFsqLG3pdNT",
+      "pacienteId": "8ImYC8udutnNz3PirfpE",
+      "pacienteNombre": "Paula Riveros Saavedra",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "23 agosto 1988",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "23 agosto 1988 36 años 951892839 (propio) 95584925"
+        }
+      ]
+    },
+    {
+      "notaId": "uxBkwAiNtV5bC3p6RuGK",
+      "pacienteId": "05RUFTsJEmemD2uEXKS1",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control: 9 julio 10:00 hrs",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 9 julio 10:00 hrs No se indica bupropion "
+        }
+      ]
+    },
+    {
+      "notaId": "v8cVZkjKac5Rol85zu5R",
+      "pacienteId": "qlBjQavc70K27KqZ07e9",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "Control el 8 de enero a las 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 8 de enero a las 20.00hrs. Mantener car"
+        },
+        {
+          "titulo": "Control 12 febrero 19.15hrs. Presencial.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 12 febrero 19.15hrs. Presencial. Muy impor"
+        },
+        {
+          "titulo": "Control jueves 9 mayo 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control jueves 9 mayo 20.00hrs. Aripiprazol 10mgvo"
+        }
+      ]
+    },
+    {
+      "notaId": "vmaYIlJnG9DYNIsbCNMo",
+      "pacienteId": "Ag86GH9xTpf0ofDSij81",
+      "pacienteNombre": "Pamela Abarza Cancino",
+      "cantidadControles": 8,
+      "controles": [
+        {
+          "titulo": "12-8-74",
+          "fecha": "2074-08-12",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "12-8-74 1pte 635 dpto 101D Talca mas vida enfermer"
+        },
+        {
+          "titulo": "7 febrero 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**7 febrero 2022**: se opero el 17 de enero y sali"
+        },
+        {
+          "titulo": "Control el 7 de abril a las 19:45 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 7 de abril a las 19:45 hrs.  > Rize 10m"
+        },
+        {
+          "titulo": "7 abril 2022 -  control tele. laboratorio sin alt desde lo psiq, ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "7 abril 2022: control tele. laboratorio sin alt de"
+        },
+        {
+          "titulo": "13 jun 2022",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**13 jun 2022**: control tele. Con cuadro GI que n"
+        },
+        {
+          "titulo": "Control psiq 7 nov a las 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control psiq 7 nov a las 20.00hrs. Mandarme inform"
+        },
+        {
+          "titulo": "1 febrero 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**1 febrero 2023**: me envía resultado exámenes de"
+        },
+        {
+          "titulo": "8 feb 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "> **8 feb 2024** > > Paxon suspendido hace 2 seman"
+        }
+      ]
+    },
+    {
+      "notaId": "w4u3HtJ7Z6dRvVrpYFdT",
+      "pacienteId": "V3vettToFohBZsO8XhPl",
+      "pacienteNombre": "Claudia Zárate Hernandez",
+      "cantidadControles": 2,
+      "controles": [
+        {
+          "titulo": "8 mayo 1981",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "8 mayo 1981 12 sur 3 poniente #491, Talca 41066394"
+        },
+        {
+          "titulo": "Control 21 noviembre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 21 noviembre 18.30hrs. Psicoterapia Planid"
+        }
+      ]
+    },
+    {
+      "notaId": "wkzgZK1QJoEpktyGvXFV",
+      "pacienteId": "RMwLSiavkQzWr3TFQabt",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 7,
+      "controles": [
+        {
+          "titulo": "23 oct 1945",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "23 oct 1945 5 oriente 1729, Talca Vive con: hijo g"
+        },
+        {
+          "titulo": "26 enero 2024 - lab, glic ayuna 101, ldl 36, phepaticas normales, ",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "26 enero 2024 lab, glic ayuna 101, ldl 36, phepati"
+        },
+        {
+          "titulo": "Control 25 marzo 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 25 marzo 18.30hrs. Repetir RM cerebral en "
+        },
+        {
+          "titulo": "Control presencial 25 marzo 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control presencial 25 marzo 18.30hrs. Repetir RM c"
+        },
+        {
+          "titulo": "10 Jun 2024 - recibo Acer de 63 puntos con forma concordance a v",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "10 Jun 2024 recibo Acer de 63 puntos con forma con"
+        },
+        {
+          "titulo": "Control presencial. Con hija. Sigue con mismos farmacos en general, respecto lo no psiquiatrico. Eutimica, sin sint psicoticos. Adherente a tto y sin rams. Está con 25mcg levotiroxina. eutebrol duo 1410: 1 cada noche. Sertralina 100mg vo 1 1/2 cada mañana. Risperidona 3mg vo: 1/2 cada noche. RM 6 sept 2024: focos hiperintensos de la sustancia blanca supratentorial de aspecto microangiopatico. Leves signos involutivos difusos de predominio en ambos valles silvianos. Resto de estudio sin hallazgos de significado patologico. Le pidieron holter de arritmias. Lab 2 julio tsh 2.7, t4l 1.04.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control presencial. Con hija. Sigue con mismos far"
+        },
+        {
+          "titulo": "control 29 sept 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 29 sept 18.30hrs. Suspender memantina y do"
+        }
+      ]
+    },
+    {
+      "notaId": "wp6XyKXH4gSQCVBJetIe",
+      "pacienteId": "QDz7ZV1aKtBmhSaAGLJn",
+      "pacienteNombre": "Evelyn Patricia Cornejo Matamala",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "19 agosto 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**19 agosto 2024** Estuvo con ansiedad al inicio d"
+        }
+      ]
+    },
+    {
+      "notaId": "xf9fGZqqvDb40okGYoIO",
+      "pacienteId": "gvuhOZtnAhs6EfoflhHo",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control 20 agosto 14.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 20 agosto 14.00hrs. Solicito perfil hepáti"
+        }
+      ]
+    },
+    {
+      "notaId": "y5wD1M3cGaRz0VkgcJUE",
+      "pacienteId": "KWDBHPMLLMRYicCTlARG",
+      "pacienteNombre": "Maria Fernanda Silva",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "control juev 16 diciembre a las 20.00hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control juev 16 diciembre a las 20.00hrs. ipran 10"
+        }
+      ]
+    },
+    {
+      "notaId": "ySdJvkDoAOengGo9D86S",
+      "pacienteId": "jKX5N9ilPgsWiWI6d53t",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "13-09-2025 -  BT 1.87 mg/dL, BD 0.09 mg/dL, BI **<u>1.78</u>** ",
+          "fecha": "2025-09-13",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "13-09-2025: BT 1.87 mg/dL, BD 0.09 mg/dL, BI **<u>"
+        }
+      ]
+    },
+    {
+      "notaId": "zQpjg8Ua8Nq5NCQgHDNV",
+      "pacienteId": "i0MXHpLl7wT5o3Dpt7tx",
+      "pacienteNombre": "Sin nombre",
+      "cantidadControles": 1,
+      "controles": [
+        {
+          "titulo": "Control en 1 mes:  17 sept 09.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control en 1 mes:  17 sept 09.15hrs.  Solicito: he"
+        }
+      ]
+    },
+    {
+      "notaId": "zTiBtGCUmRakNO1f6eY3",
+      "pacienteId": "MeqPbOHLM1OOaykETPFx",
+      "pacienteNombre": "Jose Lizama Canio",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "17 agosto 1982",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "17 agosto 1982 Isapre Colmena Jose.martin.lizama@g"
+        },
+        {
+          "titulo": "control 26 diciembre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "control 26 diciembre 18.30hrs. psicoterapia solici"
+        },
+        {
+          "titulo": "10 dic 2024 - , reviso laboratorio:",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "10 dic 2024, reviso laboratorio: hgma normal, ldl "
+        }
+      ]
+    },
+    {
+      "notaId": "zgDlU2Z90pQwN8Jmh01K",
+      "pacienteId": "T6N99oqLwhGjLRH4sfRC",
+      "pacienteNombre": "Valentina Schorr Prieto",
+      "cantidadControles": 8,
+      "controles": [
+        {
+          "titulo": "22 agosto 2023 -  reviso examenes, normal salvo RAC en 50 y vitD en",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "22 agosto 2023: reviso examenes, normal salvo RAC "
+        },
+        {
+          "titulo": "7 sept 2023 -  reporte me envia x mail, en general levemente mej",
+          "fecha": null,
+          "patron": "fecha_inicio",
+          "primeras50Chars": "7 sept 2023: reporte me envia x mail, en general l"
+        },
+        {
+          "titulo": "Control 28 diciembre 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 28 diciembre 19.15hrs. Contarme cómo se ha"
+        },
+        {
+          "titulo": "28 dic 2023",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**28 dic 2023** Control Cefalea retroocular invali"
+        },
+        {
+          "titulo": "Control el 7 marzo 19.15 hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control el 7 marzo 19.15 hrs. Risperdal 1mgvo: med"
+        },
+        {
+          "titulo": "7 marzo 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**7 marzo 2024** Conrtol tele Elontril xl 300mgvo "
+        },
+        {
+          "titulo": "11 abril 2024",
+          "fecha": null,
+          "patron": "markdown_bold",
+          "primeras50Chars": "**11 abril 2024** Elontril xl 300mgvo 1 cada mañan"
+        },
+        {
+          "titulo": "Control: 13 junio 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control: 13 junio 18.30hrs. Elontril xl 300mgvo 1 "
+        }
+      ]
+    },
+    {
+      "notaId": "zjVfYYzRxPr5KYypio5V",
+      "pacienteId": "vbUcASLkg1CbXzax9P5V",
+      "pacienteNombre": "Catalina Bustos",
+      "cantidadControles": 3,
+      "controles": [
+        {
+          "titulo": "10-10-90",
+          "fecha": "2090-10-10",
+          "patron": "fecha_numerica",
+          "primeras50Chars": "10-10-90 Colmena Vive con: hijo José Tomás 9 años "
+        },
+        {
+          "titulo": "Control 7 octubre 18.30hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 7 octubre 18.30hrs. Psicoterapia Solicito "
+        },
+        {
+          "titulo": "Control 9 diciembre 19.15hrs.",
+          "fecha": null,
+          "patron": "control_keyword",
+          "primeras50Chars": "Control 9 diciembre 19.15hrs. Mantener psicoterapi"
+        }
+      ]
+    }
+  ]
+}

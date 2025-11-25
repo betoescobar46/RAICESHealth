@@ -1,0 +1,94 @@
+NOTA 1: INGRESO (orden: 0)
+Título: Ingreso
+
+---
+ficha_id: 
+origen: EXTRASISTEMA
+paciente: Abigailt Troncoso Gonzalez
+
+tags:
+  - sx_ansiedad---
+Ingreso 28 oct 2024
+Abigailt Troncoso Gonzalez
+15599048-1
+40 años.
+3 marzo 1984 fecha nacimiento
+14 Sur 696, cooperativa Las Palmas.
+abigailt.stg@gmail.com
+61925678
+Consalud
+Vive con esposo Raul 49 fiscalizador en SII + hijo Mateo 9 + madre (ocasional) Silvia 60 años dueña de casa.
+Oficio: tecnico en SII, trabaja de 8.30hrs a 17.30hrs. Dos dias presencial en la semana, resto teletrabajo.
+Alergias-
+Cesareas previas, fractura de codo con protesis en codo izquierdo. Mastectomia total de mama izquierda, cirugia en higado, ademas cirugia reconstructiva de mama. Intervencion quirurgica previa cerebral por metastasis cerebral. Usa cateter venoso central tambien. Manga gastrica.
+Sin otras hospitalizaciones.
+Farmacos actuales:
+
+> Multivitaminico: muno 5.
+> 
+> ashwagandha
+> 
+> Bicilinato de magnesio
+> 
+> Está con inmunoterapia: pertuzumab, trastuzumab (hace ocho años, de por vida)
+> 
+> En este momento ademas por resfrio: Salbutamol, milidren, codeina en jarabe, prednisona 20mg hace tres dias y ahora por 4 dias desde hoy subió a 40mg dia. Ademas paracetamol cada ocho horas.
+> 
+> Vitamina D en gotas.
+Antecedentes familiares de salud mental: niega.
+Cancer de mamas desde 2016, luego metastasis hepaticas y luyego en cerebelo y cerebro. Una de estas ultimas tratada con cirugia y otra con radioterapia. Desde 2018 en remision, con controles de seguimiento cada cuatro meses, con resonancia magnetica cerebral y PETCT. Hay periodos en que identifica que necesita apoyo psicolkogico, ya pidio hora, pendiente que la atienda este. En general se habia sentido estable hace tiempo, pero hace tres meses diagnosticaron a su sobrino de melanoma.
+Desde entonces nota cambios en su estado animico. Es cristiana, suele escribir como se siente para canalizar sus emociones. Empezó a notar que lloraba mas seguido, que se removieron recuerdos de su propia enfermedad. Luego hace un mes su madre fue diagnosticada con cancer cervicouterino, lo que la colapsó mentalmente. Ir a tomarse resonancias y PETCT le produce marcada conducta evitativa desde la ansiedad, lo mismo cuando debe abrir resultado de informes de imágenes.
+Hace una semana le extrañó que despertó en la noche y sintió un mareo, tipo vértigo, de inmediato pensó posibilidad de que sea una metastasis en sistema nervioso central, a lo que le prosigue una crisis de pánico. A la vez con ansiedad marcada de pronostico de su madre, pensando en quien la acompañará en su tratamiento en la FALP al día siguiente. Hace una semana la vio otorrino y le sospechó, no confirmado, VPPB, quien ademas no descartó que pudiera deberse a manifestacion de su ansiedad. Se lo informó a su neurólogo que le dijo que debía hacerse una resonancia cerebral. Viajó a hacersela hace cinco días, nuevamente tuvo crisis de panico, recurrió a clotiazepam SOS que le dio notable tranquilidad. Sin embargo, dias despues nuevamente cuando estaba sola en casa tuvo amague de crisis de panico, que menguó con práctica de mnidfulness. Se peribe que ha estado mas sensible afectivamente, con angustia recurrente que localiza en region toracica. Ademas prontamente su marido se irá a trabajar a Linares que podria aumentar su ansiedad. Desde 2018 hasta ener 2024 tomó escitalopram 20mg que luego bajó a 10mg vo, luego se lo cambiaron a fluoxetina (porque tuvo asociacion temporal a alza de peso), que un dia se le olvidó a inico de año y desde entonces no retomó. Alcanzó a tomar fluoxetina menos de un mes. Notó que al suspender escitalopram bajó de peso y cedió reaccion adversa de tipo sexual. Resultado de RM salió normal. Apetito normal.
+Diagnosticos:
+I tno de panico, obs vppb.
+II cancer de mamas metastizado en remision
+Fundamental controlar sintomas ansiosos para tener claridad si aparecen sintomas neurologicos y así lograr mayor especifidad si aparece focalidad neurologica que hiciera sospechar una metastasis cerebral.
+Dilasedan 10mg vo: medio en la mañana, medio en la tarde (17.00hrs)
+Seronex 50mg vo: medio en la mañana por seis dias, luego 1 cada mañana.
+Psicoterapia
+Control 2 diciembre 19.15hrs.
+25 nov 2024, recibo examenes de laboratorio del 6 sept 2024:
+glic 100*
+bun normal acido urico normal prot totales normales, alb normal en 4. globulinas normales. bili normal. got normal, gpt normal ggt normal, ldh normal FA normal, calcio 9.4, fosforo 2.7. b12 1346 crea 0.75. ferremia 124 normal con corte inferior en 33, UIBC 134 con corte inferior en 135, tibc 258 normal con corte inferior en 240, saturacion de 47.9 normal con corte superior 50, ferritina aumentada 250 con corte superior 175. tsh 7.6 corte superior 4.2, vitamina D 18.6**
+hb 11.7, vcm 97 corte superior 98 hcm 32.3 corte superior 34, chcm 33.4 corte inferior 32 y superior 36. formula normal, blancos normales. glicosilada 5.3
+indico vitamina D polvo suspension oral 50000 UI 1 frasco en 200cc de agua una vez a la semana por ocho semanas. Sugiero control con médico general, para seguimiento de anemia y glicemia en ayuna alterada.
+2 diciembre 2024
+control presencial
+
+> psicofarmacos actuales:
+> 
+> Dilasedan 10mg vo: medio en la mañana, medio en la tarde (17.00hrs)
+> 
+> Seronex 50mg vo: 1 cada mañana.
+glicemia alterada fue sin ayuna. anemia refiere que es algo habitual por su tto oncologico y por su manga gastrica. comenzó automedicado vitaminas C + hierro. sin crisis de panico. clotiazepam del dia le dio sueño, ha seguido solo con el de la noche. Proxima semana tiene PETCT control, ansiedad normal asociada. Marido tbjando fuera, lo ha enfrentado adecuadamente. Empezo psicoterapia, lleva una sesion que luego tuvo que reagendar siguiente. Ha tenido recuerdos de parentalizacion a temprana edad. Relacion tiende a ser lejana con su padre. Madre le pidió disculpas por no haber terminado antes esa relación ya que daño a sus hijos segun reconoce. Ha tenido recuerdos difusos de un primo que la habria tocado (AS) cuando pequeña, , nuevamente asociado a sentimiento de abandono. Describe padre muy sensible, que habia que tener mucho cuidado en como tratarlo, madre se separó de él por probables celos patológicos de él. Reflexiona que volver a vivir con su madre ha removido todos estos pensamientos con alta carga afectiva. Sus hermanos viven en cauquenes y los angeles, pero son responsables a distancia. Este miercoles Abigailt tiene PETCT, estará hospitalizada, mientras mismo día su madre tiene que ponerse cateter venoso central, requerirá apoyo de sus hermanos. Ha podido soltar los cuidados de su padre, que es capaz de hacerse cargo de si mismo. Madre ya tuvo su cirugia con fines curativos, la qmt + rdt que le harán ahora será adyuvante. Sin RAM de aumento de apetito, tampoco en area sexual. Sin episodios nuevos de vertigo.
+
+> Indicaciones:
+> 
+> Importante mantener psicoterapia
+> 
+> seronex 100 mg vo: ½ cada mañana
+> 
+> suspender dilasedan
+> 
+> control 3 febrero 20.00hrs
+solicito nivel de vitamina D (tomar luego de 1 semana de haber completado el frasco de bonavid)
+  
+  
+  
+---
+  
+# **3 febrero 2025**
+control presencial
+no ha ido a psicologo, no ha estado disponible él. está de vacaciones ella, se ha sentido bien en general.
+está con sertac 50mg vo: 1 cada mañana. está haciendo el tto con vitamina D. retomó ejercicio hace tres semanas. El sueño de repente algo alterado , en ocasiones recurre a armonil y le da algo de estreñimiento. Vuelve en cinco dias al trabajo. Madre está en radioterapia, le queda una semana para empezar con quimioterapia. En ocasiones cierto mareo inespecifico, pero no vertigo como tal, pero si viene ahi cierta ansiedad anticipatoria, lo puntua como un 10% parecida. Logró suspender dilasedan, solo lo anda trayendo como sos, andaba en control rutinario de su quimio, en esa circunstancia fue. O sea, hay cierta sintomatologia ansiosa pero bien leve a su juicio. Igual aparecen pensamientos de ansiedad de si volviera el cancer. Lo relaciona en parte a noticia que vio hace poco de una persona que murió por recidiva de cáncer. Tomando zinc plus. Ya le pidieron exámenees de laboratorio y de imágenes.
+indicaciones:
+seronex 100mg vo: 1 cada mañana (aumenta)
+tomarse nivel de vitamina D cuando complete 8 semanas de tratamiento
+control 2 junio 20.00hrs.
+  
+  
+  
+  
+  
+  
+---

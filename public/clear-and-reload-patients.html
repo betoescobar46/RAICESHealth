@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpiar y Recargar Pacientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button.danger {
+            background: #f44336;
+        }
+        button.danger:hover {
+            background: #da190b;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+        #status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        #status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        #status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .info-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🔄 Limpiar y Recargar Pacientes</h1>
+
+        <div class="info-box">
+            <strong>⚠️ Importante:</strong> Esta herramienta limpiará los datos antiguos de pacientes
+            almacenados en el navegador y forzará la recarga desde el archivo JSON con los datos
+            extraídos correctamente (RUT, dirección, teléfono, diagnósticos, etc.).
+        </div>
+
+        <p>Acciones disponibles:</p>
+
+        <button onclick="clearPatientsOnly()">
+            🗑️ Limpiar Solo Pacientes
+        </button>
+
+        <button onclick="clearAllData()" class="danger">
+            ⚠️ Limpiar TODOS los Datos (Pacientes, Usuarios, Prestaciones, etc.)
+        </button>
+
+        <div id="status"></div>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
+            <h3>Información Actual</h3>
+            <div id="currentInfo"></div>
+        </div>
+    </div>
+
+    <script>
+        // Mostrar información actual
+        function displayCurrentInfo() {
+            const infoDiv = document.getElementById('currentInfo');
+            const patients = JSON.parse(localStorage.getItem('simora_patients') || '[]');
+            const users = JSON.parse(localStorage.getItem('simora_users') || '[]');
+
+            let html = '<ul>';
+            html += `<li><strong>Pacientes:</strong> ${patients.length}</li>`;
+            html += `<li><strong>Usuarios:</strong> ${users.length}</li>`;
+            html += `<li><strong>Tamaño total localStorage:</strong> ${formatBytes(getLocalStorageSize())}</li>`;
+            html += '</ul>';
+
+            if (patients.length > 0) {
+                const firstPatient = patients[0];
+                html += '<h4>Ejemplo de primer paciente:</h4>';
+                html += '<pre style="background: #f5f5f5; padding: 10px; border-radius: 4px; overflow-x: auto;">';
+                html += JSON.stringify({
+                    nombre: firstPatient.nombre,
+                    rut: firstPatient.rut || '(vacío)',
+                    edad: firstPatient.edad,
+                    direccion: firstPatient.direccion || '(vacío)',
+                    telefono: firstPatient.telefonos?.[0] || '(vacío)',
+                    email: firstPatient.email || '(vacío)'
+                }, null, 2);
+                html += '</pre>';
+            }
+
+            infoDiv.innerHTML = html;
+        }
+
+        function getLocalStorageSize() {
+            let total = 0;
+            for (let key in localStorage) {
+                if (localStorage.hasOwnProperty(key)) {
+                    total += localStorage[key].length + key.length;
+                }
+            }
+            return total;
+        }
+
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+        }
+
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = type;
+            statusDiv.style.display = 'block';
+        }
+
+        function clearPatientsOnly() {
+            if (confirm('¿Estás seguro de que quieres limpiar los datos de pacientes? Esto forzará la recarga desde el JSON.')) {
+                const patientsCount = JSON.parse(localStorage.getItem('simora_patients') || '[]').length;
+                localStorage.removeItem('simora_patients');
+                showStatus(`✅ ${patientsCount} pacientes eliminados. Redirigiendo a la aplicación...`, 'success');
+
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+            }
+        }
+
+        function clearAllData() {
+            if (confirm('⚠️ ADVERTENCIA: Esto eliminará TODOS los datos almacenados incluyendo pacientes, usuarios, prestaciones, configuración, etc. ¿Estás seguro?')) {
+                if (confirm('¿Realmente estás seguro? Esta acción no se puede deshacer.')) {
+                    const itemCount = localStorage.length;
+                    localStorage.clear();
+                    showStatus(`✅ ${itemCount} elementos eliminados del localStorage. Redirigiendo a la aplicación...`, 'success');
+
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 2000);
+                }
+            }
+        }
+
+        // Mostrar info al cargar
+        displayCurrentInfo();
+    </script>
+</body>
+</html>

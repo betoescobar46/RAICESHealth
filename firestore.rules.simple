@@ -1,0 +1,95 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper: Check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper: Get user role (cached in single variable to avoid multiple get() calls)
+    function getUserRole() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
+    }
+
+    // Helper: Check if user exists and has health professional role
+    function isHealthProfessional() {
+      return isAuthenticated() &&
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             (getUserRole() == 'admin' ||
+              getUserRole() == 'medico' ||
+              getUserRole() == 'MEDICO' ||
+              getUserRole() == 'psicologo' ||
+              getUserRole() == 'PSICOLOGO' ||
+              getUserRole() == 'profesional' ||
+              getUserRole() == 'PROFESIONAL');
+    }
+
+    // Helper: Check if user is admin
+    function isAdmin() {
+      return isAuthenticated() &&
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             getUserRole() == 'admin';
+    }
+
+    // Patients collection
+    match /patients/{patientId} {
+      allow read: if isHealthProfessional();
+      allow create: if isHealthProfessional();
+      allow update: if isHealthProfessional();
+      allow delete: if isAdmin();
+    }
+
+    // Clinical notes collection
+    match /clinicalNotes/{noteId} {
+      allow read: if isHealthProfessional();
+      allow create: if isHealthProfessional();
+      allow update: if isHealthProfessional();
+      allow delete: if isAdmin();
+    }
+
+    // Prestaciones (services) collection
+    match /prestaciones/{prestacionId} {
+      allow read: if isHealthProfessional();
+      allow create: if isHealthProfessional();
+      allow update: if isHealthProfessional();
+      allow delete: if isAdmin();
+    }
+
+    // Users collection
+    match /users/{userId} {
+      // Health professionals can read all users
+      allow read: if isHealthProfessional();
+
+      // Users can read their own profile
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+
+      // Only admins can create/update/delete users
+      allow create: if isAdmin();
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+
+      // Users can update their own profile (but not role)
+      allow update: if isAuthenticated() && request.auth.uid == userId &&
+                      !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role']);
+    }
+
+    // Backups collection
+    match /backups/{backupId} {
+      allow read, create, delete: if isAdmin();
+      allow update: if false; // Backups are immutable
+    }
+
+    // System configuration
+    match /config/{configId} {
+      allow read: if true; // Anyone can read config
+      allow write: if isAdmin();
+    }
+
+    // Default: deny all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

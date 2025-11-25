@@ -1,0 +1,584 @@
+import React, { useState, useMemo, useEffect } from 'react';
+import { User, PrestacionConfig, UserRole, Patient } from '../types';
+import LocalStorageService from '../services/LocalStorageService';
+import { MOCK_PATIENTS } from '../mockPatients';
+
+declare const XLSX: any;
+const exportToExcel = (data: any[], fileName: string) => {
+    if (typeof XLSX === 'undefined') {
+        console.error("SheetJS (XLSX) library is not loaded.");
+        alert("La funcionalidad de exportación no está disponible. Contacte al administrador.");
+        return;
+    }
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Datos');
+    const safeFileName = fileName.replace(/[^a-z0-9_.-]/gi, '_');
+    XLSX.writeFile(workbook, `${safeFileName}.xlsx`);
+};
+
+const ExportIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
+    </svg>
+);
+
+const ExportButton: React.FC<{ onClick: () => void; text?: string }> = ({ onClick, text = 'Exportar' }) => (
+    <button onClick={onClick} className="text-xs flex items-center gap-1 bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold py-1 px-3 rounded-md border">
+        <ExportIcon />
+        {text}
+    </button>
+);
+
+
+interface AdminViewProps {
+    users: User[];
+    onUpdateUsers: (users: User[]) => void;
+    notifications: string[];
+    prestacionConfig: PrestacionConfig;
+    onUpdatePrestacionConfig: (config: PrestacionConfig) => void;
+    allPrestaciones: string[];
+    onUpdateAllPrestaciones: (prestaciones: string[]) => void;
+    patients: Patient[];
+}
+
+const ChangePasswordModal: React.FC<{ user: User; onClose: () => void; onSave: (password: string) => void; }> = ({ user, onClose, onSave }) => {
+    const [newPassword, setNewPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [onClose]);
+
+    const handleSubmit = () => {
+        if (newPassword.length < 4) {
+            setError('La contraseña debe tener al menos 4 caracteres.');
+            return;
+        }
+        if (newPassword !== confirmPassword) {
+            setError('Las contraseñas no coinciden.');
+            return;
+        }
+        onSave(newPassword);
+        onClose();
+    };
+
+    return (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-sm">
+                <h3 className="text-lg font-semibold mb-2">Cambiar Contraseña</h3>
+                <p className="text-sm text-gray-600 mb-4">Para: <span className="font-bold">{user.name}</span></p>
+                <div className="space-y-4">
+                    <div>
+                        <label className="block text-sm font-medium">Nueva Contraseña</label>
+                        <input type="password" value={newPassword} onChange={e => setNewPassword(e.target.value)} className="mt-1 w-full p-2 border rounded-md"/>
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium">Confirmar Contraseña</label>
+                        <input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} className="mt-1 w-full p-2 border rounded-md"/>
+                    </div>
+                </div>
+                {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+                <div className="flex justify-end gap-2 mt-6">
+                    <button onClick={onClose} className="bg-gray-200 px-4 py-2 rounded-md text-sm">Cancelar</button>
+                    <button onClick={handleSubmit} className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm">Guardar</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const AddUserModal: React.FC<{ profiles: string[]; onClose: () => void; onSave: (newUser: Omit<User, 'id'>) => void; }> = ({ profiles, onClose, onSave }) => {
+    const [newUser, setNewUser] = useState({ name: '', username: '', title: profiles[0] || '' });
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [onClose]);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        setNewUser(prev => ({...prev, [e.target.name]: e.target.value}));
+    };
+
+    const handleSubmit = () => {
+        if (!newUser.name || !newUser.username || !newUser.title) {
+            setError('Todos los campos son obligatorios.');
+            return;
+        }
+        const role: UserRole = (newUser.title === 'Admin' || newUser.title === 'Estadísticas') ? (newUser.title === 'Admin' ? 'admin' : 'estadistica') : 'profesional';
+        onSave({ ...newUser, role, password: '1234', failedLoginAttempts: 0, isLocked: false, lockoutUntil: null });
+        onClose();
+    };
+
+    return (
+         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-md">
+                <h3 className="text-lg font-semibold mb-4">Agregar Nuevo Usuario</h3>
+                <div className="space-y-4">
+                    <div><label className="block text-sm font-medium">Nombre Completo</label><input type="text" name="name" value={newUser.name} onChange={handleChange} className="mt-1 w-full p-2 border rounded-md"/></div>
+                    <div><label className="block text-sm font-medium">RUT (sin puntos, con guión)</label><input type="text" name="username" value={newUser.username} onChange={handleChange} className="mt-1 w-full p-2 border rounded-md"/></div>
+                    <div><label className="block text-sm font-medium">Perfil / Rol</label><select name="title" value={newUser.title} onChange={handleChange} className="mt-1 w-full p-2 border rounded-md bg-white">{profiles.map(p => <option key={p} value={p}>{p}</option>)}</select></div>
+                </div>
+                {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+                <div className="flex justify-end gap-2 mt-6">
+                    <button onClick={onClose} className="bg-gray-200 px-4 py-2 rounded-md text-sm">Cancelar</button>
+                    <button onClick={handleSubmit} className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm">Crear Usuario</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+
+const ActionButton: React.FC<{ type: 'enable' | 'disable' | 'delete', onClick: () => void, title: string }> = ({ type, onClick, title }) => {
+    let styles = '';
+    let icon: React.ReactElement;
+
+    switch (type) {
+        case 'enable':
+            styles = 'text-green-600 hover:bg-green-100';
+            icon = <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" /></svg>;
+            break;
+        case 'disable':
+            styles = 'text-red-600 hover:bg-red-100';
+            icon = <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clipRule="evenodd" /></svg>;
+            break;
+        case 'delete':
+            styles = 'text-gray-500 hover:bg-gray-200';
+            icon = <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" /></svg>;
+            break;
+    }
+        
+    return <button onClick={onClick} title={title} className={`p-1 rounded-full ${styles}`}>{icon}</button>;
+};
+
+
+const AdminView: React.FC<AdminViewProps> = ({ users, onUpdateUsers, notifications, prestacionConfig, onUpdatePrestacionConfig, allPrestaciones, onUpdateAllPrestaciones, allFarmacos, onUpdateAllFarmacos, patients }) => {
+    // --- User Management State ---
+    const [userToEdit, setUserToEdit] = useState<User | null>(null);
+    const [isAddingUser, setIsAddingUser] = useState(false);
+    const [localUsers, setLocalUsers] = useState<User[]>(users);
+    const [isUsersDirty, setIsUsersDirty] = useState(false);
+    const [userForPatientPermissions, setUserForPatientPermissions] = useState<User | null>(null);
+
+    // --- Prestacion Management State ---
+    const [localPrestacionConfig, setLocalPrestacionConfig] = useState<PrestacionConfig>(prestacionConfig);
+    const [localAllPrestaciones, setLocalAllPrestaciones] = useState<string[]>(allPrestaciones);
+    const [isPrestacionesDirty, setIsPrestacionesDirty] = useState(false);
+    const [newPrestacionName, setNewPrestacionName] = useState('');
+    const [selectedProfile, setSelectedProfile] = useState<string | null>(null);
+    const [filterTerm, setFilterTerm] = useState('');
+    
+
+
+    // --- Sync local state with parent props ---
+    useEffect(() => {
+        setLocalUsers(users);
+        setIsUsersDirty(false);
+    }, [users]);
+
+    useEffect(() => {
+        setLocalPrestacionConfig(prestacionConfig);
+        setLocalAllPrestaciones(allPrestaciones);
+        setIsPrestacionesDirty(false);
+    }, [prestacionConfig, allPrestaciones]);
+    
+    // --- User Management Handlers ---
+    const handleUpdateLocalUser = (updatedUser: User) => {
+        setLocalUsers(prev => prev.map(u => u.id === updatedUser.id ? updatedUser : u));
+        setIsUsersDirty(true);
+    };
+    
+    const handleAddUser = (newUser: Omit<User, 'id'>) => {
+        const newId = Math.max(...localUsers.map(u => u.id), 0) + 1;
+        setLocalUsers(prev => [...prev, { id: newId, ...newUser }]);
+        setIsUsersDirty(true);
+    };
+
+    const handleDeleteUser = (userIdToDelete: number) => {
+        const user = localUsers.find(u => u.id === userIdToDelete);
+        if (user && window.confirm(`¿Está seguro de que desea eliminar al usuario ${user.name}?`)) {
+            setLocalUsers(prev => prev.filter(u => u.id !== userIdToDelete));
+            setIsUsersDirty(true);
+        }
+    };
+
+
+    const handleResetPassword = (user: User) => {
+        if (window.confirm(`¿Está seguro que desea resetear la contraseña de ${user.name} a "1234"?`)) {
+            handleUpdateLocalUser({ ...user, password: '1234' });
+            alert('Contraseña reseteada. Haga clic en "Guardar Cambios" para confirmar.');
+        }
+    };
+    
+    const handleUnlockUser = (user: User) => {
+        handleUpdateLocalUser({ ...user, isLocked: false, lockoutUntil: null, failedLoginAttempts: 0 });
+        alert(`Usuario ${user.name} desbloqueado. Haga clic en "Guardar Cambios" para confirmar.`);
+    };
+
+    const handleSaveNewPassword = (password: string) => {
+        if (userToEdit) {
+            handleUpdateLocalUser({ ...userToEdit, password });
+        }
+    };
+    
+    const handleSaveUsers = () => {
+        onUpdateUsers(localUsers);
+        setIsUsersDirty(false);
+        alert('Cambios de usuario guardados.');
+    };
+
+    const handleCancelUsers = () => {
+        setLocalUsers(users);
+        setIsUsersDirty(false);
+    };
+
+    const handleLoadDemoPatients = () => {
+        if (window.confirm('¿Está seguro que desea cargar los 5 pacientes de demostración? Esto sobrescribirá los pacientes actuales.')) {
+            LocalStorageService.savePatients(MOCK_PATIENTS);
+            alert('Pacientes de demostración cargados exitosamente. Actualice la página para verlos.');
+            console.log('Pacientes de demostración cargados:', MOCK_PATIENTS.length);
+        }
+    };
+
+    const handleSyncToFirebase = async () => {
+        if (window.confirm('¿Desea sincronizar todos los datos con Firebase? Esto creará un backup en la nube.')) {
+            try {
+                // Mostrar indicador de carga
+                const loadingMsg = 'Sincronizando con Firebase...';
+                console.log(loadingMsg);
+
+                // Realizar la sincronización
+                const result = await LocalStorageService.syncWithFirebase();
+
+                if (result.success) {
+                    alert(`✅ ${result.message}`);
+                    console.log('Sincronización con Firebase completada:', result);
+                } else {
+                    alert(`❌ Error: ${result.message}\n\nPor favor, verifique las credenciales de Firebase en el archivo .env`);
+                    console.error('Error al sincronizar con Firebase:', result.message);
+                }
+            } catch (error) {
+                alert(`❌ Error al sincronizar con Firebase: ${error}`);
+                console.error('Error al sincronizar con Firebase:', error);
+            }
+        }
+    };
+
+    const handleExportUsers = () => {
+        const dataToExport = localUsers.map(({ password, failedLoginAttempts, ...rest }) => ({
+            ID: rest.id,
+            Nombre: rest.name,
+            RUT: rest.username,
+            Rol: rest.role,
+            "Título/Perfil": rest.title,
+            Bloqueado: rest.isLocked ? 'Sí' : 'No',
+            "Bloqueado Hasta": rest.lockoutUntil ? new Date(rest.lockoutUntil).toLocaleString('es-CL') : 'N/A'
+        }));
+        exportToExcel(dataToExport, "Lista_Usuarios_RLP");
+    };
+    
+    // --- Prestacion Management Handlers ---
+
+    const profiles = useMemo(() =>
+        Array.from(new Set(users.map(u => u.title)))
+        .sort((a: string, b: string) => a.localeCompare(b))
+    , [users]);
+
+    useEffect(() => {
+        if (!selectedProfile && profiles.length > 0) {
+            setSelectedProfile(profiles.find(p => p !== 'Admin' && p !== 'Estadísticas') || profiles[0]);
+        }
+    }, [profiles, selectedProfile]);
+    
+    const handleCreatePrestacion = (e: React.FormEvent) => {
+        e.preventDefault();
+        const trimmedName = newPrestacionName.trim();
+        if (!trimmedName) {
+            alert('El nombre de la prestación no puede estar vacío.');
+            return;
+        }
+        if (localAllPrestaciones.some(p => p.toLowerCase() === trimmedName.toLowerCase())) {
+            alert('Ya existe una prestación con este nombre.');
+            return;
+        }
+        setLocalAllPrestaciones(prev => [...prev, trimmedName].sort());
+        setNewPrestacionName('');
+        setIsPrestacionesDirty(true);
+    };
+
+    const handleDeletePrestacion = (prestacionToDelete: string) => {
+        if (!window.confirm(`¿Está seguro de que desea eliminar la prestación "${prestacionToDelete}" de forma PERMANENTE? Esta acción no se puede deshacer y la eliminará de todos los perfiles.`)) {
+            return;
+        }
+        setLocalAllPrestaciones(prev => prev.filter(p => p !== prestacionToDelete));
+        const newConfig = { ...localPrestacionConfig };
+        Object.keys(newConfig).forEach(profile => {
+            newConfig[profile] = newConfig[profile].filter(p => p !== prestacionToDelete);
+        });
+        setLocalPrestacionConfig(newConfig);
+        setIsPrestacionesDirty(true);
+    };
+    
+    const handleMovePrestacion = (prestacion: string, direction: 'up' | 'down') => {
+        if (!selectedProfile) return;
+        setLocalPrestacionConfig(prev => {
+            const config = { ...prev };
+            const enabled = [...(config[selectedProfile] || [])];
+            const index = enabled.indexOf(prestacion);
+            if (index === -1) return prev;
+
+            const newIndex = direction === 'up' ? index - 1 : index + 1;
+            if (newIndex < 0 || newIndex >= enabled.length) return prev;
+            
+            [enabled[index], enabled[newIndex]] = [enabled[newIndex], enabled[index]]; // Swap
+            
+            config[selectedProfile] = enabled;
+            return config;
+        });
+        setIsPrestacionesDirty(true);
+    };
+
+    const handleEnable = (prestacion: string) => {
+        if (!selectedProfile) return;
+        setLocalPrestacionConfig(prev => {
+            const currentEnabled = prev[selectedProfile] || [];
+            if (currentEnabled.includes(prestacion)) return prev;
+            const newEnabled = [...currentEnabled, prestacion]; // Add to end by default
+            return { ...prev, [selectedProfile]: newEnabled };
+        });
+        setIsPrestacionesDirty(true);
+    };
+
+    const handleDisable = (prestacion: string) => {
+        if (!selectedProfile) return;
+        setLocalPrestacionConfig(prev => {
+            const currentEnabled = prev[selectedProfile] || [];
+            const newEnabled = currentEnabled.filter(p => p !== prestacion);
+            return { ...prev, [selectedProfile]: newEnabled };
+        });
+        setIsPrestacionesDirty(true);
+    };
+    
+     const handleSavePrestaciones = () => {
+        onUpdateAllPrestaciones(localAllPrestaciones);
+        onUpdatePrestacionConfig(localPrestacionConfig);
+        setIsPrestacionesDirty(false);
+        alert('Cambios de prestaciones guardados.');
+    };
+
+    const handleCancelPrestaciones = () => {
+        setLocalAllPrestaciones(allPrestaciones);
+        setLocalPrestacionConfig(prestacionConfig);
+        setIsPrestacionesDirty(false);
+    };
+    
+    const { enabledList, disabledList } = useMemo(() => {
+        if (!selectedProfile) return { enabledList: [], disabledList: [] };
+
+        const enabledForProfile = localPrestacionConfig[selectedProfile] || [];
+        const disabledForProfile = localAllPrestaciones.filter(p => !enabledForProfile.includes(p)).sort();
+        
+        const lowerCaseFilter = filterTerm.toLowerCase();
+        if (!lowerCaseFilter) {
+            return { enabledList: enabledForProfile, disabledList: disabledForProfile };
+        }
+
+        return {
+            enabledList: enabledForProfile.filter(p => p.toLowerCase().includes(lowerCaseFilter)),
+            disabledList: disabledForProfile.filter(p => p.toLowerCase().includes(lowerCaseFilter)),
+        };
+    }, [selectedProfile, localPrestacionConfig, localAllPrestaciones, filterTerm]);
+    
+
+
+    return (
+        <div>
+            {userToEdit && <ChangePasswordModal user={userToEdit} onClose={() => setUserToEdit(null)} onSave={handleSaveNewPassword} />}
+            {isAddingUser && <AddUserModal profiles={profiles} onClose={() => setIsAddingUser(false)} onSave={handleAddUser} />}
+
+            <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-semibold">Panel de Administración</h3>
+                <div className="flex gap-2">
+                    <button
+                        onClick={handleLoadDemoPatients}
+                        className="bg-purple-100 text-purple-800 font-bold py-1 px-3 rounded-md text-sm border border-purple-200 hover:bg-purple-200"
+                        title="Cargar 5 pacientes ficticios para demostración"
+                    >
+                        📋 Cargar Pacientes Demo
+                    </button>
+                    <button
+                        onClick={handleSyncToFirebase}
+                        className="bg-orange-100 text-orange-800 font-bold py-1 px-3 rounded-md text-sm border border-orange-200 hover:bg-orange-200"
+                        title="Sincronizar todos los datos con Firebase"
+                    >
+                        ☁️ Sincronizar con Firebase
+                    </button>
+                </div>
+            </div>
+
+            {notifications.length > 0 && (
+                <div className="mb-6">
+                    <h4 className="text-lg font-semibold mb-2">Notificaciones</h4>
+                    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 max-h-40 overflow-y-auto">
+                        <ul className="list-disc list-inside space-y-1 text-sm text-yellow-800">
+                            {notifications.map((note, index) => <li key={index}>{note}</li>)}
+                        </ul>
+                    </div>
+                </div>
+            )}
+
+            <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                 <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center gap-4">
+                        <h4 className="text-lg font-semibold">Gestión de Usuarios</h4>
+                        <button onClick={() => setIsAddingUser(true)} className="bg-green-100 text-green-800 font-bold py-1 px-3 rounded-md text-sm border border-green-200 hover:bg-green-200">+ Agregar Usuario</button>
+                        <ExportButton onClick={handleExportUsers} text="Exportar Usuarios" />
+                    </div>
+                    {isUsersDirty && (
+                        <div className="flex items-center gap-2">
+                            <button onClick={handleCancelUsers} className="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-md text-sm">Cancelar</button>
+                            <button onClick={handleSaveUsers} className="bg-blue-600 text-white font-bold py-2 px-4 rounded-md text-sm animate-pulse">Guardar Cambios</button>
+                        </div>
+                    )}
+                </div>
+                 <div className="overflow-x-auto">
+                    <table className="min-w-full divide-y divide-gray-200 text-sm">
+                        <thead className="bg-gray-50">
+                            <tr>
+                                <th className="px-4 py-2 text-left font-medium text-gray-700 w-1/4">Nombre</th>
+                                <th className="px-4 py-2 text-left font-medium text-gray-700 w-1/4">RUT</th>
+                                <th className="px-4 py-2 text-left font-medium text-gray-700 w-1/4">Rol</th>
+                                <th className="px-4 py-2 text-left font-medium text-gray-700">Estado</th>
+                                <th className="px-4 py-2 text-left font-medium text-gray-700">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-200">
+                            {localUsers.map(user => (
+                                <tr key={user.id} className="hover:bg-gray-50">
+                                    <td className="px-4 py-2"><input type="text" value={user.name} onChange={(e) => handleUpdateLocalUser({...user, name: e.target.value})} className="w-full p-1 border rounded-md"/></td>
+                                    <td className="px-4 py-2 font-mono"><input type="text" value={user.username} onChange={(e) => handleUpdateLocalUser({...user, username: e.target.value})} className="w-full p-1 border rounded-md"/></td>
+                                    <td className="px-4 py-2"><select value={user.title} onChange={(e) => handleUpdateLocalUser({...user, title: e.target.value})} className="w-full p-1 border rounded-md bg-white">{profiles.map(p=><option key={p} value={p}>{p}</option>)}</select></td>
+                                    <td className="px-4 py-2">
+                                        {user.isLocked ? (
+                                            <span className="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full">
+                                                Bloqueado
+                                            </span>
+                                        ) : (
+                                            <span className="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full">
+                                                Activo
+                                            </span>
+                                        )}
+                                    </td>
+                                    <td className="px-4 py-2 space-x-2 whitespace-nowrap">
+                                        <button onClick={() => setUserToEdit(user)} className="text-blue-600 hover:underline">Clave</button>
+                                        <button onClick={() => handleResetPassword(user)} className="text-blue-600 hover:underline">Reset</button>
+                                        {user.isLocked && <button onClick={() => handleUnlockUser(user)} className="text-green-600 hover:underline font-bold">Desbloq.</button>}
+                                        <button onClick={() => handleDeleteUser(user.id)} className="text-red-600 hover:underline">Eliminar</button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm mt-6">
+                <div className="flex justify-between items-center mb-2">
+                    <h4 className="text-lg font-semibold">Gestión de Prestaciones</h4>
+                     {isPrestacionesDirty && (
+                        <div className="flex items-center gap-2">
+                            <button onClick={handleCancelPrestaciones} className="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-md text-sm">Cancelar</button>
+                            <button onClick={handleSavePrestaciones} className="bg-blue-600 text-white font-bold py-2 px-4 rounded-md text-sm animate-pulse">Guardar Cambios</button>
+                        </div>
+                    )}
+                </div>
+
+                <div className="p-3 bg-gray-50 border rounded-md mb-6">
+                    <h5 className="font-semibold text-gray-600 mb-2">Administrar Catálogo de Prestaciones</h5>
+                    <form onSubmit={handleCreatePrestacion} className="flex items-center gap-2">
+                        <input
+                            type="text"
+                            placeholder="Nombre de la nueva prestación"
+                            value={newPrestacionName}
+                            onChange={(e) => setNewPrestacionName(e.target.value)}
+                            className="flex-grow p-2 border border-gray-300 rounded-md"
+                        />
+                        <button type="submit" className="bg-green-600 text-white font-bold py-2 px-4 rounded-md text-sm">Agregar Prestación</button>
+                    </form>
+                </div>
+                
+                <h5 className="font-semibold mb-2">Configurar Prestaciones por Perfil</h5>
+                <div className="flex gap-6 mt-4">
+                    <div className="w-1/3 border-r pr-4">
+                        <h6 className="font-semibold text-gray-600 mb-2">Perfiles Profesionales</h6>
+                        <ul className="space-y-1">
+                            {profiles.filter(p => p !== 'Admin' && p !== 'Estadísticas').map(profile => (
+                                <li key={profile}>
+                                    <button
+                                        onClick={() => setSelectedProfile(profile)}
+                                        className={`w-full text-left p-2 rounded-md text-sm transition-colors ${selectedProfile === profile ? 'bg-blue-100 text-blue-800 font-bold' : 'hover:bg-gray-100'}`}
+                                    >
+                                        {profile}
+                                    </button>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="w-2/3">
+                        {selectedProfile ? (
+                            <>
+                                <h6 className="font-semibold text-gray-600 mb-2">Configurar para: <span className="text-blue-700">{selectedProfile}</span></h6>
+                                <input 
+                                    type="text"
+                                    placeholder="Buscar prestación..."
+                                    value={filterTerm}
+                                    onChange={e => setFilterTerm(e.target.value)}
+                                    className="w-full p-2 border border-gray-300 rounded-md mb-4"
+                                />
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <h6 className="font-bold text-green-700 mb-2">Habilitadas ({enabledList.length})</h6>
+                                        <ul className="space-y-1 p-2 border rounded-md h-96 overflow-y-auto bg-green-50">
+                                            {enabledList.map((p, index) => (
+                                                <li key={p} className="flex justify-between items-center p-1 rounded hover:bg-white group">
+                                                    <span className="text-sm text-gray-800 flex-grow mr-2">{p}</span>
+                                                    <div className="flex items-center">
+                                                        <button onClick={() => handleMovePrestacion(p, 'up')} disabled={index === 0} className="p-0.5 disabled:opacity-20"><svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M5 15l7-7 7 7"/></svg></button>
+                                                        <button onClick={() => handleMovePrestacion(p, 'down')} disabled={index === enabledList.length - 1} className="p-0.5 disabled:opacity-20"><svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 9l-7 7-7 7"/></svg></button>
+                                                        <ActionButton type="disable" onClick={() => handleDisable(p)} title="Deshabilitar"/>
+                                                    </div>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h6 className="font-bold text-red-700 mb-2">No Habilitadas ({disabledList.length})</h6>
+                                        <ul className="space-y-1 p-2 border rounded-md h-96 overflow-y-auto bg-red-50">
+                                            {disabledList.map(p => (
+                                                <li key={p} className="flex justify-between items-center p-1 rounded hover:bg-white group">
+                                                    <span className="text-sm text-gray-800 flex-grow mr-2">{p}</span>
+                                                    <ActionButton type="enable" onClick={() => handleEnable(p)} title="Habilitar"/>
+                                                    <ActionButton type="delete" onClick={() => handleDeletePrestacion(p)} title="Eliminar permanentemente"/>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
+                            <p className="text-center text-gray-500 pt-16">Seleccione un perfil para comenzar.</p>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default AdminView;

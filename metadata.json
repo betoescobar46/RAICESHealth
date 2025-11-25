@@ -1,0 +1,5 @@
+{
+  "name": "RLP con borrador de estadistica avanzada",
+  "description": "An application for managing and viewing patient appointments and clinical schedules in a calendar format for COSAM.",
+  "requestFramePermissions": []
+}

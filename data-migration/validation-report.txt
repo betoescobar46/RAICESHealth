@@ -1,0 +1,37 @@
+
+REPORTE DETALLADO DE VALIDACIÓN
+================================
+Fecha: 2025-11-14T01:30:02.463Z
+
+
+RESUMEN DE VALIDACIÓN
+======================
+✅ Total de pacientes: 238 (Esperados: ~219)
+✅ Total de notas clínicas: 333
+✅ Promedio de notas por paciente: 1.4
+✅ Pacientes con notas: 238 (100.0%)
+
+PROBLEMAS ENCONTRADOS:
+----------------------
+✅ Todos los pacientes tienen notas
+✅ Todas las notas tienen paciente válido
+✅ Todas las fechas son válidas
+✅ Todos los campos requeridos presentes
+
+RESULTADO: ✅ MIGRACIÓN EXITOSA
+
+
+DETALLES DE PROBLEMAS:
+----------------------
+
+Pacientes sin notas (0):
+
+
+Notas sin paciente válido (0):
+
+
+Fechas inválidas (0):
+
+
+Campos requeridos faltantes (0):
+

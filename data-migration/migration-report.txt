@@ -1,0 +1,28 @@
+
+REPORTE DE MIGRACIÓN
+====================
+Fecha: 2025-11-14T01:20:01.142Z
+Directorio fuente: C:\boveda725OB\beto725\Pacientes Extrasistema
+Directorio salida: C:\Users\betoe\SIMORAHealth\data-migration
+
+RESULTADOS:
+-----------
+✅ Total de pacientes procesados: 238
+✅ Total de notas clínicas generadas: 333
+✅ Total de referencias a adjuntos encontradas: 105
+
+ARCHIVOS GENERADOS:
+-------------------
+1. C:\Users\betoe\SIMORAHealth\data-migration\pacientes_completos.json (2291.24 KB)
+2. C:\Users\betoe\SIMORAHealth\data-migration\notas_clinicas_completas.json (2444.88 KB)
+3. C:\Users\betoe\SIMORAHealth\data-migration\adjuntos_referencias.json (5.82 KB)
+
+VERIFICACIÓN:
+-------------
+⚠️ Esperados 219 pacientes, encontrados 238
+
+PRÓXIMOS PASOS:
+---------------
+1. Verificar los archivos JSON generados
+2. Importar a la aplicación usando el importador batch
+3. Verificar en la UI que todos los datos están completos

@@ -1,0 +1,141 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             getUserData().role == 'admin';
+    }
+
+    function isMedico() {
+      return isAuthenticated() &&
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             (getUserData().role == 'medico' || getUserData().role == 'MEDICO');
+    }
+
+    function isPsicologo() {
+      return isAuthenticated() &&
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             (getUserData().role == 'psicologo' || getUserData().role == 'PSICOLOGO');
+    }
+
+    function isProfesional() {
+      return isAuthenticated() &&
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             (getUserData().role == 'profesional' || getUserData().role == 'PROFESIONAL');
+    }
+
+    function isHealthProfessional() {
+      return isMedico() || isPsicologo() || isProfesional() || isAdmin();
+    }
+
+    // Patients collection
+    match /patients/{patientId} {
+      // ✅ SECURE: Only authenticated health professionals can read
+      allow read: if isHealthProfessional();
+
+      // Health professionals can create patients
+      allow create: if isHealthProfessional();
+
+      // Health professionals can update patients
+      allow update: if isHealthProfessional();
+
+      // Only admins can delete patients
+      allow delete: if isAdmin();
+    }
+
+    // Clinical notes collection
+    match /clinicalNotes/{noteId} {
+      // ✅ SECURE: Only authenticated health professionals can read
+      allow read: if isHealthProfessional();
+
+      // Health professionals can create notes
+      allow create: if isHealthProfessional();
+
+      // Only the creator or admin can update notes
+      allow update: if isHealthProfessional() &&
+                      (resource.data.createdBy == request.auth.uid || isAdmin());
+
+      // Only admins can delete notes
+      allow delete: if isAdmin();
+    }
+
+    // Prestaciones (services) collection
+    match /prestaciones/{prestacionId} {
+      // Health professionals can read all prestaciones
+      allow read: if isHealthProfessional();
+
+      // Health professionals can create prestaciones
+      allow create: if isHealthProfessional();
+
+      // Health professionals can update their own prestaciones or admins can update any
+      allow update: if isHealthProfessional() &&
+                      (resource.data.createdBy == request.auth.uid || isAdmin());
+
+      // Only admins can delete prestaciones
+      allow delete: if isAdmin();
+    }
+
+    // Users collection
+    match /users/{userId} {
+      // All authenticated health professionals can list and read users (needed for tratantes feature)
+      allow list, get: if isHealthProfessional();
+
+      // Users can also read their own profile
+      allow get: if isAuthenticated() && request.auth.uid == userId;
+
+      // Only admins can create users
+      allow create: if isAdmin();
+
+      // Users can update their own profile (limited fields)
+      allow update: if isAuthenticated() && request.auth.uid == userId &&
+                      !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role', 'rut']);
+
+      // Admins can update any user
+      allow update: if isAdmin();
+
+      // Only admins can delete users
+      allow delete: if isAdmin();
+    }
+
+    // Backups collection (for system backups)
+    match /backups/{backupId} {
+      // Only admins can read backups
+      allow read: if isAdmin();
+
+      // Only admins can create backups
+      allow create: if isAdmin();
+
+      // No one can update backups (immutable)
+      allow update: if false;
+
+      // Only admins can delete backups
+      allow delete: if isAdmin();
+    }
+
+    // System configuration
+    match /config/{configId} {
+      // Everyone can read config (for app settings)
+      allow read: if true;
+
+      // Only admins can write config
+      allow write: if isAdmin();
+    }
+
+    // Default deny all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

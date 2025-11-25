@@ -1,0 +1,47 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "clinicalNotes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "pacienteId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "fecha",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "clinicalNotes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "pacienteId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "ordenEnHistorial",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "prestaciones",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "patientId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "fecha",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

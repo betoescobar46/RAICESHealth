@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar Datos - SIMORAHealth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .info-box {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .count {
+            font-size: 48px;
+            font-weight: bold;
+            color: #3498db;
+            margin: 10px 0;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Estado de Datos - SIMORAHealth</h1>
+
+    <div class="info-box">
+        <h2>💾 LocalStorage</h2>
+        <div>Pacientes: <span class="count" id="localPatients">-</span></div>
+        <div>Usuarios: <span class="count" id="localUsers">-</span></div>
+        <div>Notas Clínicas: <span class="count" id="localNotes">-</span></div>
+        <div>Prestaciones: <span class="count" id="localPrestaciones">-</span></div>
+    </div>
+
+    <div class="info-box">
+        <h2>☁️ Firestore (verificar en consola)</h2>
+        <p>Para ver los datos en Firestore, abre la consola del navegador (F12)</p>
+    </div>
+
+    <script type="module">
+        // Mostrar datos de localStorage
+        const patients = JSON.parse(localStorage.getItem('patients') || '[]');
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
+        const notes = JSON.parse(localStorage.getItem('clinicalNotes') || '[]');
+        const prestaciones = JSON.parse(localStorage.getItem('prestaciones') || '[]');
+
+        document.getElementById('localPatients').textContent = patients.length;
+        document.getElementById('localUsers').textContent = users.length;
+        document.getElementById('localNotes').textContent = notes.length;
+        document.getElementById('localPrestaciones').textContent = prestaciones.length;
+
+        console.log('📊 Datos en localStorage:');
+        console.log('- Pacientes:', patients.length);
+        console.log('- Usuarios:', users.length);
+        console.log('- Notas clínicas:', notes.length);
+        console.log('- Prestaciones:', prestaciones.length);
+
+        if (patients.length > 0) {
+            console.log('\n👥 Primeros 5 pacientes:');
+            patients.slice(0, 5).forEach(p => {
+                console.log(`  - ${p.nombre} (RUT: ${p.rut})`);
+            });
+        }
+    </script>
+</body>
+</html>

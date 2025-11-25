@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "target": "es2020",
+    "outDir": "dist-script",
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["migrate-from-markdown.ts"]
+}

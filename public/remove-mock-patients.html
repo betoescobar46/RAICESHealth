@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Pacientes Ficticios</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 { color: #333; margin-bottom: 20px; }
+        .info {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .button {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(220, 53, 69, 0.4);
+        }
+        .button.cancel {
+            background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+        }
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+        .success {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #4caf50;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            border: 1px solid #ef5350;
+        }
+        #mockList {
+            text-align: left;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        #mockList li {
+            padding: 5px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗑️ Eliminar Pacientes Ficticios</h1>
+
+        <div class="info">
+            ⚠️ Esta acción eliminará los pacientes de prueba (ficticios) del sistema.
+            Tus pacientes reales NO serán afectados.
+        </div>
+
+        <div id="mockList">
+            <strong>Pacientes a eliminar:</strong>
+            <ul id="patientList"></ul>
+        </div>
+
+        <button class="button" onclick="removeMockPatients()">
+            🗑️ Eliminar Pacientes Ficticios
+        </button>
+
+        <button class="button cancel" onclick="goBack()">
+            ← Cancelar
+        </button>
+
+        <div id="status"></div>
+    </div>
+
+    <script>
+        // Identificadores de pacientes ficticios comunes
+        const mockIdentifiers = [
+            'mock_patient',
+            'patient_mock',
+            'ficticio',
+            'prueba',
+            'test_',
+            'demo_',
+            'example_'
+        ];
+
+        // Nombres comunes de pacientes ficticios
+        const mockNames = [
+            'Juan Pérez',
+            'María González',
+            'Pedro Martínez',
+            'Ana López',
+            'Carlos Rodríguez',
+            'Test Patient',
+            'Demo Patient',
+            'Paciente Prueba',
+            'Paciente Ficticio',
+            'Paciente Demo'
+        ];
+
+        function isMockPatient(patient) {
+            // Verificar por ID
+            if (patient.firestoreId) {
+                const id = patient.firestoreId.toLowerCase();
+                if (mockIdentifiers.some(mock => id.includes(mock))) {
+                    return true;
+                }
+            }
+
+            // Verificar por nombre
+            if (patient.nombre) {
+                const nombre = patient.nombre.toLowerCase();
+                if (mockNames.some(mock => nombre.toLowerCase() === mock.toLowerCase())) {
+                    return true;
+                }
+            }
+
+            // Verificar por número de ficha menor a 10 (común en datos de prueba)
+            if (patient.ficha && patient.ficha <= 5) {
+                // Verificar también que tenga características de mock
+                if (patient.nombre && mockNames.some(mock =>
+                    patient.nombre.toLowerCase().includes(mock.toLowerCase()))) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        // Mostrar lista de pacientes ficticios al cargar
+        window.addEventListener('load', function() {
+            try {
+                const allPatients = JSON.parse(localStorage.getItem('rlp_patients') || '[]');
+                const mockPatients = allPatients.filter(isMockPatient);
+
+                const list = document.getElementById('patientList');
+
+                if (mockPatients.length === 0) {
+                    list.innerHTML = '<li style="color: #28a745;">✅ No se encontraron pacientes ficticios</li>';
+                    document.querySelector('.button').disabled = true;
+                    document.querySelector('.button').style.opacity = '0.5';
+                } else {
+                    mockPatients.forEach(patient => {
+                        const li = document.createElement('li');
+                        li.textContent = `${patient.nombre} (${patient.rut || 'Sin RUT'})`;
+                        list.appendChild(li);
+                    });
+                }
+            } catch (error) {
+                showStatus('error', '❌ Error al cargar pacientes: ' + error.message);
+            }
+        });
+
+        function removeMockPatients() {
+            if (!confirm('¿Estás seguro de eliminar los pacientes ficticios?\n\nEsta acción no se puede deshacer.')) {
+                return;
+            }
+
+            try {
+                // Obtener todos los pacientes
+                const allPatients = JSON.parse(localStorage.getItem('rlp_patients') || '[]');
+                const totalBefore = allPatients.length;
+
+                // Filtrar solo los pacientes reales
+                const realPatients = allPatients.filter(patient => !isMockPatient(patient));
+                const totalAfter = realPatients.length;
+                const removed = totalBefore - totalAfter;
+
+                // Guardar
+                localStorage.setItem('rlp_patients', JSON.stringify(realPatients));
+
+                showStatus('success',
+                    `🎉 ¡Pacientes ficticios eliminados!<br>
+                    Eliminados: ${removed}<br>
+                    Pacientes reales conservados: ${totalAfter}<br><br>
+                    Redirigiendo a SIMORAHealth...`
+                );
+
+                // Redirigir
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+
+            } catch (error) {
+                showStatus('error', '❌ Error al eliminar: ' + error.message);
+            }
+        }
+
+        function goBack() {
+            window.location.href = '/';
+        }
+
+        function showStatus(type, message) {
+            const status = document.getElementById('status');
+            status.className = type;
+            status.innerHTML = message;
+            status.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importar Pacientes</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 { color: #333; margin-bottom: 20px; }
+        .button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+        .success {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #4caf50;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            border: 1px solid #ef5350;
+        }
+        .info {
+            background: #e3f2fd;
+            color: #1565c0;
+            border: 1px solid #2196f3;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📥 Importar Pacientes a SIMORAHealth</h1>
+
+        <div style="margin: 30px 0;">
+            <p style="color: #666;">Selecciona el archivo <strong>pacientes_migrados.json</strong></p>
+            <input type="file" id="fileInput" accept=".json">
+        </div>
+
+        <button class="button" onclick="importPatients()">
+            🚀 Importar Ahora
+        </button>
+
+        <div id="status"></div>
+    </div>
+
+    <script>
+        let patientsData = null;
+
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    try {
+                        patientsData = JSON.parse(event.target.result);
+                        showStatus('info', `✅ Archivo cargado: ${patientsData.length} pacientes`);
+                    } catch (error) {
+                        showStatus('error', '❌ Error: Archivo JSON inválido');
+                    }
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        function importPatients() {
+            if (!patientsData) {
+                showStatus('error', '❌ Por favor selecciona primero el archivo JSON');
+                return;
+            }
+
+            try {
+                // Obtener pacientes actuales
+                const currentPatients = JSON.parse(localStorage.getItem('rlp_patients') || '[]');
+
+                showStatus('info', `Pacientes actuales: ${currentPatients.length}`);
+
+                // Combinar
+                const allPatients = [...currentPatients, ...patientsData];
+
+                // Guardar
+                localStorage.setItem('rlp_patients', JSON.stringify(allPatients));
+
+                showStatus('success',
+                    `🎉 ¡Importación Exitosa!<br>
+                    Pacientes importados: ${patientsData.length}<br>
+                    Total en sistema: ${allPatients.length}<br><br>
+                    Redirigiendo a SIMORAHealth...`
+                );
+
+                // Redirigir a la app principal
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+
+            } catch (error) {
+                showStatus('error', '❌ Error al importar: ' + error.message);
+            }
+        }
+
+        function showStatus(type, message) {
+            const status = document.getElementById('status');
+            status.className = type;
+            status.innerHTML = message;
+            status.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

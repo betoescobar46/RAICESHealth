@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpiar Clinical Notes - localStorage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+        button.secondary {
+            background: #3498db;
+        }
+        button.secondary:hover {
+            background: #2980b9;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗑️ Limpiar Clinical Notes de localStorage</h1>
+
+        <p><strong>⚠️ ADVERTENCIA:</strong> Esta página eliminará la clave <code>clinicalNotes</code> de tu localStorage.</p>
+
+        <p>Esto solo afecta datos legacy almacenados localmente. Las notas en Firestore ya fueron eliminadas.</p>
+
+        <div>
+            <button onclick="checkLocalStorage()">🔍 Ver qué hay en localStorage</button>
+            <button onclick="cleanClinicalNotes()">🗑️ Limpiar Clinical Notes</button>
+            <button class="secondary" onclick="cleanAll()">🧹 Limpiar TODO el localStorage</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function showResult(message, type = 'info') {
+            const resultDiv = document.getElementById('result');
+            resultDiv.className = type;
+            resultDiv.innerHTML = message;
+            resultDiv.style.display = 'block';
+        }
+
+        function checkLocalStorage() {
+            const clinicalNotes = localStorage.getItem('clinicalNotes');
+            const allKeys = Object.keys(localStorage);
+
+            let message = `<h3>📊 Estado de localStorage:</h3>`;
+            message += `<p><strong>Total de claves:</strong> ${allKeys.length}</p>`;
+            message += `<p><strong>Claves disponibles:</strong></p>`;
+            message += `<pre>${allKeys.join('\n')}</pre>`;
+
+            if (clinicalNotes) {
+                try {
+                    const parsed = JSON.parse(clinicalNotes);
+                    const count = Array.isArray(parsed) ? parsed.length : 'N/A';
+                    message += `<p><strong>clinicalNotes encontrado:</strong> ${count} notas</p>`;
+                } catch (e) {
+                    message += `<p><strong>clinicalNotes:</strong> Existe pero no es JSON válido</p>`;
+                }
+            } else {
+                message += `<p><strong>clinicalNotes:</strong> ❌ No existe</p>`;
+            }
+
+            showResult(message, 'info');
+        }
+
+        function cleanClinicalNotes() {
+            const hadClinicalNotes = localStorage.getItem('clinicalNotes') !== null;
+
+            if (hadClinicalNotes) {
+                localStorage.removeItem('clinicalNotes');
+                showResult(
+                    '<h3>✅ Clinical Notes Eliminado</h3>' +
+                    '<p>La clave <code>clinicalNotes</code> ha sido eliminada de localStorage.</p>' +
+                    '<p>Puedes verificar nuevamente con el botón "Ver qué hay en localStorage".</p>',
+                    'success'
+                );
+            } else {
+                showResult(
+                    '<h3>ℹ️ No había nada que limpiar</h3>' +
+                    '<p>No se encontró la clave <code>clinicalNotes</code> en localStorage.</p>',
+                    'warning'
+                );
+            }
+        }
+
+        function cleanAll() {
+            const confirmed = confirm(
+                '⚠️ ADVERTENCIA: Esto eliminará TODO el contenido de localStorage.\n\n' +
+                '¿Estás seguro? Esta acción no se puede deshacer.'
+            );
+
+            if (confirmed) {
+                const keysCount = localStorage.length;
+                localStorage.clear();
+                showResult(
+                    '<h3>✅ localStorage Limpiado Completamente</h3>' +
+                    `<p>Se eliminaron ${keysCount} claves de localStorage.</p>`,
+                    'success'
+                );
+            }
+        }
+
+        // Verificar al cargar
+        window.addEventListener('load', () => {
+            checkLocalStorage();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Force Load Real Patients - SIMORA Health</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button.danger {
+            background-color: #f44336;
+        }
+        button.danger:hover {
+            background-color: #da190b;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+        #status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        #status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        #status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .info-box {
+            background-color: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Force Load Real Patients</h1>
+
+        <div class="info-box">
+            <strong>Current Status:</strong>
+            <div id="currentStatus">Loading...</div>
+        </div>
+
+        <h2>Actions:</h2>
+
+        <button onclick="checkStatus()">Check Current Status</button>
+        <button onclick="clearPatientsOnly()" class="danger">Clear Patients Only</button>
+        <button onclick="loadRealPatients()">Load Real Patients from JSON</button>
+        <button onclick="clearAllAndReload()" class="danger">Clear All & Force Reload</button>
+
+        <div id="status"></div>
+    </div>
+
+    <script>
+        function showStatus(message, type = 'info') {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = type;
+            statusDiv.style.display = 'block';
+        }
+
+        function updateCurrentStatus() {
+            const patients = localStorage.getItem('rlp_patients');
+            const statusDiv = document.getElementById('currentStatus');
+
+            if (patients) {
+                try {
+                    const patientsList = JSON.parse(patients);
+                    const count = patientsList.length;
+
+                    // Check if these are mock patients
+                    const isMock = patientsList.some(p =>
+                        p.firestoreId === 'patient-001' ||
+                        p.firestoreId === 'patient-002' ||
+                        p.nombre === 'María González Rodríguez'
+                    );
+
+                    statusDiv.innerHTML = `
+                        <strong>Patients in localStorage:</strong> ${count}<br>
+                        <strong>Type:</strong> ${isMock ? '❌ MOCK PATIENTS' : '✅ REAL PATIENTS'}<br>
+                        <strong>First patient:</strong> ${patientsList[0]?.nombre || 'N/A'}<br>
+                        <strong>Has contenidoOriginal:</strong> ${patientsList[0]?.contenidoOriginal ? 'Yes ✅' : 'No ❌'}
+                    `;
+                } catch (error) {
+                    statusDiv.innerHTML = '❌ Error parsing patients data';
+                }
+            } else {
+                statusDiv.innerHTML = '⚠️ No patients in localStorage';
+            }
+        }
+
+        function checkStatus() {
+            updateCurrentStatus();
+            showStatus('Status updated!', 'success');
+        }
+
+        function clearPatientsOnly() {
+            if (!confirm('This will remove all patients from localStorage. Continue?')) {
+                return;
+            }
+
+            localStorage.removeItem('rlp_patients');
+            showStatus('✅ Patients cleared from localStorage!', 'success');
+            updateCurrentStatus();
+        }
+
+        async function loadRealPatients() {
+            showStatus('Loading real patients from JSON...', 'info');
+
+            try {
+                const response = await fetch('/data-migration/pacientes_completos.json');
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const importedPatients = await response.json();
+
+                if (!Array.isArray(importedPatients)) {
+                    throw new Error('JSON file does not contain an array of patients');
+                }
+
+                // Transform patients to expected format
+                const patients = importedPatients.map((p) => ({
+                    firestoreId: p.id,
+                    ficha: parseInt(p.numeroFicha) || Math.floor(Math.random() * 100000),
+                    nombre: p.nombre,
+                    rut: '',
+                    edad: 0,
+                    sexo: 'Masculino',
+                    identidadGenero: '',
+                    fechaNacimiento: '2000-01-01',
+                    direccion: '',
+                    comuna: '',
+                    lat: -35.4264,
+                    lon: -71.6554,
+                    telefonos: [],
+                    email: '',
+                    tutor: 'No aplica',
+                    ocupacion: '',
+                    dispositivoAPS: '',
+                    alergias: '',
+                    ram: '',
+                    objetivosTerapeuticos: '',
+                    diagnostico: {
+                        saludMental: '',
+                        morbilidadMedica: '',
+                        factoresPsicosociales: ''
+                    },
+                    farmacos: [],
+                    pensionDiscapacidad: false,
+                    credencialDiscapacidad: false,
+                    consumoActivoDrogas: false,
+                    contenidoOriginal: p.contenidoCompleto,
+                    tags: p.tags || [],
+                    fechaCreacion: p.fechaCreacion,
+                    fechaActualizacion: p.fechaActualizacion,
+                    origen: p.origen
+                }));
+
+                // Save to localStorage
+                localStorage.setItem('rlp_patients', JSON.stringify(patients));
+
+                showStatus(`✅ Successfully loaded ${patients.length} real patients from JSON!`, 'success');
+                updateCurrentStatus();
+
+            } catch (error) {
+                showStatus(`❌ Error loading patients: ${error.message}`, 'error');
+                console.error('Error loading patients:', error);
+            }
+        }
+
+        async function clearAllAndReload() {
+            if (!confirm('This will clear ALL localStorage data and reload real patients. Continue?')) {
+                return;
+            }
+
+            // Clear all localStorage
+            localStorage.clear();
+            showStatus('Cleared all localStorage. Loading real patients...', 'info');
+
+            // Wait a bit then load real patients
+            setTimeout(async () => {
+                await loadRealPatients();
+            }, 500);
+        }
+
+        // Initialize status on page load
+        updateCurrentStatus();
+    </script>
+</body>
+</html>

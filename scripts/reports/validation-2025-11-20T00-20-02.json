@@ -1,0 +1,210 @@
+{
+  "timestamp": "2025-11-20T00:20:06.378Z",
+  "estadisticas": {
+    "totalNotas": 1431,
+    "totalPacientes": 257,
+    "notasPorTipo": {
+      "CONTROL": 1174,
+      "INGRESO": 257
+    },
+    "camposFaltantes": {
+      "titulo": 165,
+      "contenidoCompleto": 5
+    },
+    "subseccionesMalClasificadas": [
+      {
+        "notaId": "aWOz505TNkt8PDRqnlFP",
+        "titulo": "Examen mental descrito en informes previos. En último control con fecha 25 agosto 2025: destaca ánim",
+        "patientId": "WJt0IfdZvwxrRweg7zHK"
+      },
+      {
+        "notaId": "IsD0kRkSPn9HYi7IHqa1",
+        "titulo": "==Se extiende licencia médica desde el 1 de julio por 9 días adicionales por F41.2. Reevaluación en ",
+        "patientId": "PtfdmSIcZuhkpfX2a9Kb"
+      },
+      {
+        "notaId": "JuMot7icHFivcLIQTBfU",
+        "titulo": "anamnesis proxima: en 2010 estuvo con tto psicologico 1 año por duelo complicado luego de morir su m",
+        "patientId": "FIDcM1pehCIDvzeLzsqU"
+      },
+      {
+        "notaId": "0zOF3y5sFiA6pQ8ZAI1h",
+        "titulo": "**Indicaciones:** Feedback con Karla. Zolpidem 5mg sublingual cada noche. Control 26 junio 20.00hrs.",
+        "patientId": "YlkdM2UAj0sYHgeM4NHP"
+      },
+      {
+        "notaId": "rVK21YVjZEWbsC9dYvY7",
+        "titulo": "**1 jun 2022:** control raul silva mala atencion, le dio indicaciones respecto al reflujo. Solo alte",
+        "patientId": "ghCrPaeEHtavb9iAyOzp"
+      },
+      {
+        "notaId": "3WW5jvj4Dsp247tumkWr",
+        "titulo": "**Indicaciones:** Control próximo agendado para el 19 de mayo a las 19:15 hrs.",
+        "patientId": "9gUgj3SAxU3FOxPrjGaz"
+      },
+      {
+        "notaId": "72zbKlANLLLcShhVKV5n",
+        "titulo": "- No apto para reintegro en este ciclo de licencia. Reevaluación en control del 17-09-2025. Si reduc",
+        "patientId": "uXOrsXQs74aClBxZcaMy"
+      },
+      {
+        "notaId": "AOm0wVs7I7YCrH5K2tds",
+        "titulo": "- Vitamina D: control pos-tratamiento indicado",
+        "patientId": "uXOrsXQs74aClBxZcaMy"
+      },
+      {
+        "notaId": "id1hgFxkjWkTOzws4iHJ",
+        "titulo": "- Solicito control de vitamina D; control de crónicos (DM2 y dislipidemia); evaluación urológica por",
+        "patientId": "uXOrsXQs74aClBxZcaMy"
+      },
+      {
+        "notaId": "uUIzqwH0Tiicj9yfHTlx",
+        "titulo": "control con medico general para tratamiento de gastropatia.",
+        "patientId": "p5Td79fiYfVUFKWQsC7l"
+      },
+      {
+        "notaId": "p1879j6pzs23naUjyeLD",
+        "titulo": "Tratamiento al alta: ácido valproico 200 mg VO 1-0-1, olanzapina 10 mg VO ½-0-1, quetiapina 25 mg VO",
+        "patientId": "PPeMbO82wMYhSdj6YrE4"
+      },
+      {
+        "notaId": "R2yzSze59NpaArmJ9Grk",
+        "titulo": "Se recomienda evaluación por médico internista y se agenda próximo control psiquiátrico para el 13 a",
+        "patientId": "REJ0CyboRzqDhA3McL6X"
+      },
+      {
+        "notaId": "GWgxSI7tvciVcnOYXCTa",
+        "titulo": "Se mantiene tratamiento farmacológico combinado (venlafaxina OR y fluoxetina) con suplementación de ",
+        "patientId": "O5QCuAUwBSZMi2Vk3VBd"
+      },
+      {
+        "notaId": "L7Z6L7S8WzUpyuU9K4Jt",
+        "titulo": "Otras indicaciones: Psicoterapia; higiene del sueño; regularidad estricta de la toma de antidepresiv",
+        "patientId": "O5QCuAUwBSZMi2Vk3VBd"
+      },
+      {
+        "notaId": "SspVn8k5L1TsLFfQxRVg",
+        "titulo": "Previo al ingreso tenía antecedente de tratamiento psiquiátrico por depresión posparto en 2022 (sin ",
+        "patientId": "O5QCuAUwBSZMi2Vk3VBd"
+      },
+      {
+        "notaId": "TiFwqwXNbeK8b32RS6u3",
+        "titulo": "Paciente con antecedentes de Depresión con baja respuesta a Sertralina, abuso de OH (superado), cons",
+        "patientId": "x9BYAaXlsvd9bSLmangh"
+      }
+    ],
+    "pacientesConMultiplesIngresos": [],
+    "notasSinOrden": [],
+    "notasConOrdenIncorrecto": [],
+    "pacientesCorrectos": 240
+  },
+  "problemas": [
+    {
+      "tipo": "ERROR",
+      "notaId": "aWOz505TNkt8PDRqnlFP",
+      "mensaje": "Control \"Examen mental descrito en informes previos. En último control con fecha 25 agosto 2025: destaca ánim\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "IsD0kRkSPn9HYi7IHqa1",
+      "mensaje": "Control \"==Se extiende licencia médica desde el 1 de julio por 9 días adicionales por F41.2. Reevaluación en \" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "JuMot7icHFivcLIQTBfU",
+      "mensaje": "Control \"anamnesis proxima: en 2010 estuvo con tto psicologico 1 año por duelo complicado luego de morir su m\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "0zOF3y5sFiA6pQ8ZAI1h",
+      "mensaje": "Control \"**Indicaciones:** Feedback con Karla. Zolpidem 5mg sublingual cada noche. Control 26 junio 20.00hrs.\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "rVK21YVjZEWbsC9dYvY7",
+      "mensaje": "Control \"**1 jun 2022:** control raul silva mala atencion, le dio indicaciones respecto al reflujo. Solo alte\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "3WW5jvj4Dsp247tumkWr",
+      "mensaje": "Control \"**Indicaciones:** Control próximo agendado para el 19 de mayo a las 19:15 hrs.\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "72zbKlANLLLcShhVKV5n",
+      "mensaje": "Control \"- No apto para reintegro en este ciclo de licencia. Reevaluación en control del 17-09-2025. Si reduc\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "AOm0wVs7I7YCrH5K2tds",
+      "mensaje": "Control \"- Vitamina D: control pos-tratamiento indicado\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "id1hgFxkjWkTOzws4iHJ",
+      "mensaje": "Control \"- Solicito control de vitamina D; control de crónicos (DM2 y dislipidemia); evaluación urológica por\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "uUIzqwH0Tiicj9yfHTlx",
+      "mensaje": "Control \"control con medico general para tratamiento de gastropatia.\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "p1879j6pzs23naUjyeLD",
+      "mensaje": "Control \"Tratamiento al alta: ácido valproico 200 mg VO 1-0-1, olanzapina 10 mg VO ½-0-1, quetiapina 25 mg VO\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "BPddbwCI6HqkLHJmA6u0",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "R2yzSze59NpaArmJ9Grk",
+      "mensaje": "Control \"Se recomienda evaluación por médico internista y se agenda próximo control psiquiátrico para el 13 a\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "GWgxSI7tvciVcnOYXCTa",
+      "mensaje": "Control \"Se mantiene tratamiento farmacológico combinado (venlafaxina OR y fluoxetina) con suplementación de \" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "L7Z6L7S8WzUpyuU9K4Jt",
+      "mensaje": "Control \"Otras indicaciones: Psicoterapia; higiene del sueño; regularidad estricta de la toma de antidepresiv\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "SspVn8k5L1TsLFfQxRVg",
+      "mensaje": "Control \"Previo al ingreso tenía antecedente de tratamiento psiquiátrico por depresión posparto en 2022 (sin \" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ERROR",
+      "notaId": "TiFwqwXNbeK8b32RS6u3",
+      "mensaje": "Control \"Paciente con antecedentes de Depresión con baja respuesta a Sertralina, abuso de OH (superado), cons\" parece ser una subsección del INGRESO"
+    },
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "L9FDsuoMYaIrTi3VG0pr",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    },
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "b8r3ew0S11KUMKSwx14y",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    },
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "fNirfatsYd0MbpzUdGGj",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    },
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "kmKiZYSeUabMazKir6h0",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    }
+  ],
+  "totalProblemas": 16,
+  "totalAdvertencias": 5
+}

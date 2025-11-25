@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estandarizar RUTs - SIMORAHealth</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        button:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+        }
+        .info {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        #log {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            display: none;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Estandarización de RUTs</h1>
+
+        <div class="info">
+            <strong>Formato objetivo:</strong> <code>00000000-0</code> (8 dígitos sin puntos, con guion)
+            <br><br>
+            Este script actualizará todos los RUTs en localStorage al formato estandarizado.
+        </div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <div class="stat-card">
+                <div class="stat-number" id="totalPatients">0</div>
+                <div class="stat-label">Pacientes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="updatedPatients">0</div>
+                <div class="stat-label">Actualizados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalUsers">0</div>
+                <div class="stat-label">Usuarios</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="updatedUsers">0</div>
+                <div class="stat-label">Actualizados</div>
+            </div>
+        </div>
+
+        <button onclick="analyzeData()">📊 Analizar Datos</button>
+        <button onclick="standardizeRUTs()" id="executeBtn" disabled>🚀 Ejecutar Estandarización</button>
+        <button onclick="downloadBackup()">💾 Descargar Backup</button>
+
+        <div id="log"></div>
+    </div>
+
+    <script>
+        let patientsData = [];
+        let usersData = [];
+
+        function standardizeRUT(rut) {
+            if (!rut) return '';
+
+            // Remover todos los puntos, espacios y guiones
+            const cleaned = rut.replace(/[.\s-]/g, '').toUpperCase();
+
+            if (cleaned.length === 0) return '';
+
+            // Extraer cuerpo y dígito verificador
+            const body = cleaned.slice(0, -1);
+            const dv = cleaned.slice(-1);
+
+            // Rellenar con ceros a la izquierda hasta 8 dígitos
+            const paddedBody = body.padStart(8, '0');
+
+            return `${paddedBody}-${dv}`;
+        }
+
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('log');
+            logDiv.style.display = 'block';
+
+            const timestamp = new Date().toLocaleTimeString();
+            const icon = {
+                'info': 'ℹ️',
+                'success': '✅',
+                'warning': '⚠️',
+                'error': '❌'
+            }[type] || 'ℹ️';
+
+            logDiv.textContent += `[${timestamp}] ${icon} ${message}\n`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function analyzeData() {
+            log('Analizando datos en localStorage...', 'info');
+
+            // Cargar pacientes
+            const patientsStr = localStorage.getItem('patients');
+            if (patientsStr) {
+                patientsData = JSON.parse(patientsStr);
+                log(`Encontrados ${patientsData.length} pacientes`, 'success');
+            } else {
+                patientsData = [];
+                log('No se encontraron pacientes en localStorage', 'warning');
+            }
+
+            // Cargar usuarios
+            const usersStr = localStorage.getItem('users');
+            if (usersStr) {
+                usersData = JSON.parse(usersStr);
+                log(`Encontrados ${usersData.length} usuarios`, 'success');
+            } else {
+                usersData = [];
+                log('No se encontraron usuarios en localStorage', 'warning');
+            }
+
+            // Analizar RUTs que necesitan actualización
+            let patientsToUpdate = 0;
+            let usersToUpdate = 0;
+
+            patientsData.forEach(patient => {
+                if (patient.rut) {
+                    const standardized = standardizeRUT(patient.rut);
+                    if (patient.rut !== standardized) {
+                        patientsToUpdate++;
+                        log(`  ${patient.nombre}: ${patient.rut} → ${standardized}`, 'info');
+                    }
+                }
+            });
+
+            usersData.forEach(user => {
+                const rut = user.username || user.rut;
+                if (rut) {
+                    const standardized = standardizeRUT(rut);
+                    if (rut !== standardized) {
+                        usersToUpdate++;
+                        log(`  ${user.name}: ${rut} → ${standardized}`, 'info');
+                    }
+                }
+            });
+
+            // Actualizar estadísticas
+            document.getElementById('stats').style.display = 'grid';
+            document.getElementById('totalPatients').textContent = patientsData.length;
+            document.getElementById('updatedPatients').textContent = patientsToUpdate;
+            document.getElementById('totalUsers').textContent = usersData.length;
+            document.getElementById('updatedUsers').textContent = usersToUpdate;
+
+            if (patientsToUpdate > 0 || usersToUpdate > 0) {
+                document.getElementById('executeBtn').disabled = false;
+                log(`\n📋 Resumen: ${patientsToUpdate} pacientes y ${usersToUpdate} usuarios necesitan actualización`, 'warning');
+            } else {
+                log('\n✨ Todos los RUTs ya están en formato estandarizado', 'success');
+            }
+        }
+
+        function standardizeRUTs() {
+            if (!confirm('¿Está seguro de que desea estandarizar todos los RUTs?\n\nSe recomienda descargar un backup antes de continuar.')) {
+                return;
+            }
+
+            log('\n🚀 Iniciando estandarización de RUTs...', 'info');
+
+            let patientsUpdated = 0;
+            let usersUpdated = 0;
+
+            // Actualizar pacientes
+            patientsData.forEach(patient => {
+                if (patient.rut) {
+                    const original = patient.rut;
+                    const standardized = standardizeRUT(patient.rut);
+                    if (original !== standardized) {
+                        patient.rut = standardized;
+                        patientsUpdated++;
+                        log(`✅ ${patient.nombre}: ${original} → ${standardized}`, 'success');
+                    }
+                }
+            });
+
+            // Actualizar usuarios
+            usersData.forEach(user => {
+                const originalUsername = user.username;
+                const originalRut = user.rut;
+
+                if (user.username) {
+                    const standardized = standardizeRUT(user.username);
+                    if (user.username !== standardized) {
+                        user.username = standardized;
+                        usersUpdated++;
+                    }
+                }
+
+                if (user.rut) {
+                    const standardized = standardizeRUT(user.rut);
+                    if (user.rut !== standardized) {
+                        user.rut = standardized;
+                        if (!user.username || user.username === originalUsername) {
+                            usersUpdated++;
+                        }
+                    }
+                }
+
+                if (originalUsername !== user.username || originalRut !== user.rut) {
+                    log(`✅ ${user.name}: RUT actualizado`, 'success');
+                }
+            });
+
+            // Guardar en localStorage
+            try {
+                localStorage.setItem('patients', JSON.stringify(patientsData));
+                localStorage.setItem('users', JSON.stringify(usersData));
+
+                log(`\n📊 Resumen Final:`, 'info');
+                log(`   Pacientes actualizados: ${patientsUpdated}`, 'success');
+                log(`   Usuarios actualizados: ${usersUpdated}`, 'success');
+                log(`\n✨ Estandarización completada exitosamente`, 'success');
+
+                // Actualizar estadísticas
+                document.getElementById('updatedPatients').textContent = patientsUpdated;
+                document.getElementById('updatedUsers').textContent = usersUpdated;
+
+                document.getElementById('executeBtn').disabled = true;
+
+                alert('✅ Estandarización completada exitosamente!\n\n' +
+                      `Pacientes actualizados: ${patientsUpdated}\n` +
+                      `Usuarios actualizados: ${usersUpdated}\n\n` +
+                      'Por favor, recarga la página para ver los cambios.');
+
+            } catch (error) {
+                log(`❌ Error al guardar en localStorage: ${error.message}`, 'error');
+                alert('Error al guardar los cambios. Por favor, revise el log.');
+            }
+        }
+
+        function downloadBackup() {
+            const backup = {
+                timestamp: new Date().toISOString(),
+                patients: patientsData.length > 0 ? patientsData : JSON.parse(localStorage.getItem('patients') || '[]'),
+                users: usersData.length > 0 ? usersData : JSON.parse(localStorage.getItem('users') || '[]'),
+                clinicalNotes: JSON.parse(localStorage.getItem('clinicalNotes') || '[]'),
+                prestaciones: JSON.parse(localStorage.getItem('prestaciones') || '[]')
+            };
+
+            const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `simora-backup-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            log('💾 Backup descargado exitosamente', 'success');
+        }
+
+        // Analizar datos al cargar
+        window.addEventListener('load', () => {
+            log('🔧 Script de estandarización de RUTs cargado', 'info');
+            log('Haga clic en "Analizar Datos" para comenzar\n', 'info');
+        });
+    </script>
+</body>
+</html>

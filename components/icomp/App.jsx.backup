@@ -1,0 +1,530 @@
+import React, { useState, useEffect } from 'react';
+import html2pdf from 'html2pdf.js';
+import ClinicalRecordInput from './components/ClinicalRecordInput';
+import ReportEditor from './components/ReportEditor';
+import ActionPanel from './components/ActionPanel';
+import LicenseSelector from './components/LicenseSelector';
+import Alert from './components/Alert';
+
+const App = () => {
+  const [fichaClinica, setFichaClinica] = useState('');
+  const [reportContent, setReportContent] = useState('');
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [detectedLicenses, setDetectedLicenses] = useState([]);
+  const [selectedLicense, setSelectedLicense] = useState(null);
+  const [showLicenseSelector, setShowLicenseSelector] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  // Recover draft on load - DEBE EJECUTARSE PRIMERO
+  useEffect(() => {
+    try {
+      const savedData = localStorage.getItem('compin_autosave');
+      if (savedData) {
+        const parsed = JSON.parse(savedData);
+        const minutesAgo = Math.floor((new Date() - new Date(parsed.timestamp)) / 60000);
+
+        // Recuperar datos de hasta 24 horas atrás
+        if (minutesAgo < 1440) {
+          if (parsed.fichaClinica) setFichaClinica(parsed.fichaClinica);
+          if (parsed.reportContent) setReportContent(parsed.reportContent);
+          if (parsed.selectedLicense) setSelectedLicense(parsed.selectedLicense);
+          if (parsed.detectedLicenses) setDetectedLicenses(parsed.detectedLicenses);
+
+          setSuccess(`✓ Datos recuperados (guardados hace ${minutesAgo < 60 ? minutesAgo + ' min' : Math.floor(minutesAgo / 60) + ' hrs'})`);
+          setTimeout(() => setSuccess(''), 5000);
+        }
+      }
+    } catch (error) {
+      console.error('Error recuperando autosave:', error);
+    } finally {
+      setDataLoaded(true);
+    }
+  }, []);
+
+  // Auto-save every 10 seconds (solo después de cargar datos iniciales)
+  useEffect(() => {
+    if (!dataLoaded) return; // No guardar hasta que se hayan cargado los datos
+
+    const interval = setInterval(() => {
+      const dataToSave = {
+        fichaClinica,
+        reportContent,
+        selectedLicense,
+        detectedLicenses,
+        timestamp: new Date().toISOString()
+      };
+
+      // Solo guardar si hay datos relevantes
+      if (fichaClinica || reportContent) {
+        localStorage.setItem('compin_autosave', JSON.stringify(dataToSave));
+      }
+    }, 10000); // Cada 10 segundos
+    return () => clearInterval(interval);
+  }, [dataLoaded, fichaClinica, reportContent, selectedLicense, detectedLicenses]);
+
+  // Guardar inmediatamente cuando se genera un informe
+  useEffect(() => {
+    if (!dataLoaded || !reportContent) return;
+
+    const dataToSave = {
+      fichaClinica,
+      reportContent,
+      selectedLicense,
+      detectedLicenses,
+      timestamp: new Date().toISOString()
+    };
+    localStorage.setItem('compin_autosave', JSON.stringify(dataToSave));
+  }, [dataLoaded, reportContent]);
+
+  const analyzeWithClaude = async (ficha, selectedLicenseDate = null) => {
+    const prompt = selectedLicenseDate
+      ? `Analiza esta ficha clínica y genera un informe médico COMPIN completo.
+
+CRÍTICO: Solo debes considerar información disponible HASTA la fecha: ${selectedLicenseDate}.
+Ignora completamente cualquier control, medicamento, evento o dato posterior a esta fecha.
+
+La fecha del informe (en el título) debe ser: ${new Date().toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' })}
+
+Ficha clínica:
+${ficha}
+
+Genera el informe siguiendo EXACTAMENTE esta estructura con formato HTML:
+
+<div style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px;">
+  <h2 style="text-align: center; font-weight: bold;">INFORME MÉDICO COMPLEMENTARIO</h2>
+  <p>FECHA: ${new Date().toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+
+  <h3>1. IDENTIFICACIÓN DEL PACIENTE</h3>
+  <p>NOMBRE: [extraer nombre completo]</p>
+  <p>RUT: [formato XX.XXX.XXX-X]</p>
+  <p>EDAD: [calcular edad]</p>
+  <p>OCUPACIÓN: [extraer ocupación]</p>
+
+  <h3>2. LICENCIAS QUE JUSTIFICA EN EL INFORME (N° folio):</h3>
+  <p>[Folio de la licencia seleccionada]</p>
+
+  <h3>3. MOTIVO DE CONSULTA, ANAMNESIS Y ANTECEDENTES CLÍNICOS RELEVANTES:</h3>
+  <p>[Desarrollar cronológicamente hasta ${selectedLicenseDate}]</p>
+
+  <h3>4. EXAMEN MENTAL Y/O FÍSICO:</h3>
+  <p>Al ingreso ([fecha]): [Examen mental inicial]</p>
+  <p>Último control ([fecha del control previo a emisión de licencia]): [Examen mental del último control]</p>
+
+  <h3>5. ESTADO FUNCIONAL DEL PACIENTE</h3>
+  <p>[Describir evolución funcional: al ingreso, durante tratamiento, última evaluación. Cubrir AAVD, AIVD, ABVD]</p>
+
+  <h3>6. TRATAMIENTO REALIZADO</h3>
+  <p>[Cronología de tratamientos hasta ${selectedLicenseDate}, incluyendo fármacos con dosis exactas]</p>
+
+  <h3>7. DIAGNÓSTICOS</h3>
+  <p>Eje I: [Trastornos psiquiátricos DSM-V-TR]</p>
+  <p>Eje II: [Personalidad/discapacidad intelectual]</p>
+  <p>Eje III: [Condiciones médicas]</p>
+  <p>Eje IV: [Factores psicosociales]</p>
+  <p>Eje V: EEAG [puntaje estimado]</p>
+
+  <h3>8. OTROS ANTECEDENTES RELEVANTES</h3>
+  <p>ES PATOLOGÍA GES: [Sí/No]</p>
+  <p>LA LICENCIA ES EMITIDA A TRAVÉS DE GES: [Sí/No]</p>
+  <p>SOSPECHA DE ORIGEN LABORAL: [Sí/No]</p>
+  <p>RECUPERABILIDAD LABORAL: [Sí/No]</p>
+  <p>DEBE INICIAR TRÁMITE DE PENSIÓN DE INVALIDEZ (TPI): [Sí/No]</p>
+
+  <h3>9. PLAN DE MANEJO</h3>
+  <p>[Plan terapéutico vigente al momento de emisión de licencia]</p>
+
+  <h3>10. FECHA PROBABLE DE ALTA</h3>
+  <p>[Fecha estimada de alta laboral]</p>
+
+  <h3>11. TRATAMIENTO E INDICACIONES</h3>
+  <p>Reposo médico (licencia): [fechas de la licencia que se justifica]</p>
+  <p>Fármacos: [esquema vigente al momento de emisión]</p>
+  <p>Otras indicaciones: [psicoterapia, controles, etc.]</p>
+
+  <h3>12. IDENTIFICACIÓN DEL TRATANTE</h3>
+  <p>NOMBRE: Humberto Antonio Escobar Guimay</p>
+  <p>RUT: 17.685.576-2</p>
+  <p>ESPECIALIDAD: Psiquiatra adultos</p>
+  <p>CORREO ELECTRÓNICO: ___________________________________</p>
+  <p>FIRMA: ___________________________________</p>
+</div>
+
+REGLAS CRÍTICAS DE FORMATO:
+- USA NEGRITAS (<strong>) SOLO en estos títulos y subtítulos:
+  * INFORME MÉDICO COMPLEMENTARIO (título principal)
+  * 1. IDENTIFICACIÓN DEL PACIENTE
+  * 2. LICENCIAS QUE JUSTIFICA EN EL INFORME (N° folio):
+  * 3. MOTIVO DE CONSULTA, ANAMNESIS Y ANTECEDENTES CLÍNICOS RELEVANTES:
+  * 4. EXAMEN MENTAL Y/O FÍSICO:
+  * 5. ESTADO FUNCIONAL DEL PACIENTE
+  * 6. TRATAMIENTO REALIZADO
+  * 7. DIAGNÓSTICOS
+  * 8. OTROS ANTECEDENTES RELEVANTES
+  * 9. PLAN DE MANEJO
+  * 10. FECHA PROBABLE DE ALTA
+  * 11. TRATAMIENTO E INDICACIONES
+  * 12. IDENTIFICACIÓN DEL TRATANTE
+
+- NO uses negritas en: NOMBRE, RUT, EDAD, OCUPACIÓN, FECHA, medicamentos, síntomas, fechas, Eje I-V, nombres de fármacos, dosis, o cualquier otro texto que NO sea los títulos listados arriba
+- Redacción telegráfica y profesional
+- Si falta información para alguna sección, marca como "[COMPLETAR MANUALMENTE]"`
+      : `Analiza esta ficha clínica y extrae TODAS las licencias médicas (LME) mencionadas.
+
+Para cada licencia detectada, extrae:
+1. Código diagnóstico (ej: f32.1, f321)
+2. Fecha de emisión (ej: "desde 7 agosto 2025", "desde 8 sept")
+3. Duración en días
+4. Número de folio (si está disponible)
+5. Fecha de finalización (si está disponible)
+
+Ficha clínica:
+${ficha}
+
+Responde SOLO con un JSON en este formato exacto:
+{
+  "licencias": [
+    {
+      "diagnostico": "f32.1",
+      "fechaEmision": "2025-08-07",
+      "duracionDias": 32,
+      "folio": "22445169-5",
+      "fechaFin": "2025-09-06"
+    }
+  ]
+}`;
+
+    try {
+      // Timeout de 60 segundos para evitar que se quede colgado
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 60000);
+
+      const response = await fetch('http://localhost:3001/api/claude', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt }),
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error?.message || `Error ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      const content = data.content.find((c) => c.type === 'text')?.text || '';
+
+      if (!content) {
+        throw new Error('Respuesta vacía de la API');
+      }
+
+      return content;
+    } catch (error) {
+      if (error.name === 'AbortError') {
+        throw new Error('Tiempo de espera agotado. Por favor, intente nuevamente.');
+      }
+      if (error.message.includes('fetch')) {
+        throw new Error('Error de conexión. Verifique que el servidor esté ejecutándose.');
+      }
+      throw new Error('Error al comunicarse con la API: ' + error.message);
+    }
+  };
+
+  const handleGenerateClick = async () => {
+    console.log('=== handleGenerateClick iniciado ===');
+
+    if (!fichaClinica.trim()) {
+      setError('Por favor, pegue la ficha clínica primero');
+      setTimeout(() => setError(''), 3000);
+      return;
+    }
+
+    console.log('Ficha clínica presente, longitud:', fichaClinica.length);
+
+    setError('');
+    setSuccess('');
+    setIsGenerating(true);
+    setSuccess('Detectando licencias médicas...');
+
+    try {
+      console.log('Llamando a analyzeWithClaude...');
+      // First call: detect licenses
+      const licenciasResponse = await analyzeWithClaude(fichaClinica);
+
+      console.log('Respuesta recibida, longitud:', licenciasResponse?.length);
+
+      // Try to parse JSON
+      let licenciasData;
+      try {
+        // Limpiar la respuesta de bloques de código markdown si los tiene
+        let cleanResponse = licenciasResponse;
+
+        // Remover bloques de código markdown ```json ... ```
+        if (cleanResponse.includes('```')) {
+          console.log('Detectado bloque de código markdown, limpiando...');
+          cleanResponse = cleanResponse.replace(/```json\n?/g, '').replace(/```\n?/g, '');
+        }
+
+        // Buscar el objeto JSON en la respuesta
+        const jsonMatch = cleanResponse.match(/\{[\s\S]*\}/);
+        console.log('JSON match encontrado:', !!jsonMatch);
+
+        if (!jsonMatch) {
+          console.error('No se encontró JSON en la respuesta');
+          console.log('Respuesta limpia:', cleanResponse.substring(0, 500));
+          throw new Error('Respuesta inválida del servidor - no se encontró JSON');
+        }
+
+        licenciasData = JSON.parse(jsonMatch[0]);
+        console.log('Licencias parseadas:', licenciasData);
+      } catch (e) {
+        console.error('Error parseando licencias:', e);
+        console.log('Respuesta recibida:', licenciasResponse?.substring(0, 500));
+        throw new Error('No se pudieron detectar licencias en la ficha. Error: ' + e.message);
+      }
+
+      if (!licenciasData.licencias || licenciasData.licencias.length === 0) {
+        console.warn('No se encontraron licencias en la respuesta');
+        throw new Error('No se encontraron licencias médicas en la ficha');
+      }
+
+      console.log(`${licenciasData.licencias.length} licencias detectadas`);
+
+      // Show license selector
+      setDetectedLicenses(licenciasData.licencias);
+      setShowLicenseSelector(true);
+      setSuccess(`${licenciasData.licencias.length} licencia(s) detectada(s)`);
+      setTimeout(() => setSuccess(''), 3000);
+      setIsGenerating(false);
+
+      console.log('=== handleGenerateClick completado exitosamente ===');
+    } catch (error) {
+      console.error('❌ Error en handleGenerateClick:', error);
+      console.error('Stack trace:', error.stack);
+      setError(error.message || 'Error desconocido al generar informe');
+      setSuccess('');
+      setIsGenerating(false);
+      setTimeout(() => setError(''), 5000);
+    }
+  };
+
+  const handleLicenseSelect = async (license) => {
+    setSelectedLicense(license);
+    setShowLicenseSelector(false);
+    setIsGenerating(true);
+    setError('');
+    setSuccess('Generando informe médico...');
+
+    try {
+      // Second call: generate report with temporal cutoff
+      const reportHtml = await analyzeWithClaude(fichaClinica, license.fechaEmision);
+
+      if (!reportHtml || reportHtml.length < 100) {
+        throw new Error('Respuesta inválida o incompleta del servidor');
+      }
+
+      setReportContent(reportHtml);
+      setSuccess('✓ Informe generado exitosamente');
+      setTimeout(() => setSuccess(''), 3000);
+    } catch (error) {
+      console.error('Error en handleLicenseSelect:', error);
+      setError(error.message);
+      setSuccess('');
+      setTimeout(() => setError(''), 5000);
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  const handleExportPDF = async () => {
+    if (!reportContent) return;
+
+    try {
+      setSuccess('Generando PDF...');
+
+      // Create temporary element with content
+      const element = document.createElement('div');
+      element.innerHTML = reportContent;
+      element.style.padding = '40px';
+      element.style.fontFamily = 'Arial, sans-serif';
+      element.style.lineHeight = '1.6';
+      element.style.color = 'black';
+
+      // PDF configuration - Letter size (8.5" x 11")
+      const opt = {
+        margin: [10, 10, 10, 10], // 10mm margins
+        filename: `Informe_COMPIN_${selectedLicense?.folio || new Date().getTime()}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          logging: false
+        },
+        jsPDF: {
+          unit: 'mm',
+          format: 'letter', // Letter size (8.5" x 11")
+          orientation: 'portrait'
+        },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+
+      // Generate PDF
+      await html2pdf().set(opt).from(element).save();
+
+      setSuccess('PDF generado exitosamente');
+      setTimeout(() => setSuccess(''), 3000);
+    } catch (error) {
+      setError('Error al generar PDF: ' + error.message);
+      setTimeout(() => setError(''), 3000);
+    }
+  };
+
+  const handleCopyToClipboard = () => {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = reportContent;
+    const text = tempDiv.innerText;
+    navigator.clipboard.writeText(text);
+    setSuccess('Copiado al portapapeles');
+    setTimeout(() => setSuccess(''), 2000);
+  };
+
+  const handleClearAll = () => {
+    if (confirm('¿Está seguro de que desea limpiar todo el contenido?')) {
+      setFichaClinica('');
+      setReportContent('');
+      setDetectedLicenses([]);
+      setSelectedLicense(null);
+      setError('');
+      setSuccess('');
+      // Limpiar TODOS los datos guardados
+      localStorage.removeItem('compin_draft');
+      localStorage.removeItem('compin_draft_time');
+      localStorage.removeItem('compin_autosave');
+      setSuccess('✓ Datos limpiados');
+      setTimeout(() => setSuccess(''), 2000);
+    }
+  };
+
+  return (
+    <div className="min-h-screen p-6" style={{ background: '#E8E9ED' }}>
+      {/* Header */}
+      <div className="flex justify-center w-full mb-32">
+        <div style={{ maxWidth: '1400px' }}>
+          <h1 className="text-2xl font-semibold mb-2" style={{
+            color: '#2C3E50',
+            letterSpacing: '-0.01em',
+            fontWeight: '600'
+          }}>
+            Generador de Informes COMPIN
+          </h1>
+        </div>
+      </div>
+
+      {/* Alerts */}
+      {error && <Alert type="error" message={error} />}
+      {success && <Alert type="success" message={success} />}
+
+      {/* License Selector Modal */}
+      {showLicenseSelector && (
+        <LicenseSelector
+          licenses={detectedLicenses}
+          onSelect={handleLicenseSelect}
+          onCancel={() => setShowLicenseSelector(false)}
+        />
+      )}
+
+      {/* Main Grid */}
+      <div className="flex justify-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" style={{
+          maxWidth: '1400px',
+          gridTemplateColumns: '300px 550px 300px'
+        }}>
+        {/* Left Column - Clinical Record */}
+        <ClinicalRecordInput
+          fichaClinica={fichaClinica}
+          onChange={(e) => setFichaClinica(e.target.value)}
+          onGenerate={handleGenerateClick}
+          isGenerating={isGenerating}
+        />
+
+        {/* Center Column - Editor */}
+        <ReportEditor content={reportContent} onChange={setReportContent} />
+
+        {/* Right Column - Actions */}
+        <ActionPanel
+          reportContent={reportContent}
+          selectedLicense={selectedLicense}
+          onExportPDF={handleExportPDF}
+          onCopy={handleCopyToClipboard}
+          onClear={handleClearAll}
+        />
+        </div>
+      </div>
+
+      {/* Generate Report Button - Outside Grid */}
+      <div className="flex justify-center w-full mt-3">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            try {
+              handleGenerateClick();
+            } catch (error) {
+              console.error('Error en onClick:', error);
+            }
+          }}
+          disabled={isGenerating || !fichaClinica.trim()}
+          className="py-3.5 px-5 rounded-xl text-base font-medium flex items-center justify-center gap-2 transition-all duration-200"
+          style={{
+            backgroundColor: isGenerating || !fichaClinica.trim() ? '#E0E1E5' : '#E4C6A1',
+            color: isGenerating || !fichaClinica.trim() ? '#95989E' : '#2C3E50',
+            cursor: isGenerating || !fichaClinica.trim() ? 'not-allowed' : 'pointer',
+            letterSpacing: '-0.01em',
+            fontWeight: '500',
+            border: 'none',
+            margin: '11px -3px 0 67px',
+            padding: '0 12px 0 9px'
+          }}
+          onMouseEnter={(e) => {
+            if (!isGenerating && fichaClinica.trim()) {
+              e.target.style.backgroundColor = '#D4B08C';
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 4px 12px rgba(228, 198, 161, 0.3)';
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (!isGenerating && fichaClinica.trim()) {
+              e.target.style.backgroundColor = '#E4C6A1';
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = 'none';
+            }
+          }}
+        >
+          {isGenerating ? (
+            <>
+              <span style={{ display: 'inline-block', animation: 'spin 1s linear infinite' }}>⏳</span>
+              Generando...
+            </>
+          ) : (
+            <>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'block' }}>
+                <path d="M8 2v4"></path>
+                <path d="M16 2v4"></path>
+                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                <path d="M3 10h18"></path>
+              </svg>
+              Generar Informe
+            </>
+          )}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default App;

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Pacientes Ficticios</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 { color: #333; margin-bottom: 20px; }
+        .warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            color: #856404;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .button {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(220, 53, 69, 0.4);
+        }
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+        .success {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #4caf50;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗑️ Eliminar Pacientes Ficticios</h1>
+
+        <div class="warning">
+            ⚠️ Se eliminarán los 5 pacientes ficticios:<br><br>
+            • María González Rodríguez<br>
+            • Juan Carlos Fernández López<br>
+            • Claudia Inés Martínez Riquelme<br>
+            • Roberto Miguel Soto Vergara<br>
+            • Daniela Alejandra Silva Contreras
+        </div>
+
+        <button class="button" onclick="deleteMockPatients()">
+            🗑️ ELIMINAR AHORA
+        </button>
+
+        <div id="status"></div>
+    </div>
+
+    <script>
+        function deleteMockPatients() {
+            try {
+                // Nombres exactos de los pacientes ficticios
+                const mockNames = [
+                    'María González Rodríguez',
+                    'Juan Carlos Fernández López',
+                    'Claudia Inés Martínez Riquelme',
+                    'Roberto Miguel Soto Vergara',
+                    'Daniela Alejandra Silva Contreras'
+                ];
+
+                // RUTs de los pacientes ficticios
+                const mockRuts = [
+                    '15.234.567-8',
+                    '18.456.789-5',
+                    '12.678.901-2',
+                    '17.890.234-9',
+                    '19.123.456-3'
+                ];
+
+                // Obtener todos los pacientes
+                const allPatients = JSON.parse(localStorage.getItem('rlp_patients') || '[]');
+                const totalBefore = allPatients.length;
+
+                console.log('Total pacientes antes:', totalBefore);
+
+                // Filtrar: eliminar los que tengan esos nombres o RUTs
+                const realPatients = allPatients.filter(patient => {
+                    const isNameMatch = mockNames.includes(patient.nombre);
+                    const isRutMatch = mockRuts.includes(patient.rut);
+
+                    if (isNameMatch || isRutMatch) {
+                        console.log('Eliminando:', patient.nombre, patient.rut);
+                        return false; // Eliminar
+                    }
+                    return true; // Mantener
+                });
+
+                const totalAfter = realPatients.length;
+                const removed = totalBefore - totalAfter;
+
+                console.log('Total pacientes después:', totalAfter);
+                console.log('Pacientes eliminados:', removed);
+
+                // Guardar
+                localStorage.setItem('rlp_patients', JSON.stringify(realPatients));
+
+                showStatus(
+                    `🎉 ¡ÉXITO!<br><br>
+                    ✅ ${removed} pacientes ficticios eliminados<br>
+                    ✅ ${totalAfter} pacientes reales conservados<br><br>
+                    Redirigiendo en 2 segundos...`
+                );
+
+                // Redirigir
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+
+            } catch (error) {
+                alert('❌ Error: ' + error.message);
+                console.error(error);
+            }
+        }
+
+        function showStatus(message) {
+            const status = document.getElementById('status');
+            status.className = 'success';
+            status.innerHTML = message;
+            status.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

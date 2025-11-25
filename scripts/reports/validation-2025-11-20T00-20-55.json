@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-11-20T00:20:59.096Z",
+  "estadisticas": {
+    "totalNotas": 1410,
+    "totalPacientes": 257,
+    "notasPorTipo": {
+      "CONTROL": 1153,
+      "INGRESO": 257
+    },
+    "camposFaltantes": {
+      "titulo": 165,
+      "contenidoCompleto": 5
+    },
+    "subseccionesMalClasificadas": [],
+    "pacientesConMultiplesIngresos": [],
+    "notasSinOrden": [],
+    "notasConOrdenIncorrecto": [],
+    "pacientesCorrectos": 252
+  },
+  "problemas": [
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "BPddbwCI6HqkLHJmA6u0",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    },
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "L9FDsuoMYaIrTi3VG0pr",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    },
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "b8r3ew0S11KUMKSwx14y",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    },
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "fNirfatsYd0MbpzUdGGj",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    },
+    {
+      "tipo": "ADVERTENCIA",
+      "notaId": "kmKiZYSeUabMazKir6h0",
+      "mensaje": "Falta campo requerido: contenidoCompleto"
+    }
+  ],
+  "totalProblemas": 0,
+  "totalAdvertencias": 5
+}
