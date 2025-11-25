@@ -36,3 +36,6 @@ raiceshealth-service-account.json
 .env.local
 .env.production
 nul
+
+# Firebase cache
+.firebase/
